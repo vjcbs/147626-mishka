@@ -1,0 +1,66 @@
+<section class="form">
+
+  <header class="form-header">
+    <h2 class="form__title">Вязание на заказ</h2>
+    <p class="form__text-header">
+      Мы будем рады воплотить в жизнь ваши пожелания!
+      Заполните простую форму заказа и мы свяжемся с вами,
+      чтобы уточнить детали.
+    </p>
+  </header>
+
+
+  <form class="form-body" action="https://echo.htmlacademy.ru" method="post" >
+    <div class="main-wrapper">
+      <fieldset class="form__radiogroup">
+        <legend>Тип</legend>
+          <label class="form__radio-label form-label" for="radio-interior">Аксессуары для интерьера</label>
+          <input class="form__radio-button" type="radio" id="radio-interior" />
+          <label class="form__radio-label form-label" for="radio-toy">Детская игрушка</label>
+          <input class="form__radio-button" type="radio" id="radio-toy" />
+        </fieldset>
+      </fieldset>
+
+      <fieldset class="form__checkboxgroup">
+        <legend>Цвет</legend>
+        <input class="form__checkbox" type="checkbox" name="white" id="checkbox-white" checked/>
+        <label class="form__checkbox-label form-label" for="checkbox-white">Белый</label>
+        <input class="form__checkbox" type="checkbox" name="gray" id="checkbox-gray" checked/>
+        <label class="form__checkbox-label form-label" for="checkbox-gray">Серый</label>
+        <input class="form__checkbox" type="checkbox" name="tiffany" id="checkbox-tiffany" />
+        <label class="form__checkbox-label form-label" for="checkbox-tiffany">«Тиффани»</label>
+        <input class="form__checkbox" type="checkbox" name="black" id="checkbox-black" />
+        <label class="form__checkbox-label form-label" for="checkbox-black">Черный</label>
+        <input class="form__checkbox" type="checkbox" name="pink" id="checkbox-pink" />
+        <label class="form__checkbox-label form-label" for="checkbox-pink">Розовый</label>
+        <input class="form__checkbox" type="checkbox" name="orange" id="checkbox-orange" />
+        <label class="form__checkbox-label form-label" for="checkbox-orange">Оранжевый</label>
+      </fieldset>
+
+      <fieldset class="form__customer-info">
+        <legend>
+          ФИО
+        </legend>
+        <label class="form__customer-info-label form-label" for="input-name">Имя:</label>
+        <input class="form__input-text" type="text" id="input-name" name="name" placeholder="Введите ваше имя*"/>
+        <label class="form__customer-info-label form-label" for="input-surname">Фамилия:</label>
+        <input class="form__input-text" type="text" id="input-surname" name="surname" placeholder="Укажите фамилию*"/>
+        <label class="form__customer-info-label form-label" for="input-second-name">Отчество</label>
+        <input class="form__input-text" type="text" id="input-second-name" name="second-name" placeholder="Отчество, если желаете"/>
+        <label class="form__customer-info-label form-label legend-label" for="input-phone">Тел</label>
+        <input class="form__input-text" type="text" id="input-phone" name="phone" placeholder="+7 XXX XX XX*"/>
+        <label class="form__customer-info-label form-label legend-label" for="input-email">E-mail</label>
+        <input class="form__input-text" type="text" id="input-email" name="email" placeholder="Ваш Email*">
+        <label class="form__customer-info-label form-label legend-label" for="input-additional-info">Доп</label>
+        <textarea class="form__input-textarea" type="text" id="input-additional-info" name="additional-info" rows="5">
+          Опишите все ваши пожелания по заказу
+        </textarea>
+        <span class="form__note"><sup>*</sup>Поля обязательны для заполнения</span>
+      </fieldset>
+
+      <input class="form__submit" type="submit" value="Отправить заказ" />
+
+    </div>
+  </form>
+
+</section>
