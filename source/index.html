@@ -11,19 +11,19 @@
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Мишка" />
       </a>
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+      <button class="nav-menu__toggle" type="button">Открыть меню</button>
+      <nav class="nav-menu">
+        <ul class="nav-menu__list">
+          <li class="nav-menu__item">
             <a href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="site-list__item">
+          <li class="nav-menu__item">
             <a href="#">Вязание на заказ</a>
           </li>
-          <li class="site-list__item search--item">
+          <li class="nav-menu__item nav-menu__item--search">
             <a href="#">Поиск по сайту</a>
           </li>
-          <li class="site-list__item cart--item">
+          <li class="nav-menu__item nav-menu__item--cart">
             <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
@@ -35,15 +35,15 @@
 
       <section class="selection">
         <header class="selection-header">
-          <img class="selection-header__bg-image" src="http://placehold.it/575x373" width="575" height="373"/>
+          <img class="selection-header__bg-image" src="http://placehold.it/575x373" width="575" height="373" alt="Милые штуки"/>
           <h1>Милые штуки ручной работы для дома</h1>
         </header>
-        <ul class="selection__list site-list">
-          <li class="selection__item">
-            <span class="selection__item-name interior--item">Предметы интерьера</span>
+        <ul class="selection__list">
+          <li class="selection__item selection__item--interior">
+            <span class="selection__item-name">Предметы интерьера</span>
           </li>
-          <li class="selection__item">
-            <span class="selection__item-name toy--item">Детские игрушки</span>
+          <li class="selection__item selection__item--toy">
+            <span class="selection__item-name">Детские игрушки</span>
           </li>
         </ul>
       </section>
@@ -56,28 +56,28 @@
             Экологически чистая пряжа, ручная работа. Доступны в шести расцветках
             и трех размерах.
           </p>
-          <table class="featured__list">
+          <table class="featured__table">
             <tr>
-              <td class="featured__field">
+              <td>
                 Цвет:
               </td>
-              <td class="featured__value">
+              <td>
                 «Тиффани»/серый
               </td>
             </tr>
             <tr>
-              <td class="featured__field">
+              <td>
                 Диаметр:
               </td>
-              <td class="featured__value">
+              <td>
                 25 см
               </td>
             </tr>
             <tr>
-              <td class="featured__field">
+              <td>
                 Высота:
               </td>
-              <td class="featured__value">
+              <td>
                 15 см
               </td>
             </tr>
@@ -85,7 +85,7 @@
           <div class="featured__order">
             <img class="featured__product-image" src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки" />
             <p class="featured__price">Цена: 990 руб.</p>
-            <button class="featured__order-button button" type="button">Заказать</button>
+            <button class="button featured__order-button" type="button">Заказать</button>
           </div>
         </div>
       </section>
@@ -93,24 +93,24 @@
       <section class="about">
         <div class="main-wrapper">
           <h2 class="about__title">Коротко о нас:</h2>
-          <ul class="about__list site-list">
-            <li class="about__item flower--item">
-              Экологически чистые материалы
+          <ul class="about__list">
+            <li class="about__item about__item--flower">
+              <span class="about__item-caption">Экологически чистые материалы</span>
             </li>
-            <li class="about__item style--item">
-              Скандинавский стиль по российской цене
+            <li class="about__item about__item--style">
+              <span class="about__item-caption">Скандинавский стиль по российской цене</span>
             </li>
-            <li class="about__item heart--item">
-              Увеличивает лайки на фотографиях
+            <li class="about__item about__item--heart">
+              <span class="about__item-caption">Увеличивает лайки на фотографиях</span>
             </li>
-            <li class="about__item clew--item">
-              Связано вручную с любовью и умилением
+            <li class="about__item about__item--clew">
+              <span class="about__item-caption">Связано вручную с любовью и умилением</span>
             </li>
-            <li class="about__item rocket--item">
-              Поддержка отечественного производителя
+            <li class="about__item about__item--rocket">
+              <span class="about__item-caption">Поддержка отечественного производителя</span>
             </li>
-            <li class="about__item gift--item">
-              Поставляется в подарочной упаковке
+            <li class="about__item about__item--gift">
+              <span class="about__item-caption">Поставляется в подарочной упаковке</span>
             </li>
           </ul>
         </div>
@@ -129,30 +129,30 @@
             <cite class="feedback__author-account">@misssssiskras</cite>
           </blockquote>
           <div class="feedback__nav-buttons">
-            <button class="feedback__nav-button nav-buton--left" type="button">Влево</button>
-            <button class="feedback__nav-button nav-buton--right" type="button">Вправо</button>
+            <button class="button feedback__nav-button feedback__nav-button--left" type="button">Влево</button>
+            <button class="button feedback__nav-button feedback__nav-button--right" type="button">Вправо</button>
           </div>
-          <button class="feedback__button button" type="button">Написать</button>
+          <button class="button feedback__button" type="button">Написать</button>
         </div>
       </section>
 
       <section class="contact">
         <div class="main-wrapper">
           <h3 class="contact__title">Контакты</h3>
-          <table class="contact__list">
+          <table class="contact__table">
             <th>
-              <td class="contact__field">
+              <td>
                 e-mail:
               </td>
-              <td class="contact__value">
+              <td>
                 info@mimimishkashop.ru
               </td>
             </th>
             <th>
-              <td class="contact__field">
+              <td>
                 адрес:
               </td>
-              <td class="contact__value">
+              <td>
                 г.Санкт-Петербург,
                 ул. Большая Конюшенная,
                 д. 19/8, офис 101
@@ -164,7 +164,7 @@
           <img class="contact__map-image" src="http://placehold.it/322x457" width="322" height="457" alt="Карта" />
           <img class="contact__map-pin" src="http://placehold.it/67x100" width="67" height="100" alt="Мы находимся здесь" />
         </div>
-        <button class="contact__button button">Напишите нам</button>
+        <button class="button contact__button">Напишите нам</button>
       </section>
 
     </main>
