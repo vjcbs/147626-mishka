@@ -1,0 +1,100 @@
+<section class="form">
+
+  <header class="form-header">
+    <h2 class="form__title">Вязание на заказ</h2>
+    <p class="form__text-header">
+      Мы будем рады воплотить в жизнь ваши пожелания!
+      Заполните простую форму заказа и мы свяжемся с вами,
+      чтобы уточнить детали.
+    </p>
+  </header>
+
+
+  <form class="form-body" action="https://echo.htmlacademy.ru" method="post" >
+    <div class="main-wrapper">
+      <fieldset class="form__radiogroup">
+        <legend>Тип</legend>
+        <ul class="form__list">
+          <li class="form__item">
+            <label class="form__label form__radio-label" for="radio-interior">Аксессуары для интерьера</label>
+            <input class="form__radio-button" type="radio" name="interior" id="radio-interior" />
+          </li>
+          <li class="form__item">
+            <label class="form__label form__radio-label" for="radio-toy">Детская игрушка</label>
+            <input class="form__radio-button" type="radio" name="toy" id="radio-toy" />
+          </li>
+        </ul>
+        </fieldset>
+      </fieldset>
+
+      <fieldset class="form__checkboxgroup">
+        <legend>Цвет</legend>
+        <ul class="form__list">
+          <li class="form__item">
+            <input class="form__checkbox" type="checkbox" name="white" id="checkbox-white" checked/>
+            <label class="form__label form__checkbox-label" for="checkbox-white">Белый</label>
+          </li>
+          <li class="form__item">
+            <input class="form__checkbox" type="checkbox" name="gray" id="checkbox-gray" checked/>
+            <label class="form__label form__checkbox-label" for="checkbox-gray">Серый</label>
+          </li>
+          <li class="form__item">
+            <input class="form__checkbox" type="checkbox" name="tiffany" id="checkbox-tiffany" />
+            <label class="form__label form__checkbox-label" for="checkbox-tiffany">«Тиффани»</label>
+          </li>
+          <li class="form__item">
+            <input class="form__checkbox" type="checkbox" name="black" id="checkbox-black" />
+            <label class="form__label form__checkbox-label" for="checkbox-black">Черный</label>
+          </li>
+          <li class="form__item">
+            <input class="form__checkbox" type="checkbox" name="pink" id="checkbox-pink" />
+            <label class="form__label form__checkbox-label" for="checkbox-pink">Розовый</label>
+          </li>
+          <li class="form__item">
+            <input class="form__checkbox" type="checkbox" name="orange" id="checkbox-orange" />
+            <label class="form__label form__checkbox-label" for="checkbox-orange">Оранжевый</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form__customer-info">
+        <legend>
+          ФИО
+        </legend>
+        <ul class="form__list">
+          <li class="form__item">
+            <label class="form__label form__customer-info-label" for="input-name">Имя:</label>
+            <input class="form__input-text" type="text" id="input-name" name="name" placeholder="Введите ваше имя*"/>
+          </li>
+          <li class="form__item">
+            <label class="form__label form__customer-info-label" for="input-surname">Фамилия:</label>
+            <input class="form__input-text" type="text" id="input-surname" name="surname" placeholder="Укажите фамилию*"/>
+          </li>
+          <li class="form__item">
+            <label class="form__label form__customer-info-label" for="input-second-name">Отчество</label>
+            <input class="form__input-text" type="text" id="input-second-name" name="second-name" placeholder="Отчество, если желаете"/>
+          </li>
+          <li class="form__item">
+            <label class="form__label form__customer-info-label legend-label" for="input-phone">Тел</label>
+            <input class="form__input-text" type="text" id="input-phone" name="phone" placeholder="+7 XXX XX XX*"/>
+          </li>
+          <li class="form__item">
+            <label class="form__label form__customer-info-label legend-label" for="input-email">E-mail</label>
+            <input class="form__input-text" type="text" id="input-email" name="email" placeholder="Ваш Email*">
+          </li>
+          <li class="form__item">
+            <label class="form__label form__customer-info-label legend-label" for="input-additional-info">Доп</label>
+            <textarea class="form__input-textarea" type="text" id="input-additional-info" name="additional-info" rows="5">
+              Опишите все ваши пожелания по заказу
+            </textarea>
+            <span class="form__note"><sup>*</sup>Поля обязательны для заполнения</span>
+          </li>
+        </ul>
+      </fieldset>
+
+      <button class="form__submit" type="submit" value="Send order">Отправить заказ</button>
+
+    </div>
+  </form>
+
+</section>
