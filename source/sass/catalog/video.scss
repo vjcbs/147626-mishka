@@ -1,0 +1,55 @@
+.catalog-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid $light-gray;
+  padding: 30px 0;
+}
+
+.catalog-video__title {
+  display: inline-block;
+  align-self: center;
+
+  height: 50px;
+  margin: 0;
+  margin-bottom: 30px;
+  // padding-left: 120px;
+  font: $h3-font-size $bold-font;
+  // background-color: $light-gray;
+  word-wrap: wrap;
+  text-align: center;
+  width: $wrapper-width;
+}
+
+.catalog-video__frame {
+  position: relative;
+  width: 100%;
+}
+
+.catalog-video__frame-image {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+
+.catalog-video__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.catalog-video__desc {
+  width: $wrapper-width;
+  align-self: center;
+  padding: 20px 0;
+}
+
+.catalog__order-button {
+  display: inline-block;
+  width: $wrapper-width;
+  align-self: center;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 48px;
+}

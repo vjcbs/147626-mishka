@@ -1,0 +1,74 @@
+.form__radiogroup,
+.form__checkboxgroup,
+.form__customer-info {
+  @include remove-fieldset-borders;
+  padding: 20px 0;
+}
+
+.form__legend {
+  @include heading($h3-font-size);
+  @include customize-legend($margin: 0);
+}
+
+.form__list {
+  padding: 0 0;
+}
+
+.form__item {
+  display: flex;
+  margin-bottom: 25px;
+
+  @include heading($h3-font-size);
+}
+
+.form__radio-label {
+  position: relative;
+}
+
+/*
+.form__radio-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 15px;
+  height: 15px;
+  border: 5px solid $light-green;
+  border-radius: 50%;
+}
+*/
+
+.form__customer-info .form__item {
+  @include flex-column;
+}
+
+.form__customer-info-label {
+  margin-bottom: 5px;
+}
+
+.form__input-text {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 18px 0;
+  outline: none;
+}
+
+.form__input-text::placeholder,
+.form__input-textarea::placeholder {
+  color: $light-black;
+  opacity: 0.4;
+}
+
+.form__input-textarea {
+  font: $text-font-size $regular-font;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.form__note {
+  font: 12px $regular-font;
+}
+
+.form__submit {
+  margin-bottom: 20px;
+}

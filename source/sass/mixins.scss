@@ -1,0 +1,22 @@
+@mixin heading($font-size: $h1-font-size) {
+  font-family: $bold-font;
+  font-size: $font-size;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin customize-legend($margin: -5%, $padding: 10%, $color: $light-green) {
+  color: $color;
+  padding-right: $padding;
+  margin: $margin;
+}
+
+@mixin remove-fieldset-borders($color: $light-green) {
+  border: none;
+  border-top: 1px solid $color;
+}

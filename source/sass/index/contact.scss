@@ -1,0 +1,49 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 0;
+}
+
+.contact__title {
+  margin: 0;
+  padding: 0;
+}
+
+.contact__table {
+  border-spacing: 0;
+  font-size: $text-font-size;
+  line-height: 30px;
+  color: $light-black;
+  margin-bottom: 28px;
+}
+
+.contact__table td {
+  padding: 15px 0;
+  vertical-align: top;
+}
+
+.contact__table td:last-child {
+  width: 66.667%;
+}
+
+.contact__map {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.contact__map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact__map-pin {
+  position: absolute;
+  top: 145px;
+  left: 140px;
+}
+
+.contact__button {
+  width: $wrapper-width;
+  align-self: center;
+}

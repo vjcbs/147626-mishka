@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="css/style.css" />
 <section class="form">
 
   <header class="form-header">
     <h2 class="form__title">Вязание на заказ</h2>
-    <p class="form__text-header">
+    <p class="form__header-text">
       Мы будем рады воплотить в жизнь ваши пожелания!
       Заполните простую форму заказа и мы свяжемся с вами,
       чтобы уточнить детали.
@@ -13,23 +14,23 @@
   <form class="form-body" action="https://echo.htmlacademy.ru" method="post" >
     <div class="main-wrapper">
       <fieldset class="form__radiogroup">
-        <legend>Тип</legend>
-        <ul class="form__list">
+        <legend class="form__legend">Тип</legend>
+        <ul class="site-list form__list">
           <li class="form__item">
+            <input class="radio-button form__radio-button" type="radio" name="interior" id="radio-interior" />
             <label class="form__label form__radio-label" for="radio-interior">Аксессуары для интерьера</label>
-            <input class="form__radio-button" type="radio" name="interior" id="radio-interior" />
           </li>
           <li class="form__item">
+            <input class="radio-button form__radio-button" type="radio" name="toy" id="radio-toy" />
             <label class="form__label form__radio-label" for="radio-toy">Детская игрушка</label>
-            <input class="form__radio-button" type="radio" name="toy" id="radio-toy" />
           </li>
         </ul>
         </fieldset>
       </fieldset>
 
       <fieldset class="form__checkboxgroup">
-        <legend>Цвет</legend>
-        <ul class="form__list">
+        <legend class="form__legend">Цвет</legend>
+        <ul class="site-list form__list">
           <li class="form__item">
             <input class="form__checkbox" type="checkbox" name="white" id="checkbox-white" checked/>
             <label class="form__label form__checkbox-label" for="checkbox-white">Белый</label>
@@ -58,10 +59,10 @@
       </fieldset>
 
       <fieldset class="form__customer-info">
-        <legend>
+        <legend class="form__legend">
           ФИО
         </legend>
-        <ul class="form__list">
+        <ul class="site-list form__list">
           <li class="form__item">
             <label class="form__label form__customer-info-label" for="input-name">Имя:</label>
             <input class="form__input-text" type="text" id="input-name" name="name" placeholder="Введите ваше имя*"/>
@@ -71,7 +72,7 @@
             <input class="form__input-text" type="text" id="input-surname" name="surname" placeholder="Укажите фамилию*"/>
           </li>
           <li class="form__item">
-            <label class="form__label form__customer-info-label" for="input-second-name">Отчество</label>
+            <label class="form__label form__customer-info-label" for="input-second-name">Отчество:</label>
             <input class="form__input-text" type="text" id="input-second-name" name="second-name" placeholder="Отчество, если желаете"/>
           </li>
           <li class="form__item">
@@ -84,15 +85,14 @@
           </li>
           <li class="form__item">
             <label class="form__label form__customer-info-label legend-label" for="input-additional-info">Доп</label>
-            <textarea class="form__input-textarea" type="text" id="input-additional-info" name="additional-info" rows="5">
-              Опишите все ваши пожелания по заказу
-            </textarea>
+            <textarea class="form__input-textarea" type="text" id="input-additional-info" name="additional-info" rows="5"
+            placeholder="Опишите все ваши пожелания по заказу"></textarea>
             <span class="form__note"><sup>*</sup>Поля обязательны для заполнения</span>
           </li>
         </ul>
       </fieldset>
 
-      <button class="form__submit" type="submit" value="Send order">Отправить заказ</button>
+      <button class="button form__submit" type="submit" value="Send order">Отправить заказ</button>
 
     </div>
   </form>

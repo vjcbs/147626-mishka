@@ -1,0 +1,20 @@
+.form-header {
+  @include flex-column;
+}
+
+.form__title {
+  @include heading;
+  align-self: center;
+  width: 100%;
+  padding: 75px 0;
+  background-color: $light-gray;
+  text-align: center;
+}
+
+.form__header-text {
+  align-self: center;
+  width: $wrapper-width;
+  margin: 0;
+  padding: 30px 0;
+  line-height: 24px;
+}

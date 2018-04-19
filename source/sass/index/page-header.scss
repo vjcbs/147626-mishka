@@ -1,0 +1,27 @@
+.page-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  height: 50px;
+  padding-top: 25px;
+  align-self: center;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-menu__toggle {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  width: 21px;
+  height: 20px;
+  border: none;
+  background: url("../img/icon-menu-open.svg") no-repeat;
+  outline: none;
+  cursor: pointer;
+}
