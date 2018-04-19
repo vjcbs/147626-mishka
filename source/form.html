@@ -58,38 +58,45 @@
         </ul>
       </fieldset>
 
-      <fieldset class="form__customer-info">
+      <fieldset class="form__customer-name">
         <legend class="form__legend">
           ФИО
         </legend>
         <ul class="site-list form__list">
           <li class="form__item">
-            <label class="form__label form__customer-info-label" for="input-name">Имя:</label>
+            <label class="form__label form__customer-name-label" for="input-name">Имя:</label>
             <input class="form__input-text" type="text" id="input-name" name="name" placeholder="Введите ваше имя*"/>
           </li>
           <li class="form__item">
-            <label class="form__label form__customer-info-label" for="input-surname">Фамилия:</label>
+            <label class="form__label form__customer-name-label" for="input-surname">Фамилия:</label>
             <input class="form__input-text" type="text" id="input-surname" name="surname" placeholder="Укажите фамилию*"/>
           </li>
           <li class="form__item">
-            <label class="form__label form__customer-info-label" for="input-second-name">Отчество:</label>
+            <label class="form__label form__customer-name-label" for="input-second-name">Отчество:</label>
             <input class="form__input-text" type="text" id="input-second-name" name="second-name" placeholder="Отчество, если желаете"/>
           </li>
-          <li class="form__item">
-            <label class="form__label form__customer-info-label legend-label" for="input-phone">Тел</label>
-            <input class="form__input-text" type="text" id="input-phone" name="phone" placeholder="+7 XXX XX XX*"/>
-          </li>
-          <li class="form__item">
-            <label class="form__label form__customer-info-label legend-label" for="input-email">E-mail</label>
-            <input class="form__input-text" type="text" id="input-email" name="email" placeholder="Ваш Email*">
-          </li>
-          <li class="form__item">
-            <label class="form__label form__customer-info-label legend-label" for="input-additional-info">Доп</label>
-            <textarea class="form__input-textarea" type="text" id="input-additional-info" name="additional-info" rows="5"
-            placeholder="Опишите все ваши пожелания по заказу"></textarea>
-            <span class="form__note"><sup>*</sup>Поля обязательны для заполнения</span>
-          </li>
         </ul>
+      </fieldset>
+
+      <fieldset class="form__customer-phone">
+        <legend class="form__legend">Тел</legend>
+        <!-- <label class="form__label form__customer-name-label legend-label" for="input-phone">Тел</label> -->
+        <input class="form__input-text" type="text" id="input-phone" name="phone" placeholder="+7 XXX XX XX*"/>
+      </fieldset>
+
+
+      <fieldset class="form__customer-email">
+        <legend class="form__legend">Email</legend>
+        <!-- <label class="form__label form__customer-name-label legend-label" for="input-email">E-mail</label> -->
+        <input class="form__input-text" type="text" id="input-email" name="email" placeholder="Ваш Email*">
+      </fieldset>
+
+      <fieldset class="form__customer-addit-info">
+        <legend class="form__legend">Доп</legend>
+        <!-- <label class="form__label form__customer-name-label legend-label" for="input-additional-info">Доп</label> -->
+        <textarea class="form__input-textarea" type="text" id="input-additional-info" name="additional-info" rows="5"
+        placeholder="Опишите все ваши пожелания по заказу"></textarea>
+        <span class="form__note"><sup>*</sup>Поля обязательны для заполнения</span>
       </fieldset>
 
       <button class="button form__submit" type="submit" value="Send order">Отправить заказ</button>

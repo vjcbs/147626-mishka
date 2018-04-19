@@ -1,13 +1,29 @@
 .form__radiogroup,
 .form__checkboxgroup,
-.form__customer-info {
+.form__customer-name {
   @include remove-fieldset-borders;
-  padding: 20px 0;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+
+.form__customer-phone,
+.form__customer-email,
+.form__customer-addit-info {
+  @include remove-fieldset-borders;
+  @include flex-column;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.form__customer-phone {
+  margin-top: 0;
 }
 
 .form__legend {
   @include heading($h3-font-size);
   @include customize-legend($margin: 0);
+  text-transform: uppercase;
 }
 
 .form__list {
@@ -15,10 +31,9 @@
 }
 
 .form__item {
-  display: flex;
-  margin-bottom: 25px;
-
   @include heading($h3-font-size);
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .form__radio-label {
@@ -38,15 +53,17 @@
 }
 */
 
-.form__customer-info .form__item {
+.form__customer-name .form__item {
   @include flex-column;
 }
 
-.form__customer-info-label {
+.form__customer-name-label {
   margin-bottom: 5px;
 }
 
 .form__input-text {
+  width: 100%;
+  font: $text-font-size $regular-font;
   border: none;
   border-bottom: 1px solid black;
   padding: 18px 0;
@@ -60,9 +77,10 @@
 }
 
 .form__input-textarea {
+  width: 100%;
   font: $text-font-size $regular-font;
   padding: 10px;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .form__note {
@@ -70,5 +88,5 @@
 }
 
 .form__submit {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
