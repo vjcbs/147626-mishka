@@ -3,12 +3,6 @@ body {
   @include font-open-sans($size: 16px);
 }
 
-.clearfix {
-  &::after {
-    @include clearfix;
-  }
-}
-
 .main-wrapper {
   width: $wrapper-width;
   margin: auto;
@@ -19,9 +13,8 @@ body {
 }
 
 .site-list {
-  list-style: none;
-  @include reset-mp;
   @include flex-column;
+  @include list-reset;
 }
 
 .button {
@@ -33,13 +26,3 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
-
-/*
-.border-blue {
-  border: 1px solid blue;
-}
-
-.border-red {
-  border: 1px solid red;
-}
-*/

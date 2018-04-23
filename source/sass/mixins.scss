@@ -10,17 +10,35 @@
 }
 
 @mixin font-open-sans($size: false, $color: false, $lh: false) {
-    font-family: $regular-font, Helvetica, Arial, sans-serif;
-    @if $size { font-size: $size; }
-    @if $color { color: $color; }
-    @if $lh { line-height: $lh; }
+  font-family: $regular-font, "Helvetica", "Arial", sans-serif;
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $color {
+    color: $color;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
 }
 
 @mixin font-open-sans-bold($size: false, $color: false, $lh: false) {
-    font-family: $bold-font, Helvetica, Arial, sans-serif;
-    @if $size { font-size: $size; }
-    @if $color { color: $color; }
-    @if $lh { line-height: $lh; }
+  font-family: $bold-font, "Helvetica", "Arial", sans-serif;
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $color {
+    color: $color;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
 }
 
 @mixin heading($font-size: $h1-font-size) {
@@ -29,8 +47,8 @@
 }
 
 @mixin list-reset {
-  list-style: none;
   @include reset-mp;
+  list-style: none;
 }
 
 @mixin flex-row {
@@ -44,9 +62,9 @@
 }
 
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
-    content: $content;
-    display: $display;
-    position: $pos;
+  content: $content;
+  display: $display;
+  position: $pos;
 }
 
 @mixin customize-legend($margin: -5%, $padding: 10%, $color: $light-green) {

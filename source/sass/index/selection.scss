@@ -55,7 +55,6 @@
 }
 
 @media (max-height: 480px) {
-
   .header__title {
     min-height: 200px;
   }
@@ -72,13 +71,10 @@
   .selection__item-name {
     width: 50%;
   }
-
 }
 
 @media (min-width: $tablet-width) {
-
   .selection {
-    // @include border(gold);
     margin-top: -80px;
     padding: 0 50px;
     background-size: contain;
