@@ -2,13 +2,15 @@
   display: flex;
   flex-direction: column;
   background-color: #f1f1f1;
+  padding: 0 30px;
+  overflow-x: hidden;
 }
 
 .footer__social-list {
-  flex-direction: row;
+  @include list-reset;
+  @include flex-row;
   justify-content: center;
   align-self: center;
-  width: 80%;
   border-bottom: 1px solid #e5e5e5;
   margin: 0 -20px;
 }
@@ -47,6 +49,7 @@
   margin: 0 -40px;
   padding-top: 35px;
   padding-bottom: 65px;
+  // border: 1px solid lightgreen;
 }
 
 .copyright__title {

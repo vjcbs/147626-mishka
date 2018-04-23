@@ -3,8 +3,7 @@
 }
 
 .catalog__list {
-  // border: 1px solid green;
-  // padding: 20px 0;
+  padding: 0 30px;
 }
 
 .catalog__item {
@@ -19,12 +18,12 @@
 }
 
 .catalog__item-desc-wrapper {
-  padding: 10px;
+  padding: 10px 20px;
   border-bottom: 1px solid $light-gray;
 }
 
 .catalog__item-title {
-  font: $h3-font-size $bold-font;
+  @include heading($h3-font-size);
 }
 
 .catalog__item-desc {
@@ -32,8 +31,16 @@
 }
 
 .catalog__item-price {
-  font: $h3-font-size $bold-font;
+  @include heading($h3-font-size);
   padding: 20px 0;
-  background: url("../img/icon-cart.svg") no-repeat;
-  background-position: top 50% right 0;
+}
+
+.catalog__item-price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.catalog__item-img {
+  @include fill-and-align;
 }

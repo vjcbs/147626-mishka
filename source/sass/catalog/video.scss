@@ -1,35 +1,40 @@
 .catalog-video {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: center;
   border: 1px solid $light-gray;
-  padding: 30px 0;
+}
+
+.catalog-video__title-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 30px;
+}
+
+.catalog-video__camera-icon {
+  @include fill-and-align;
 }
 
 .catalog-video__title {
-  display: inline-block;
-  align-self: center;
-
-  height: 50px;
-  margin: 0;
-  margin-bottom: 30px;
-  // padding-left: 120px;
-  font: $h3-font-size $bold-font;
-  // background-color: $light-gray;
+  @include heading($h3-font-size);
+  width: 50%;
+  text-align: left;
   word-wrap: wrap;
-  text-align: center;
-  width: $wrapper-width;
 }
 
 .catalog-video__frame {
   position: relative;
   width: 100%;
+  margin: auto;
+  background: url("../img/video-mobile@1x.jpg") no-repeat;
+  background-position: center;
+  background-size: 100% auto;
 }
 
 .catalog-video__frame-image {
   height: auto;
   width: 100%;
   object-fit: contain;
+  opacity: 0;
 }
 
 .catalog-video__play-icon {
@@ -39,17 +44,23 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
+.catalog-video__play-icon:hover {
+  filter: contrast(0.8);
+  cursor: pointer;
+}
+
 .catalog-video__desc {
-  width: $wrapper-width;
   align-self: center;
-  padding: 20px 0;
+  padding: 20px 30px;
 }
 
 .catalog__order-button {
   display: inline-block;
-  width: $wrapper-width;
   align-self: center;
-  text-align: center;
+  width: 100%;
+  margin: 20px 0;
   vertical-align: middle;
   line-height: 48px;
+  text-align: center;
+  text-decoration: none;
 }

@@ -1,3 +1,7 @@
+.form-body {
+  padding: 0 30px;
+}
+
 .form__radiogroup,
 .form__checkboxgroup,
 .form__customer-name {
@@ -81,6 +85,7 @@
   font: $text-font-size $regular-font;
   padding: 10px;
   margin: 20px 0;
+  resize: none;
 }
 
 .form__note {

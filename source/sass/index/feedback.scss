@@ -1,11 +1,9 @@
 .feedback {
-  padding: 35px 0;
+  padding: 20px 0;
 }
 
 .feedback__title {
-  // margin-bottom: 35px;
-  margin: 0;
-  padding: 0;
+  @include heading($h2-font-size);
 }
 
 .feedback__item {
@@ -14,13 +12,19 @@
 }
 
 .feedback__text {
-  margin: 0;
-  padding: 0;
-  line-height: 30px;
+  @include font-open-sans($size: $text-font-size, $color: $light-black, $lh: 30px);
+  @include reset-mp;
 }
 
 .feedback__author-name {
-  margin-bottom: 10px;
+  @include heading($h3-font-size);
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+
+.feedback__author-account {
+  @include font-open-sans($size: $h3-font-size, $color: $light-black);
+  @include reset-mp;
 }
 
 .feedback__nav-buttons {

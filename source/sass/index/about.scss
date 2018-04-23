@@ -1,37 +1,30 @@
+
+.about {
+  // @include wrapper;
+  padding: 30px 0;
+}
+
+.about__title {
+  @include heading($h2-font-size);
+  margin-bottom: 20px;
+}
+
+.about__list {
+  @include list-reset;
+  @include flex-column;
+}
+
 .about__item {
-  padding-top: 47px;
-  padding-bottom: 15px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  @include flex-column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.about__item-image {
+  @include fill-and-align($align: flex-start);
+  margin-bottom: 10px;
 }
 
 .about__item-caption {
   font: $h3-font-size $bold-font;
-}
-
-.about__item--flower {
-  // @include backgroundSVGandColor($icon-flower-svg)
-  // background-image: svg-fill($icon-flower-svg, $light-green);
-  // background-repeat: no-repeat;
-  background-image: url("../img/icon-feature-flower.svg");
-}
-
-.about__item--money {
-  background-image: url("../img/icon-feature-money.svg");
-}
-
-.about__item--heart {
-  background-image: url("../img/icon-feature-heart.svg");
-}
-
-.about__item--ball {
-  background-image: url("../img/icon-feature-ball.svg");
-}
-
-.about__item--rocket {
-  background-image: url("../img/icon-feature-rocket.svg");
-}
-
-.about__item--gift {
-  background-image: url("../img/icon-feature-gift.svg");
 }

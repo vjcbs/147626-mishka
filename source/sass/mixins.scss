@@ -1,13 +1,52 @@
-@mixin heading($font-size: $h1-font-size) {
-  font-family: $bold-font;
-  font-size: $font-size;
+@mixin clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@mixin reset-mp {
   margin: 0;
   padding: 0;
 }
 
-@mixin flex-column() {
+@mixin font-open-sans($size: false, $color: false, $lh: false) {
+    font-family: $regular-font, Helvetica, Arial, sans-serif;
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $lh { line-height: $lh; }
+}
+
+@mixin font-open-sans-bold($size: false, $color: false, $lh: false) {
+    font-family: $bold-font, Helvetica, Arial, sans-serif;
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $lh { line-height: $lh; }
+}
+
+@mixin heading($font-size: $h1-font-size) {
+  @include font-open-sans-bold($font-size);
+  @include reset-mp;
+}
+
+@mixin list-reset {
+  list-style: none;
+  @include reset-mp;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
   display: flex;
   flex-direction: column;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+    content: $content;
+    display: $display;
+    position: $pos;
 }
 
 @mixin customize-legend($margin: -5%, $padding: 10%, $color: $light-green) {
@@ -19,4 +58,19 @@
 @mixin remove-fieldset-borders($color: $light-green) {
   border: none;
   border-top: 1px solid $color;
+}
+
+@mixin reset-link {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin fill-and-align($color: #3bb09d, $align: center) {
+  fill: $color;
+  align-self: $align;
+}
+
+@mixin border($color: black) {
+  border: 1px solid $color;
 }
