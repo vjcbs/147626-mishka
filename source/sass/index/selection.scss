@@ -78,7 +78,7 @@
 @media (min-width: $tablet-width) {
 
   .selection {
-    @include border(gold);
+    // @include border(gold);
     margin-top: -80px;
     padding: 0 50px;
     background-size: contain;
@@ -90,14 +90,6 @@
     padding: 0;
     min-height: 310px;
     flex-grow: 3;
-    // display: block;
-    // min-height: 310px;
-    // font-size: $h1-font-size;
-    // color: #010000;
-    // padding: 0 25px;
-    // transform: translateY(25%);
-    // text-align: center;
-    // margin: auto;
   }
 
   .selection__list {
