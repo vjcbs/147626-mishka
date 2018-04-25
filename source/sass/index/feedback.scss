@@ -53,3 +53,40 @@
 .feedback__button {
   align-self: center;
 }
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    padding: 70px 50px 30px 50px;
+    position: relative;
+    // @include border(red);
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .feedback__title {
+    order: 1;
+  }
+
+  .feedback__item {
+    order: 3;
+  }
+
+  .feedback__nav-buttons {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    order: 4;
+    width: 170px;
+    // @include border(green);
+  }
+
+  .feedback__nav-button {
+    width: 50%;
+  }
+
+  .feedback__button {
+    order: 2;
+    width: 170px;
+  }
+}

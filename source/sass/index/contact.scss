@@ -28,7 +28,7 @@
 
 .contact__map {
   position: relative;
-  margin-bottom: 35px;
+  // margin-bottom: 35px;
 }
 
 .contact__map-image {
@@ -46,4 +46,30 @@
 .contact__button {
   width: $wrapper-width;
   align-self: center;
+  margin-top: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .contact {
+    padding: 70px 0;
+  }
+
+  .contact-wrapper {
+    padding: 0 50px;
+  }
+
+  .contact__table tbody {
+    @include flex-row;
+    @include border(gold);
+  }
+
+  .contact__table tr {
+    width: 50%;
+    background-color: $light-gray;
+  }
+
+  .contact__button {
+    width: 250px;
+    margin-top: 50px;
+  }
 }

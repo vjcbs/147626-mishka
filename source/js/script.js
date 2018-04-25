@@ -13,3 +13,13 @@ menuToggle.addEventListener("click", (e) => {
   }
 
 });
+
+// $(function() {
+//   var menu = document.querySelector('.nav-menu');
+//   var menuToggle = document.querySelector('.nav-menu__toggle');
+//
+//   $(menuToggle).click(function() {
+//     console.log('Clicked!');
+//     $(menu).addClass("nav-menu--slide-down");
+//   });
+// });

@@ -57,6 +57,11 @@
 }
 */
 
+.form__customer-addit-info {
+  // @include border(red);
+  // padding: 0 30px;
+}
+
 .form__customer-name .form__item {
   @include flex-column;
 }
@@ -66,8 +71,8 @@
 }
 
 .form__input-text {
+  @include font-open-sans($size: 15px);
   width: 100%;
-  font: $text-font-size $regular-font;
   border: none;
   border-bottom: 1px solid black;
   padding: 18px 0;
@@ -81,8 +86,8 @@
 }
 
 .form__input-textarea {
+  @include font-open-sans($size: 15px);
   width: 100%;
-  font: $text-font-size $regular-font;
   padding: 10px;
   margin: 20px 0;
   resize: none;
@@ -95,3 +100,23 @@
 .form__submit {
   margin: 20px 0;
 }
+/*
+@media (min-width: $tablet-width) {
+  .form__radiogroup,
+  .form__checkboxgroup,
+  .form__customer-name {
+    border: none;
+    @include flex-row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .form__legend {
+    @include border(blue);
+  }
+
+  .form__radiogroup {
+    @include border(red);
+  }
+}
+*/
