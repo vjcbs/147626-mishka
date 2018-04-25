@@ -32,7 +32,7 @@
 @media (min-width: $tablet-width) {
   .about {
     // max-height: 600px;
-    min-height: 600px;
+    min-height: 500px;
     padding: 60px 0;
     // @include border(gold);
   }
@@ -44,7 +44,7 @@
     justify-content: flex-start;
     // align-items: baseline;
     // @include border(red);
-    max-height: 600px;
+    max-height: 500px;
   }
 
   .about__item {

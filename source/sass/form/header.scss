@@ -6,14 +6,16 @@
   @include heading;
   align-self: center;
   width: 100%;
-  padding: 75px 0;
+  margin-top: -80px;
+  padding: 120px 0 80px 0;
   background-color: $light-gray;
   text-align: center;
+  z-index: -2;
 }
 
 .form__header-text {
   align-self: center;
   margin: 0;
-  padding: 30px 30px;
+  padding: 50px 50px;
   line-height: 24px;
 }

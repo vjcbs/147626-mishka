@@ -63,6 +63,7 @@
 }
 
 .copyright__logo {
+  @include fill-and-align;
   padding: 0 40px;
 }
 
@@ -73,6 +74,7 @@
     // flex-wrap: nowrap;
     padding: 35px 50px;
     align-items: center;
+    clear: both;
   }
 
   .footer__logo-image {
@@ -85,7 +87,7 @@
   }
 
   .footer__social-list {
-    @include border(gold);
+    // @include border(gold);
     // flex-grow: 1;
     // padding: 0;
     margin: 0;
@@ -97,7 +99,7 @@
   }
 
   .copyright {
-    @include border(green);
+    // @include border(green);
     // flex-grow: 1;
     width: 30%;
     padding: 0 0;
