@@ -1,0 +1,122 @@
+.form-body {
+  padding: 0 30px;
+}
+
+.form__radiogroup,
+.form__checkboxgroup,
+.form__customer-name {
+  @include remove-fieldset-borders;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+
+.form__customer-phone,
+.form__customer-email,
+.form__customer-addit-info {
+  @include remove-fieldset-borders;
+  @include flex-column;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.form__customer-phone {
+  margin-top: 0;
+}
+
+.form__legend {
+  @include heading($h3-font-size);
+  @include customize-legend($margin: 0);
+  text-transform: uppercase;
+}
+
+.form__list {
+  padding: 0 0;
+}
+
+.form__item {
+  @include heading($h3-font-size);
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.form__radio-label {
+  position: relative;
+}
+
+/*
+.form__radio-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 15px;
+  height: 15px;
+  border: 5px solid $light-green;
+  border-radius: 50%;
+}
+*/
+
+.form__customer-addit-info {
+  // @include border(red);
+  // padding: 0 30px;
+}
+
+.form__customer-name .form__item {
+  @include flex-column;
+}
+
+.form__customer-name-label {
+  margin-bottom: 5px;
+}
+
+.form__input-text {
+  @include font-open-sans($size: 15px);
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 18px 0;
+  outline: none;
+}
+
+.form__input-text::placeholder,
+.form__input-textarea::placeholder {
+  color: $light-black;
+  opacity: 0.4;
+}
+
+.form__input-textarea {
+  @include font-open-sans($size: 15px);
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  resize: none;
+}
+
+.form__note {
+  font: 12px $regular-font;
+}
+
+.form__submit {
+  margin: 20px 0;
+}
+/*
+@media (min-width: $tablet-width) {
+  .form__radiogroup,
+  .form__checkboxgroup,
+  .form__customer-name {
+    border: none;
+    @include flex-row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .form__legend {
+    @include border(blue);
+  }
+
+  .form__radiogroup {
+    @include border(red);
+  }
+}
+*/

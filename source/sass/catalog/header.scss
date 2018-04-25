@@ -1,0 +1,16 @@
+.catalog-header {
+  @include flex-column;
+}
+
+.catalog__title {
+  padding: 75px 0;
+  background-color: $light-gray;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__title {
+    margin: -80px 0 20px;
+    padding: 115px 0 80px;
+  }
+}

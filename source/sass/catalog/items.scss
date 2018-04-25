@@ -1,0 +1,46 @@
+.catalog-items {
+  padding: 20px 0;
+}
+
+.catalog__list {
+  padding: 0 30px;
+}
+
+.catalog__item {
+  border: 1px solid $light-gray;
+  margin-bottom: 30px;
+}
+
+.catalog__item-image {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+
+.catalog__item-desc-wrapper {
+  padding: 10px 20px;
+  border-bottom: 1px solid $light-gray;
+}
+
+.catalog__item-title {
+  @include heading($h3-font-size);
+}
+
+.catalog__item-desc {
+  font-size: 13px;
+}
+
+.catalog__item-price {
+  @include heading($h3-font-size);
+  padding: 20px 0;
+}
+
+.catalog__item-price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.catalog__item-img {
+  @include fill-and-align;
+}

@@ -1,0 +1,34 @@
+body {
+  @include reset-mp;
+  @include font-open-sans($size: 16px);
+}
+
+.main-wrapper {
+  width: $wrapper-width;
+  margin: auto;
+}
+
+.main-title {
+  @include heading;
+}
+
+.site-list {
+  @include flex-column;
+  @include list-reset;
+}
+
+.button {
+  @include font-open-sans-bold($size: $button-font-size, $color: $light-black);
+  width: 100%;
+  height: 48px;
+  background-color: #ffffff;
+  border: 2px solid $light-black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
