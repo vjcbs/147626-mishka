@@ -7,8 +7,8 @@
 .form__customer-name {
   @include remove-fieldset-borders;
   margin: 0;
-  padding: 0;
-  padding-top: 20px;
+  padding: 30px 0;
+  // padding-top: 20px;
 }
 
 .form__customer-phone,
@@ -16,18 +16,33 @@
 .form__customer-addit-info {
   @include remove-fieldset-borders;
   @include flex-column;
-  margin: 20px 0;
-  padding: 0;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  // padding: 30px 0;
 }
 
-.form__customer-phone {
-  margin-top: 0;
+.form__customer-phone .form__input-text {
+  // @include border(blue);
 }
+
 
 .form__legend {
   @include heading($h3-font-size);
-  @include customize-legend($margin: 0);
+  color: $light-green;
+  width: 80px;
+  // padding-right: 30px;
+  margin-top: -42px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  // @include border(red);
   text-transform: uppercase;
+}
+
+.form__customer-phone .form__legend,
+.form__customer-email .form__legend,
+.form__customer-addit-info .form__legend {
+  margin-top: -22px;
+  margin-bottom: 0;
 }
 
 .form__list {
@@ -67,16 +82,17 @@
 }
 
 .form__customer-name-label {
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
 }
 
 .form__input-text {
   @include font-open-sans($size: 15px);
   width: 100%;
   border: none;
-  border-bottom: 1px solid black;
-  padding: 18px 0;
+  border-bottom: 2px solid black;
+  padding: 12px 0;
   outline: none;
+  // @include border(blue);
 }
 
 .form__input-text::placeholder,
@@ -90,6 +106,7 @@
   width: 100%;
   padding: 10px;
   margin: 20px 0;
+  border: 2px solid $light-black;
   resize: none;
 }
 
@@ -100,23 +117,114 @@
 .form__submit {
   margin: 20px 0;
 }
-/*
+
 @media (min-width: $tablet-width) {
+  .form-body {
+    padding: 0;
+  }
+
   .form__radiogroup,
   .form__checkboxgroup,
   .form__customer-name {
-    border: none;
     @include flex-row;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: none;
+    // @include border(red);
+    padding: 30px 50px;
+  }
+
+  .form__customer-phone,
+  .form__customer-email,
+  .form__customer-addit-info {
+    border: none;
   }
 
   .form__legend {
-    @include border(blue);
+    // @include border(blue);
+    margin: 0;
+    flex-basis: 27%;
+    background-color: transparent;
+  }
+
+  .form__list {
+    flex-basis: 73%;
+    // @include border(green);
   }
 
   .form__radiogroup {
-    @include border(red);
+    // @include border(red);
   }
+
+  .form__checkboxgroup {
+    background-color: $light-gray;
+  }
+
+  .form__checkboxgroup .form__list {
+    flex-wrap: wrap;
+    max-height: 170px;
+  }
+
+  .form__customer-name .form__item {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .form__customer-name-label {
+    margin-right: 20px;
+  }
+
+  .form__input-text {
+    padding: 12px 17px;
+    background-color: transparent;
+  }
+
+  .form__customer-phone,
+  .form__customer-email,
+  .form__customer-addit-info {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0;
+    padding: 40px 50px;
+  }
+
+  .form__customer-phone,
+  .form__customer-email {
+    background-color: $light-gray;
+  }
+
+  .form__customer-phone .form__legend,
+  .form__customer-email .form__legend,
+  .form__customer-addit-info .form__legend {
+    flex-basis: 27%;
+  }
+
+  .form__customer-phone .form__input-text,
+  .form__customer-email .form__input-text,
+  .form__customer-addit-info .form__input-textarea {
+    flex-basis: 73%;
+  }
+
+  .form__note {
+    float: right;
+    margin: 0;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    height: 48px;
+    line-height: 48px;
+    vertical-align: middle;
+    // margin-bottom: 80px;
+  }
+
+  .form__submit {
+    float: left;
+    width: 220px;
+    margin: 0;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+
+
 }
-*/

@@ -64,12 +64,10 @@
 
   .contact__table tbody {
     @include flex-row;
-    @include border(gold);
   }
 
   .contact__table tr {
     width: 50%;
-    background-color: $light-gray;
   }
 
   .contact__button {
