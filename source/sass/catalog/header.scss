@@ -12,14 +12,15 @@
 @media (min-width: $tablet-width) {
   .catalog__title {
     margin: -80px 0 20px;
-    padding: 115px 0 100px;
+    padding: 120px 0 100px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalog__title {
-    margin: 0 0 100px 20px;
+    margin: 0 0 100px 0;
     font-size: $desktop-header-font;
+    padding: 150px 0 100px;
   }
 
 }

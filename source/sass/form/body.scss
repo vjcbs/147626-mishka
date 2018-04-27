@@ -205,6 +205,7 @@
   .form__customer-email .form__input-text,
   .form__customer-addit-info .form__input-textarea {
     flex-basis: 73%;
+    font-size: 19px;
   }
 
   .form__note {
@@ -213,6 +214,7 @@
     margin-right: 50px;
     margin-bottom: 50px;
     height: 48px;
+    font-size: 17px;
     line-height: 48px;
     vertical-align: middle;
     // margin-bottom: 80px;
@@ -225,6 +227,32 @@
     margin-left: 50px;
     margin-bottom: 50px;
   }
+}
 
+@media (min-width: $desktop-width) {
+  .form__legend {
+    // @include border(red);
+    flex-basis: 18.333%;
+    text-align: center;
+  }
 
+  .form__list {
+    flex-basis: 81.666%;
+  }
+
+  .form__customer-phone .form__legend,
+  .form__customer-email .form__legend,
+  .form__customer-addit-info .form__legend {
+    flex-basis: 18.333%;
+  }
+
+  .form__customer-phone .form__input-text,
+  .form__customer-email .form__input-text,
+  .form__customer-addit-info .form__input-textarea {
+    flex-basis: 81.666%;
+  }
+
+  .form__submit {
+    margin-left: 275px;
+  }
 }
