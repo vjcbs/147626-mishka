@@ -69,13 +69,14 @@
     height: 620px;
     padding: 60px 50px;
     // padding-top: 35px;
-    @include border(black);
+    // @include border(black);
   }
 
   .featured__title {
     // display: inline-block;
     // float: left;
     // @include border(gold);
+    @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
     width: 50%;
     order: 1;
     padding: 0;
@@ -102,6 +103,7 @@
     order: 2;
     // align-self: flex-end;
     width: 40%;
+    font-size: 17px;
     // margin-top: 79px;
     // padding-right: 55%;
   }
@@ -145,6 +147,7 @@
     order: 4;
     height: auto;
     width: 40%;
+    font-size: 20px;
     text-align: center;
   }
 

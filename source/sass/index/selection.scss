@@ -9,7 +9,7 @@
   // @include border(blue);
 }
 
-.header__title {
+.page-header__title {
   display: block;
   min-height: 310px;
   font-size: $h1-font-size;
@@ -56,7 +56,7 @@
 }
 
 @media (max-height: 480px) {
-  .header__title {
+  .page-header__title {
     min-height: 200px;
   }
 
@@ -79,11 +79,16 @@
     margin-top: -80px;
     padding: 130px 50px 0 50px;
     background-size: contain;
+    background-position: center;
     background-color: #f9f9f9;
+    // background-color: $light-gray;
     z-index: -2;
+    border-top: 1px solid $light-gray;
+    // @include border(red);
   }
 
-  .header__title {
+  .page-header__title {
+    @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
     padding: 0;
     min-height: 310px;
     flex-grow: 3;
@@ -91,11 +96,20 @@
 
   .selection__list {
     @include flex-row;
-    height: 80px;
+    height: 100px;
     flex-grow: 1;
   }
 
   .selection__item {
     width: 50%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .selection {
+    padding: 120px 100px 0 100px;
+    margin-top: 0;
   }
 }

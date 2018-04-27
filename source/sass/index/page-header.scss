@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 95vh;
   // @include border(red);
 }
 
@@ -26,6 +26,9 @@
 }
 
 .nav-menu__item {
+  @include flex-row;
+  position: relative;
+  justify-content: center;
   padding: 30px 40px;
   border: 1px solid #ececec;
   text-align: center;
@@ -36,9 +39,20 @@
   }
 }
 
+.nav-menu__item-image {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  fill: #d3d2d2;
+}
+
+
 .nav-menu__item-link {
   @include reset-link;
   @include heading($h3-font-size);
+  // text-align: right;
+  // @include border(red);
 }
 
 .nav-menu__toggle {
@@ -59,6 +73,7 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
+    position: relative;
     // margin: auto;
     // background-position: top 90px center;
     // @include border(red);
@@ -72,7 +87,7 @@
     left: 50px;
     z-index: 5;
     height: 90px;
-    align-self: flex-start;
+    // align-self: flex-start;
   }
 
   .nav-menu__toggle {
@@ -90,22 +105,31 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 100%;
-    // border: 1px solid blue;
+    // @include border(gold);
+  }
+
+  .nav-menu__list::after {
+    @include font-open-sans($size: $text-font-size, $color: $light-black)
+    content: "Бесплатная доставка по России";
+    position: absolute;
+    top: 110px;
+    right: 50px;
+    // color: blue;
   }
 
   .nav-menu__item {
     height: 80px;
     padding: 0;
-    display: flex;
+    @include flex-row;
     justify-content: flex-start;
     align-items: center;
+    border-top: none;
+    border-bottom: none;
 
     &:first-child,
     &:nth-child(2) {
       width: 30%;
-      border-bottom: none;
-      border-left: none;
-      border-right: none;
+      border: none;
 
       .nav-menu__item-link {
         font-size: $text-font-size;
@@ -117,9 +141,9 @@
       padding: 0;
       width: 80px;
       order: -2;
-      background-image: url("../img/icon-search.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+      // background-image: url("../img/icon-search.svg");
+      // background-repeat: no-repeat;
+      // background-position: center;
 
       .nav-menu__item-link {
         display: none;
@@ -128,19 +152,82 @@
 
     &:nth-child(4) {
       // width: auto;
+      // @include flex-row;
       order: -1;
       flex-grow: 1;
       justify-content: flex-end;
-      background-image: url("../img/icon-cart.svg");
-      background-repeat: no-repeat;
-      background-position: top 50% left 10%;
+      align-items: center;
+      // background-image: url("../img/icon-cart.svg");
+      // background-repeat: no-repeat;
+      // background-position: top 50% left 10%;
       border-right: none;
       border-left: none;
-      padding-right: 0;
+      padding: 0 0 0 20px;
+      // @include border(blue);
 
       .nav-menu__item-link {
-        position: relative;
+        // position: relative;
+        // @include border(gold);
       }
+
+      .nav-menu__item-image {
+        // @include border(green);
+        left: 20px;
+        // position: static;
+        // align-self: center;
+      }
+
     }
+  }
+
+}
+
+@media (min-width: $tablet-width) and (max-width: 730px) {
+  .nav-menu__item:nth-child(3) {
+    margin-left: 30%;
+  }
+
+  .nav-menu__item:last-child {
+    justify-content: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    // padding: 0 100px;
+  }
+
+  .page-header__logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-menu {
+    display: block;
+    padding: 0 100px;
+  }
+
+  .nav-menu__list::after {
+    right: 100px;
+  }
+
+  .nav-menu__item:first-child {
+    order: 1;
+    width: 20%;
+  }
+
+  .nav-menu__item:nth-child(2) {
+    order: 2;
+    width: 20%;
+    margin-right: 28%;
+  }
+
+  .nav-menu__item:nth-child(3) {
+    order: 3;
+    margin: 0;
+  }
+
+  .nav-menu__item:last-child {
+    order: 4;
   }
 }

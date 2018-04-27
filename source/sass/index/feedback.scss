@@ -19,7 +19,7 @@
 .feedback__author-name {
   @include heading($h3-font-size);
   margin-top: 70px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .feedback__author-account {
@@ -62,14 +62,22 @@
     @include flex-row;
     flex-wrap: wrap;
     justify-content: space-between;
+    background: url("../img/feedback-image.jpg") no-repeat;
+    background-size: contain;
+    background-position: left 0 top 0;
   }
 
   .feedback__title {
     order: 1;
+    @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
   }
 
   .feedback__item {
     order: 3;
+  }
+
+  .feedback__text {
+    font-size: 17px;
   }
 
   .feedback__nav-buttons {
@@ -78,15 +86,32 @@
     right: 50px;
     order: 4;
     width: 170px;
+    // border: none;
     // @include border(green);
   }
 
   .feedback__nav-button {
     width: 50%;
+    border: none;
   }
 
   .feedback__button {
     order: 2;
     width: 170px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback {
+    padding: 70px 100px 50px 270px;
+    background-position: left 100px center;
+  }
+
+  .feedback__title {
+    font-size: $desktop-header-font;
+  }
+
+  .feedback__nav-buttons {
+    right: 100px;
   }
 }
