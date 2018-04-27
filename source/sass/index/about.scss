@@ -38,8 +38,7 @@
   }
 
   .about__title {
-    @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px)
-    // padding: 0;
+    @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
   }
 
   .about__list {

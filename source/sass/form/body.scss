@@ -137,6 +137,11 @@
   .form__customer-phone,
   .form__customer-email,
   .form__customer-addit-info {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0;
+    padding: 40px 50px;
     border: none;
   }
 
@@ -178,16 +183,6 @@
   .form__input-text {
     padding: 12px 17px;
     background-color: transparent;
-  }
-
-  .form__customer-phone,
-  .form__customer-email,
-  .form__customer-addit-info {
-    @include flex-row;
-    justify-content: space-between;
-    align-items: baseline;
-    margin: 0;
-    padding: 40px 50px;
   }
 
   .form__customer-phone,

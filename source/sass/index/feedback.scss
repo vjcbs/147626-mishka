@@ -68,8 +68,8 @@
   }
 
   .feedback__title {
-    order: 1;
     @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
+    order: 1;
   }
 
   .feedback__item {

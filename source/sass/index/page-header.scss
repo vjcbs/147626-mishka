@@ -109,7 +109,7 @@
   }
 
   .nav-menu__list::after {
-    @include font-open-sans($size: $text-font-size, $color: $light-black)
+    @include font-open-sans($size: $text-font-size, $color: $light-black);
     content: "Бесплатная доставка по России";
     position: absolute;
     top: 110px;
@@ -118,11 +118,11 @@
   }
 
   .nav-menu__item {
-    height: 80px;
-    padding: 0;
     @include flex-row;
     justify-content: flex-start;
     align-items: center;
+    height: 80px;
+    padding: 0;
     border-top: none;
     border-bottom: none;
 
@@ -165,21 +165,14 @@
       padding: 0 0 0 20px;
       // @include border(blue);
 
-      .nav-menu__item-link {
-        // position: relative;
-        // @include border(gold);
-      }
-
       .nav-menu__item-image {
         // @include border(green);
         left: 20px;
         // position: static;
         // align-self: center;
       }
-
     }
   }
-
 }
 
 @media (min-width: $tablet-width) and (max-width: 730px) {
@@ -217,8 +210,8 @@
   }
 
   .nav-menu__item:first-child::after {
-    content: "Новые поступления";
     @include font-open-sans-bold(15px);
+    content: "Новые поступления";
     position: absolute;
     top: 110px;
     left: 0;
@@ -232,8 +225,8 @@
   }
 
   .nav-menu__item:nth-child(2)::after {
-    content: "Распродажа";
     @include font-open-sans-bold(15px);
+    content: "Распродажа";
     position: absolute;
     top: 110px;
     left: 0;
@@ -248,6 +241,4 @@
   .nav-menu__item:last-child {
     order: 4;
   }
-
-
 }
