@@ -62,14 +62,12 @@
 @media (min-width: $tablet-width) {
   .featured {
     @include flex-column;
-    // display: block;
     position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 620px;
+    height: 600px;
     padding: 60px 50px;
-    // padding-top: 35px;
-    // @include border(black);
+    margin-bottom: 50px;
   }
 
   .featured__title {
@@ -77,10 +75,11 @@
     // float: left;
     // @include border(gold);
     @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
-    width: 50%;
+    width: 60%;
     order: 1;
     padding: 0;
     margin: 0;
+    z-index: 5;
   }
 
   .featured__subtitle {
@@ -104,7 +103,9 @@
     // align-self: flex-end;
     width: 40%;
     font-size: 17px;
-    // margin-top: 79px;
+    z-index: 5;
+    margin: 0;
+    margin-top: -10px;
     // padding-right: 55%;
   }
 
@@ -116,14 +117,14 @@
   }
 
   .featured__product-image {
-    order: 7;
-    flex-basis: 0;
-    flex-grow: 5;
-    align-self: flex-end;
+    // order: 7;
+    // flex-basis: 0;
+    // flex-grow: 5;
+    // align-self: flex-end;
     // max-width: 50%;
-    width: 260px;
-    height: 344px;
-    object-fit: none;
+    // width: 260px;
+    // height: 344px;
+    // object-fit: none;
     // margin: 0;
     // position: absolute;
     // top: 100%;
@@ -140,6 +141,12 @@
 
   .featured__product-image--tablet {
     display: block;
+    position: absolute;
+    bottom: 60px;
+    right: 50px;
+    width: auto;
+    height: auto;
+    object-fit: none;
   }
 
   .featured__price {
@@ -158,5 +165,46 @@
     // border: 1px solid red;
     // vertical-align: bottom;
     // transform: translateY(-44px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .featured {
+    height: 686px;
+    padding: 0 100px 0 270px;
+  }
+
+  .featured__title {
+    width: 100%;
+    margin-top: 50px;
+    font-size: $desktop-header-font;
+    // @include border(red);
+  }
+
+  .featured__subtitle {
+    position: absolute;
+    top: 50px;
+    left: 130px;
+  }
+
+  .featured__product-image {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+  }
+
+  .featured__product-image--mobile {
+    display: none;
+  }
+
+  .featured__product-image--tablet {
+    display: none;
+  }
+
+  .featured__product-image--desktop {
+    display: block;
+    width: auto;
+    height: auto;
+    object-fit: contain;
   }
 }

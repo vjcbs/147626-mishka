@@ -31,10 +31,8 @@
 
 @media (min-width: $tablet-width) {
   .about {
-    // max-height: 600px;
     min-height: 500px;
     padding: 60px 50px;
-    // @include border(gold);
   }
 
   .about__title {
@@ -45,8 +43,6 @@
     @include flex-column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    // align-items: baseline;
-    // @include border(red);
     max-height: 500px;
   }
 
@@ -55,10 +51,6 @@
     width: 40%;
     height: 120px;
     margin-bottom: 25px;
-    // margin-bottom: 50px;
-    // @include border(blue);
-    // align-self: center;
-    // flex-basis: 1;
   }
 
   .about__item-caption {
@@ -73,6 +65,7 @@
 @media (min-width: $desktop-width) {
   .about {
     padding: 60px 270px;
+    margin-bottom: 50px;
   }
 
   .about__title {
