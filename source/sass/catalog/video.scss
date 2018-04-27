@@ -88,3 +88,62 @@
     border-bottom: 1px solid $light-gray;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .catalog-video {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 455px;
+    padding: 0 100px;
+    // @include border(blue);
+  }
+
+  .catalog-video__frame {
+    // align-self: flex-end;
+    // display: flex;
+    margin: 0;
+    width: 60%;
+    // @include border(red);
+    // flex-basis: 100%;
+  }
+
+  .catalog-video__frame-image {
+    // height: 455px;
+    // width: 682px;
+    // object-fit: none;
+    // @include border(red);
+    // vertical-align: top;
+    // display: flex;
+    // justify-content: flex-start;
+    // margin-top: -100px;
+  }
+
+  .catalog-video__title-wrapper {
+    @include flex-column;
+    justify-content: flex-start;
+    // @include border(gold);
+    flex-basis: 40%;
+    align-self: flex-start;
+    padding: 40px 55px;
+
+  }
+
+  .catalog-video__title {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .catalog-video__camera-icon {
+    align-self: flex-start;
+  }
+
+  .catalog-video__desc {
+    align-self: flex-start;
+    width: 30%;
+    margin-top: 0;
+    padding: 0 55px;
+    // @include border(tomato);
+  }
+
+}
