@@ -41,22 +41,12 @@
   object-fit: contain;
 }
 
-.featured__product-image--mobile {
-  display: block;
-}
-
-.featured__product-image--tablet {
-  display: none;
-}
-
-.featured__product-image--desktop {
-  display: none;
-}
 
 .featured__price {
   @include font-open-sans-bold($size: $h3-font-size, $color: $light-black);
-  margin: auto;
-  padding: 30px;
+  padding: 20px;
+  text-align: center;
+  // @include border(red);
 }
 
 @media (min-width: $tablet-width) {
@@ -68,17 +58,19 @@
     height: 600px;
     padding: 60px 50px;
     margin-bottom: 50px;
+    @include border(green);
   }
 
   .featured__title {
     // display: inline-block;
     // float: left;
-    // @include border(gold);
+    @include border(gold);
     @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
     width: 60%;
     order: 1;
     padding: 0;
     margin: 0;
+    // margin-top: -20px;
     z-index: 5;
   }
 
@@ -94,7 +86,7 @@
     width: 100px;
     align-self: flex-end;
     text-align: center;
-    // @include border(tomato);
+    @include border(tomato);
   }
 
   .featured__desc {
@@ -133,13 +125,6 @@
     // height: 404px;
     // @include border(red);
     // transform: translateY(-50%);
-  }
-
-  .featured__product-image--mobile {
-    display: none;
-  }
-
-  .featured__product-image--tablet {
     display: block;
     position: absolute;
     bottom: 60px;
@@ -162,9 +147,6 @@
     order: 5;
     width: 40%;
     align-self: flex-start;
-    // border: 1px solid red;
-    // vertical-align: bottom;
-    // transform: translateY(-44px);
   }
 }
 
@@ -172,13 +154,14 @@
   .featured {
     height: 686px;
     padding: 0 100px 0 270px;
+    @include border(gold);
   }
 
   .featured__title {
     width: 100%;
-    margin-top: 50px;
+    margin-top: -20px;
     font-size: $desktop-header-font;
-    // @include border(red);
+    @include border(red);
   }
 
   .featured__subtitle {
@@ -191,20 +174,10 @@
     position: absolute;
     top: 50px;
     right: 100px;
-  }
-
-  .featured__product-image--mobile {
-    display: none;
-  }
-
-  .featured__product-image--tablet {
-    display: none;
-  }
-
-  .featured__product-image--desktop {
     display: block;
     width: auto;
     height: auto;
     object-fit: contain;
   }
+
 }

@@ -34,6 +34,12 @@
   padding: 0 30px;
   background-repeat: no-repeat;
   background-color: $light-green;
+
+  &:hover {
+    // height: calc(100% + 5px);
+    // height: 200px;
+    background-color: gold;
+  }
 }
 
 .selection__item:nth-child(2n) {
@@ -43,6 +49,11 @@
 .selection__item-name {
   align-self: center;
   width: 30%;
+
+  &:hover {
+    height: 200px;
+    opacity: 0.6;
+  }
 }
 
 .selection__item:first-child {

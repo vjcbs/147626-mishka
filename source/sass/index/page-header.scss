@@ -10,6 +10,14 @@
   height: 80px;
   padding-top: 25px;
   align-self: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .nav-menu {
@@ -33,10 +41,6 @@
   border: 1px solid #ececec;
   text-align: center;
   cursor: pointer;
-
-  &:hover {
-    filter: contrast(0.5);
-  }
 }
 
 .nav-menu__item-image {
@@ -45,14 +49,29 @@
   left: 30px;
   transform: translateY(-50%);
   fill: #d3d2d2;
+
+  &:hover {
+    fill: $light-green;
+  }
+
+  &:active {
+    fill: $light-green;
+    opacity: 0.3;
+  }
 }
 
 
 .nav-menu__item-link {
   @include reset-link;
   @include heading($h3-font-size);
-  // text-align: right;
-  // @include border(red);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .nav-menu__toggle {

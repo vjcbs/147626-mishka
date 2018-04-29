@@ -40,6 +40,10 @@
   background-position: center center;
 }
 
+.feedback__nav-buttons .feedback__nav-button:hover {
+  filter: opacity(0.6);
+}
+
 .feedback__nav-button--left {
   border-right: 0;
   background-image: url("../img/icon-left-arrow.svg");
