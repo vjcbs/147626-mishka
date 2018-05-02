@@ -38,10 +38,17 @@
   border: 1px solid #ececec;
   background-repeat: no-repeat;
   background-position: center center;
+  outline: none;
 }
 
-.feedback__nav-buttons .feedback__nav-button:hover {
-  filter: opacity(0.6);
+.feedback__nav-button:hover {
+  background-color: white;
+  opacity: 0.6;
+}
+
+.feedback__nav-button:active {
+  background-color: white;
+  opacity: 0.3;
 }
 
 .feedback__nav-button--left {

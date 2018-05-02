@@ -63,7 +63,6 @@
 @mixin reset-link {
   color: black;
   text-decoration: none;
-  cursor: pointer;
 }
 
 @mixin fill-and-align($color: #3bb09d, $align: center) {

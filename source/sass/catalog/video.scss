@@ -23,6 +23,9 @@
 
 .catalog-video__frame {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   margin: auto;
   background: url("../img/video-mobile@1x.jpg") no-repeat;
@@ -38,15 +41,17 @@
 }
 
 .catalog-video__play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
+  transition: 0.3s;
+  flex-shrink: 0;
 
-.catalog-video__play-icon:hover {
-  filter: contrast(0.8);
-  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-video__desc {
@@ -75,6 +80,8 @@
 
   .catalog-video__frame {
     order: 1;
+    width: 682px;
+    height: 455px;
   }
 
   .catalog-video__title-wrapper {
@@ -103,7 +110,8 @@
     // align-self: flex-end;
     // display: flex;
     margin: 0;
-    width: 60%;
+    width: 668px;
+    height: 455px;
     // @include border(red);
     // flex-basis: 100%;
   }

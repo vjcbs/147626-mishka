@@ -43,6 +43,12 @@
   cursor: pointer;
 }
 
+.nav-menu__item:nth-child(5),
+.nav-menu__item:nth-child(6) {
+  display: none;
+}
+
+
 .nav-menu__item-image {
   position: absolute;
   top: 50%;
@@ -116,6 +122,7 @@
   .nav-menu {
     display: block;
     padding: 0 50px;
+    z-index: 2;
   }
 
 
@@ -131,7 +138,7 @@
     @include font-open-sans($size: $text-font-size, $color: $light-black);
     content: "Бесплатная доставка по России";
     position: absolute;
-    top: 110px;
+    top: 108px;
     right: 50px;
     // color: blue;
   }
@@ -199,7 +206,7 @@
     margin-left: 30%;
   }
 
-  .nav-menu__item:last-child {
+  .nav-menu__item:nth-child(4) {
     justify-content: center;
   }
 }
@@ -211,6 +218,8 @@
 
   .page-header__logo {
     left: 50%;
+    top: 5px;
+    padding-top: 0;
     transform: translateX(-50%);
   }
 
@@ -226,30 +235,25 @@
   .nav-menu__item:first-child {
     order: 1;
     width: 20%;
-  }
 
-  .nav-menu__item:first-child::after {
-    @include font-open-sans-bold(15px);
-    content: "Новые поступления";
-    position: absolute;
-    top: 110px;
-    left: 0;
-    cursor: pointer;
+    .nav-menu__item-link {
+      font-size: 17px;
+    }
   }
 
   .nav-menu__item:nth-child(2) {
     order: 2;
     width: 20%;
     margin-right: 28%;
+    font-size: 17px;
   }
 
-  .nav-menu__item:nth-child(2)::after {
-    @include font-open-sans-bold(15px);
-    content: "Распродажа";
-    position: absolute;
-    top: 110px;
-    left: 0;
-    cursor: pointer;
+  .nav-menu__item:first-child,
+  .nav-menu__item:nth-child(2) {
+    // @include border(gold);
+    .nav-menu__item-link {
+      font-size: 17px;
+    }
   }
 
   .nav-menu__item:nth-child(3) {
@@ -257,7 +261,28 @@
     margin: 0;
   }
 
-  .nav-menu__item:last-child {
+  .nav-menu__item:nth-child(4) {
     order: 4;
+  }
+
+  .nav-menu__item:nth-child(5),
+  .nav-menu__item:nth-child(6) {
+    display: flex;
+    width: 20%;
+    border: none;
+
+    // @include border(red);
+
+    .nav-menu__item-link {
+      font-size: 15px;
+    }
+  }
+
+  .nav-menu__item:nth-child(5) {
+    order: 5;
+  }
+
+  .nav-menu__item:nth-child(6) {
+    order: 6;
   }
 }
