@@ -55,14 +55,6 @@
   object-fit: contain;
 }
 
-.contact__map-image--tablet {
-  display: none;
-}
-
-.contact__map-image--desktop {
-  display: none;
-}
-
 .contact__button {
   width: $wrapper-width;
   align-self: center;
@@ -111,33 +103,27 @@
     width: 250px;
     margin-top: 50px;
   }
-
-  .contact__map-image--mobile {
-    display: none;
-  }
-
-  .contact__map-image--tablet {
-    display: block;
-  }
 }
 
 @media (min-width: $desktop-width) {
   .contact {
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 80px 100px 80px 270px;
-    height: 650px;
+    height: 620px;
+    // @include border(tomato);
   }
 
   .contact-wrapper {
     width: 40%;
-    order: 2;
+    order: 1;
     padding: 0;
+    // @include border(gold);
   }
 
   .contact__title {
     font-size: $desktop-header-font;
-    order: 1;
   }
 
   .contact__title-icon {
@@ -154,21 +140,18 @@
     width: 80%;
   }
 
-  .contact__map-image--tablet {
-    display: none;
+  .contact__button {
+    order: 2;
+    align-self: flex-start;
   }
 
-  .contact__map-image--desktop {
-    display: block;
-    width: auto;
-    height: auto;
-    object-fit: none;
-    order: 4;
+  .contact picture {
+    order: 3;
     align-self: flex-end;
   }
 
-  .contact__button {
-    order: 3;
-    align-self: flex-start;
+  .contact__map-image {
+    width: auto;
+    // @include border(lightblue);
   }
 }

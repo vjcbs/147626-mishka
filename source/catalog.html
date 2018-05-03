@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <script defer src="node_modules/svgxuse/svgxuse.js"></script>
+    <script src="js/picturefill.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,7 +57,7 @@
       <li class="catalog__item">
         <picture>
           <source media="(min-width:1200px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
-          <source media="(min-width:640px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@1x.jpg 2x">
+          <source media="(min-width:640px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
           <img class="catalog__item-image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик" />
         </picture>
         <div class="catalog__item-desc-wrapper">
@@ -77,7 +79,7 @@
         <picture>
           <source media="(min-width:1200px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
           <source media="(min-width:640px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
-          <img class="catalog__item-image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" align="middle" alt="Корзинка для белья" />
+          <img class="catalog__item-image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья" />
         </picture>
         <div class="catalog__item-desc-wrapper">
           <h3 class="catalog__item-title">Корзинка для белья</h3>
@@ -98,7 +100,7 @@
         <picture>
           <source media="(min-width:1200px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
           <source media="(min-width:640px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
-          <img class="catalog__item-image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" width="260" height="195" align="middle" alt="Большая корзина для игрушек" />
+          <img class="catalog__item-image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" width="260" height="195" alt="Большая корзина для игрушек" />
         </picture>
         <div class="catalog__item-desc-wrapper">
           <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
@@ -126,7 +128,12 @@
       <h2 class="catalog-video__title">Процесс производства</h2>
     </div>
     <div class="catalog-video__frame">
-      <img class="catalog-video__play-icon" src="img/icon-play.svg" width="101" height="77" alt="Видео" />
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+        <source media="(min-width: 640px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+        <img class="catalog-video__frame-image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео процесса производства"/>
+      </picture>
+      <img class="catalog-video__play-icon" src="img/icon-play.svg" width="101" height="77" alt="Воспроизведение" />
     </div>
     <div class="catalog-video__desc">
       <p class="catalog-video__desc-text">
@@ -164,9 +171,6 @@
     </ul>
     <a class="copyright" href="https://htmlacademy.ru">
       <b class="copyright__title">Разработано</b>
-        <!-- <svg class="copyright__logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-          <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
-        </svg> -->
         <svg class="copyright__logo" width="27" height="34">
           <use xlink:href="img/logo-htmlacademy.svg#logo">
         </svg>

@@ -1,6 +1,8 @@
 var menu = document.querySelector('.nav-menu');
 var menuToggle = document.querySelector('.nav-menu__toggle');
 
+menu.classList.remove('nav-menu--nojs');
+
 menuToggle.addEventListener("click", (e) => {
 
   if ( menu.classList.contains('nav-menu--slide-down') ) {

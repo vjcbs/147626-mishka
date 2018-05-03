@@ -57,6 +57,13 @@
   padding: 15px 60px;
 }
 
+.form__customer-name {
+  .form__item {
+    @include flex-column;
+    padding: 15px 0;
+  }
+}
+
 // Оформление кастомных радиокнопок
 
 .form__radio-button {
@@ -177,15 +184,6 @@
   }
 }
 
-.form__customer-addit-info {
-  // @include border(red);
-  // padding: 0 30px;
-}
-
-.form__customer-name .form__item {
-  @include flex-column;
-}
-
 .form__customer-name-label {
   // margin-bottom: 5px;
 }
@@ -285,9 +283,29 @@
     // @include border(green);
   }
 
-  .form__radiogroup {
-    // @include border(red);
+  .form__item {
+    padding: 15px 0;
   }
+
+  .form__customer-name {
+    .form__list {
+      transform: translateX(-55px);
+    }
+  }
+
+  // .form__customer-phone,
+  // .form__customer-email {
+  //   .form__input-text {
+  //     transform: translateX(-55px);
+  //   }
+  // }
+  //
+  // .form__customer-addit-info {
+  //   .form__input-textarea {
+  //     transform: translateX(-55px);
+  //   }
+  // }
+
 
   .form__checkboxgroup {
     background-color: $light-gray;
@@ -329,6 +347,7 @@
   .form__customer-addit-info .form__input-textarea {
     flex-basis: 73%;
     font-size: 19px;
+    transform: translateX(-55px);
   }
 
   .form__note {
