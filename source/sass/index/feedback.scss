@@ -67,7 +67,7 @@
 
 @media (min-width: $tablet-width) {
   .feedback {
-    padding: 70px 50px 30px 50px;
+    padding: 70px 50px 0 50px;
     position: relative;
     // @include border(red);
     @include flex-row;
@@ -76,6 +76,7 @@
     background: url("../img/review@1x.jpg") no-repeat;
     background-size: contain;
     background-position: left 0 top 0;
+    margin-bottom: 50px;
   }
 
   .feedback__title {

@@ -22,6 +22,19 @@
 }
 
 @media (min-width: $tablet-width) {
+  .form-header::after {
+    content: "";
+    position: absolute;
+    bottom: 300px;
+    left: 0;
+    width: 100%;
+    height: 34px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    z-index: 100;
+  }
+
   .form__title {
     font-size: $tablet-header-font;
     line-height: 50px;
@@ -34,6 +47,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .form-header::after {
+    bottom: 540px;
+  }
+
   .form__title {
     padding: 150px 0 100px;
     font-size: $desktop-header-font;

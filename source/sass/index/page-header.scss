@@ -99,12 +99,38 @@
   background: url("../img/icon-menu-close.svg") no-repeat;
 }
 
+.border-image {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
+  // .border-image {
+  //   display: block;
+  //   position: absolute;
+  //   bottom: -130px;
+  //   right: 0;
+  //   fill: blue;
+  //   z-index: 100;
+  // }
+
   .page-header {
     position: relative;
     // @include border(red);
     height: auto;
     min-height: auto;
+  }
+
+  .page-header::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 34px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    z-index: 10;
   }
 
   .page-header__logo {

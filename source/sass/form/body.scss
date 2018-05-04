@@ -286,32 +286,13 @@
 
   .form__item {
     padding: 15px 0;
+    // @include border(red);
   }
 
   .form__label {
     font-size: 19px;
     line-height: 18px;
   }
-
-  .form__customer-name {
-    .form__list {
-      transform: translateX(-55px);
-    }
-  }
-
-  // .form__customer-phone,
-  // .form__customer-email {
-  //   .form__input-text {
-  //     transform: translateX(-55px);
-  //   }
-  // }
-  //
-  // .form__customer-addit-info {
-  //   .form__input-textarea {
-  //     transform: translateX(-55px);
-  //   }
-  // }
-
 
   .form__checkboxgroup {
     background-color: $light-gray;
@@ -320,6 +301,13 @@
   .form__checkboxgroup .form__list {
     flex-wrap: wrap;
     max-height: 170px;
+  }
+
+  .form__radiogroup,
+  .form__checkboxgroup {
+    .form__list {
+      transform: translateX(55px);
+    }
   }
 
   .form__customer-name .form__item {
@@ -354,27 +342,23 @@
   .form__customer-addit-info .form__input-textarea {
     flex-basis: 73%;
     font-size: 19px;
-    transform: translateX(-55px);
+  }
+
+  .form__bottom-wrapper {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 50px;
   }
 
   .form__note {
-    float: right;
-    margin: 0;
-    margin-right: 50px;
-    margin-bottom: 50px;
-    height: 48px;
     font-size: 17px;
-    line-height: 48px;
-    vertical-align: middle;
-    // margin-bottom: 80px;
+    line-height: 30px;
   }
 
   .form__submit {
-    float: left;
+    order: -1;
     width: 220px;
-    margin: 0;
-    margin-left: 50px;
-    margin-bottom: 50px;
   }
 }
 
@@ -401,11 +385,12 @@
     flex-basis: 81.666%;
   }
 
-  .form__label {
-    font-size: 19px;
+  .form__bottom-wrapper {
+    padding-left: 20.5%;
+    // @include border(red);
   }
 
-  .form__submit {
-    margin-left: 275px;
+  .form__label {
+    font-size: 19px;
   }
 }

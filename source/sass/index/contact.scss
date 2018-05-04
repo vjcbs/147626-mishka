@@ -65,6 +65,8 @@
 @media (min-width: $tablet-width) {
   .contact {
     padding: 70px 0;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-position: top center;
   }
 
   .contact-wrapper {

@@ -42,7 +42,7 @@
     // height: 200px;
     // transform: translateY(-5px);
     // height: calc(100% + 5px);
-    transform: scaleY(1.05) translateY(-5%);
+    transform: scaleY(1.05) translateY(-2px);
     // height: 105px;
   }
 
@@ -113,6 +113,13 @@
     // min-height: 300px;
     // @include border(tomato);
     justify-content: space-between;
+    // border-image-source: url("../img/bg-zigzag-line.svg");
+    // border-image-slice: 50;
+    // border-image-repeat: repeat-x;
+    // border-image-width: 23px;
+    // border-image-outset: 14px;
+    // background-position: center bottom;
+
   }
 
   .page-header__title {
@@ -131,6 +138,9 @@
     flex-grow: 0;
     // @include border(gold);
     // margin-bottom: -70px;
+    // border-image-source: url("../img/bg-zigzag-line.svg");
+    // border-image-slice: 10%;
+    // border-image-repeat: repeat-x;
   }
 
   .selection__item {

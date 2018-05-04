@@ -56,7 +56,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 680px;
-    padding: 60px 50px 0 50px;
+    padding: 0 50px 80px 50px;
+    margin-top: 100px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-position: bottom center;
+
+    // z-index: 60;
     // margin-bottom: 50px;
     // @include border(blue);
   }
@@ -102,17 +107,9 @@
     margin-right: 30px;
   }
 
-  .featured picture {
-    // display: block;
-    // order: 7;
-    // width: 50%;
-    // align-self: flex-start;
-    // @include border(lightblue);
-  }
-
   .featured__image-wrapper {
     position: absolute;
-    bottom: -5px;
+    bottom: 75px;
     right: 50px;
     display: flex;
     // align-items: ;
@@ -145,7 +142,7 @@
 @media (min-width: $desktop-width) {
   .featured {
     height: 686px;
-    padding: 50px 100px 0 270px;
+    padding: 50px 100px 80px 270px;
   }
 
   .featured__title {
