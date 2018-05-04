@@ -1,7 +1,7 @@
 .selection {
   @include flex-column;
-  justify-content: flex-end;
-  flex-grow: 1;
+  justify-content: space-between;
+  // flex-grow: 1;
   padding-top: 50px;
   background: url("../img/hero-mobile@1x.jpg") no-repeat;
   background-position: top center;
@@ -12,7 +12,7 @@
   display: block;
   min-height: 260px;
   width: 75%;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 25px;
   color: #010000;
   text-align: center;
@@ -42,8 +42,8 @@
     // height: 200px;
     // transform: translateY(-5px);
     // height: calc(100% + 5px);
-    transform: translateY(-5px);
-    height: 105px;
+    transform: scaleY(1.05) translateY(-5%);
+    // height: 105px;
   }
 
   &:hover .selection__item-name {
@@ -101,16 +101,18 @@
 
 @media (min-width: $tablet-width) {
   .selection {
+    min-height: 600px;
     margin-top: -80px;
-    padding: 130px 50px 0 50px;
-    background-size: contain;
+    padding: 120px 50px 0 50px;
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-size: auto;
     background-position: center;
     background-color: #f9f9f9;
-    // background-color: $light-gray;
     z-index: 1;
     border-top: 1px solid $light-gray;
-    min-height: 300px;
-    @include border(tomato);
+    // min-height: 300px;
+    // @include border(tomato);
+    justify-content: space-between;
   }
 
   .page-header__title {
@@ -120,14 +122,14 @@
     padding: 0;
     min-height: auto;
     flex-grow: 0;
-    @include border(lightblue);
+    // @include border(lightblue);
   }
 
   .selection__list {
     @include flex-row;
-    height: auto;
+    // height: 120px;
     flex-grow: 0;
-    @include border(gold);
+    // @include border(gold);
     // margin-bottom: -70px;
   }
 
@@ -141,7 +143,7 @@
 @media (min-width: $desktop-width) {
   .selection {
     padding: 120px 100px 0 100px;
-    @include border(red);
+    // @include border(red);
     justify-content: space-between;
   }
 
