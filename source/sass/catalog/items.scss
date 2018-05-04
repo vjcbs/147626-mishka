@@ -94,7 +94,7 @@
     min-height: 336px;
     height: 335px;
     padding-right: 30px;
-    @include border(tomato);
+    // @include border(tomato);
   }
 
   .catalog__item-title {
@@ -117,7 +117,7 @@
     width: 15vw;
     min-width: 0;
     border: none;
-    @include border(blue);
+    // @include border(blue);
     margin-left: 20px;
     padding: 30px 0;
   }

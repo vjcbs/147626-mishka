@@ -67,7 +67,7 @@
 }
 
 .catalog-video__desc {
-  @include font-open-sans($size: 13px, $color: $light-black, $lh: 24px)
+  @include font-open-sans($size: 13px, $color: $light-black, $lh: 24px);
   align-self: center;
   padding: 20px 30px;
 }
