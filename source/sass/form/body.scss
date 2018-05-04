@@ -28,8 +28,7 @@
 
 
 .form__legend {
-  @include heading($h3-font-size);
-  color: $light-green;
+  @include font-open-sans-bold($size: $h3-font-size, $color: $light-green, $lh: 16px);
   width: 80px;
   // padding-right: 30px;
   margin-top: -42px;
@@ -51,7 +50,7 @@
 }
 
 .form__item {
-  @include heading($h3-font-size);
+  @include font-open-sans-bold($size: $h3-font-size, $lh: 17px);
   display: flex;
   margin-bottom: 20px;
   padding: 15px 60px;
@@ -218,17 +217,18 @@
 .form__input-text::placeholder,
 .form__input-textarea::placeholder {
   color: $light-black;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .form__input-textarea {
-  @include font-open-sans($size: 15px);
+  @include font-open-sans($size: 15px, $lh: 18px);
   width: 100%;
   padding: 10px;
   margin: 20px 0;
   border: 2px solid $light-black;
   transition: border-color 0.25s;
   resize: none;
+  outline: none;
 
   &:hover,
   &:active {
@@ -237,6 +237,7 @@
 }
 
 .form__note {
+  @include font-open-sans($size: 14px, $lh: 16px);
   font: 12px $regular-font;
 }
 
@@ -287,6 +288,11 @@
     padding: 15px 0;
   }
 
+  .form__label {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
   .form__customer-name {
     .form__list {
       transform: translateX(-55px);
@@ -329,6 +335,7 @@
   .form__input-text {
     padding: 12px 17px;
     background-color: transparent;
+    line-height: 18px;
   }
 
   .form__customer-phone,

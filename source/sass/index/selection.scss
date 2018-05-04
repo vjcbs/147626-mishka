@@ -10,13 +10,13 @@
 
 .page-header__title {
   display: block;
-  min-height: 310px;
-  font-size: $h1-font-size;
-  color: #010000;
-  padding: 0 25px;
-  // transform: translateY(25%);
-  text-align: center;
+  min-height: 260px;
+  width: 75%;
   margin: auto;
+  padding: 0 25px;
+  color: #010000;
+  text-align: center;
+
 }
 
 .selection__list {
@@ -109,24 +109,30 @@
     // background-color: $light-gray;
     z-index: 1;
     border-top: 1px solid $light-gray;
+    min-height: 300px;
+    @include border(tomato);
   }
 
   .page-header__title {
-    @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
+    // @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
+    font-size: $tablet-header-font;
+    line-height: 50px;
     padding: 0;
-    min-height: 310px;
-    flex-grow: 3;
+    min-height: auto;
+    flex-grow: 0;
+    @include border(lightblue);
   }
 
   .selection__list {
     @include flex-row;
-    height: 100px;
-    flex-grow: 1;
+    height: auto;
+    flex-grow: 0;
+    @include border(gold);
+    // margin-bottom: -70px;
   }
 
   .selection__item {
     width: 50%;
-    // background-color: $light-gray;
     font-size: 20px;
     line-height: 30px;
   }
@@ -135,5 +141,12 @@
 @media (min-width: $desktop-width) {
   .selection {
     padding: 120px 100px 0 100px;
+    @include border(red);
+    justify-content: space-between;
+  }
+
+  .page-header__title {
+    font-size: 53px;
+    line-height: 57px;
   }
 }

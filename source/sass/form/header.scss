@@ -14,22 +14,30 @@
 }
 
 .form__header-text {
+  @include font-open-sans($size: 13px, $color: $light-black, $lh: 24px);
   align-self: center;
   margin: 0;
-  padding: 50px 50px;
+  padding: 25px 30px;
   line-height: 24px;
 }
 
 @media (min-width: $tablet-width) {
   .form__title {
     font-size: $tablet-header-font;
+    line-height: 50px;
+  }
+
+  .form__header-text {
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .form__title {
-    font-size: $desktop-header-font;
     padding: 150px 0 100px;
+    font-size: $desktop-header-font;
+    line-height: 57px;
   }
 
   .form__header-text {

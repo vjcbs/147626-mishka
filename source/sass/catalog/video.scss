@@ -15,7 +15,7 @@
 }
 
 .catalog-video__title {
-  @include heading($h3-font-size);
+  @include heading($h3-font-size, $lh: 24px);
   width: 50%;
   text-align: left;
   word-wrap: wrap;
@@ -67,6 +67,7 @@
 }
 
 .catalog-video__desc {
+  @include font-open-sans($size: 13px, $color: $light-black, $lh: 24px)
   align-self: center;
   padding: 20px 30px;
 }
@@ -90,6 +91,10 @@
     margin-bottom: 75px;
   }
 
+  .catalog-video__title {
+    font-size: 20px;
+  }
+
   .catalog-video__frame {
     order: 1;
     min-width: 540px;
@@ -105,6 +110,8 @@
   .catalog-video__desc {
     order: 3;
     padding: 20px 55px;
+    font-size: 15px;
+    line-height: 30px;
     border-bottom: 1px solid $light-gray;
   }
 }

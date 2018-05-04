@@ -9,6 +9,7 @@
 }
 
 .contact__title {
+  @include heading;
   margin: 0;
   padding: 0;
 }
@@ -88,7 +89,6 @@
 
   .contact__table tbody {
     @include flex-row;
-    // justify-content: space-between;
   }
 
   .contact__table tr {
@@ -119,11 +119,13 @@
     width: 40%;
     order: 1;
     padding: 0;
+    align-self: flex-start;
     // @include border(gold);
   }
 
   .contact__title {
     font-size: $desktop-header-font;
+    line-height: 57px;
   }
 
   .contact__title-icon {

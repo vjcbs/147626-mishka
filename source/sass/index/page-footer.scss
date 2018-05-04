@@ -56,7 +56,7 @@
 }
 
 .copyright__title {
-  @include heading($font-size: 19px);
+  @include heading($size: 19px, $lh: 18px);
 }
 
 .copyright__logo {
