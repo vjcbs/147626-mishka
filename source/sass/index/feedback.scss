@@ -1,5 +1,6 @@
 .feedback {
-  padding: 20px 30px;
+  padding: 25px 30px;
+  @include border(red);
 }
 
 .feedback__title {
@@ -8,18 +9,21 @@
 
 .feedback__item {
   margin: 0;
-  padding: 35px 0;
+  margin-bottom: 7px;
+  padding: 25px 0;
 }
 
 .feedback__text {
   @include font-open-sans($size: $text-font-size, $color: $light-black, $lh: 30px);
   @include reset-mp;
+  // padding: 0 0;
+  margin-bottom: 27px;
 }
 
 .feedback__author-name {
   @include heading($h3-font-size, $lh: 24px);
-  margin-top: 70px;
-  margin-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 3px;
 }
 
 .feedback__author-account {
@@ -30,7 +34,8 @@
 .feedback__nav-buttons {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 35px;
+  // margin-top: 10px;
+  margin-bottom: 38px;
 }
 
 .feedback__nav-button {

@@ -1,16 +1,16 @@
 .featured {
-  padding: 30px 30px;
+  padding: 28px 30px;
 }
 
 .featured__title {
   @include heading($h2-font-size);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .featured__subtitle {
   @include font-open-sans-bold($size: $h3-font-size, $color: $light-green, $lh: 20px);
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 23px;
   text-transform: uppercase;
 }
 
@@ -32,8 +32,13 @@
 }
 
 .featured__table td {
-  padding: 15px;
+  padding: 10px 0;
   border-bottom: 1px solid #ececec;
+}
+
+.featured__table td:last-child {
+  padding-left: 15px;
+  padding-right: 10px;
 }
 
 .featured__product-image {
@@ -45,8 +50,13 @@
 
 .featured__price {
   @include font-open-sans-bold($size: $h3-font-size, $color: $light-black);
-  padding: 20px;
+  padding: 0 20px;
+  margin-bottom: 28px;
   text-align: center;
+}
+
+.featured__order-button {
+
 }
 
 @media (min-width: $tablet-width) {

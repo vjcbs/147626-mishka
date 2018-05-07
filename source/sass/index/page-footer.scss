@@ -1,6 +1,6 @@
 .page-footer {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   background-color: #f1f1f1;
   padding: 0 30px;
   overflow-x: hidden;
@@ -9,14 +9,19 @@
 .footer__social-list {
   @include list-reset;
   @include flex-row;
-  justify-content: center;
-  align-self: center;
+  justify-content: space-around;
+  margin: auto;
+  align-items: center;
   border-bottom: 1px solid #e5e5e5;
-  margin: 0 -20px;
+  padding: 0 30px;
+  margin-top: 0;
+  // @include border(red);
 }
 
 .footer__item {
-  padding: 35px 20px;
+  padding: 25px 0;
+  // width: calc(1/3*100% - (1 - 1/3)*5px);
+  // flex-shrink: 1;
   // border: 1px solid red;
 }
 
@@ -26,12 +31,13 @@
 
 .social {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 22px;
+  height: 21px;
   background-repeat: no-repeat;
   background-position: center;
   fill: #231f20;
   cursor: pointer;
+  // @include border(blue);
 }
 
 .social:hover {
@@ -43,6 +49,21 @@
   opacity: 0.3;
 }
 
+.social--ig {
+  width: 22px;
+  height: 21px;
+}
+
+.social--fb {
+  width: 15px;
+  height: 28px;
+}
+
+.social--tw {
+  width: 23px;
+  height: 28px;
+}
+
 .copyright {
   @include reset-link;
   display: flex;
@@ -51,17 +72,20 @@
   align-items: center;
   align-self: center;
   width: 100%;
-  padding-top: 35px;
-  padding-bottom: 65px;
+  padding: 20px 25px 20px 15px;
+  // @include border(gold);
 }
 
 .copyright__title {
   @include heading($size: 19px, $lh: 18px);
+  // @include border(red);
 }
 
 .copyright__logo {
   @include fill-and-align;
   fill: #63d1bb;
+  // @include border(blue);
+  // margin-right: 20px;
 }
 
 .copyright:hover .copyright__logo {

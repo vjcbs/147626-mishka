@@ -1,12 +1,12 @@
 
 .about {
   // @include wrapper;
-  padding: 30px 30px;
+  padding: 40px 30px 20px 30px;
 }
 
 .about__title {
   @include heading($h2-font-size);
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .about__list {
@@ -17,16 +17,25 @@
 .about__item {
   @include flex-column;
   justify-content: center;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
+  // padding: 15px 0 0 0;
+  margin-bottom: 35px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
+
 
 .about__item-image {
   @include fill-and-align($align: flex-start);
   margin-bottom: 10px;
+  // margin-left: 5px;
 }
 
 .about__item-caption {
   @include font-open-sans-bold($size: $h3-font-size, $lh: 20px);
+  padding: 5px 0;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
