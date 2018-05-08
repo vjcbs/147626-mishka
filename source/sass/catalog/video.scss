@@ -24,27 +24,14 @@
 .catalog-video__frame {
   flex-basis: 100%;
   position: relative;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   width: 100%;
-  // height: 150px;
   margin: auto;
-  // background: url("../img/video-mobile@1x.jpg") no-repeat;
-  // background-position: center;
-  // background-size: 100% auto;
-  // @include border(gold);
 }
 
 .catalog-video__frame-image {
   height: auto;
   width: 100%;
   object-fit: contain;
-  // opacity: 0;
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
 }
 
 .catalog-video__play-icon {
@@ -124,41 +111,21 @@
   .catalog-video {
     justify-content: flex-start;
     flex-wrap: wrap;
-    // align-items: flex-end;
     max-width: 1240px;
     height: 445px;
     padding: 0;
-    // padding: 0 100px;
     margin: 0 100px 75px 100px;
-    // @include border(blue);
   }
 
   .catalog-video__frame {
-    // align-self: flex-end;
-    // display: flex;
     margin: 0;
     width: 668px;
     height: 455px;
-    // @include border(red);
-    // flex-basis: 100%;
-  }
-
-  .catalog-video__frame-image {
-    // height: 455px;
-    // width: 682px;
-    // object-fit: none;
-    // @include border(red);
-    // vertical-align: top;
-    // display: flex;
-    // justify-content: flex-start;
-    // margin-top: -100px;
   }
 
   .catalog-video__title-wrapper {
     @include flex-column;
     justify-content: flex-start;
-    // @include border(gold);
-    // flex-basis: 40%;
     align-self: flex-start;
     padding: 20px 55px 0 55px;
   }
@@ -181,7 +148,6 @@
     margin-top: 0;
     padding: 0 55px;
     border: none;
-    // @include border(tomato);
   }
 
   .catalog__order-button {

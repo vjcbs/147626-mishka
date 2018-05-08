@@ -23,10 +23,7 @@
   position: relative;
   margin: 10% auto;
   padding: 0 30px;
-  // padding: 5px 20px 13px 20px;
-  // border-radius: 10px;
   border-top: 1px solid $light-gray;
-  // background: linear-gradient(#ffffff, #999999);
   background-color: #ffffff;
   box-shadow: 0 3px 7px 0 #c6c6c6;
   text-align: center;
@@ -43,7 +40,6 @@
 .modal-body__list {
   @include flex-row;
   justify-content: space-between;
-  // width: 75%;
   margin: auto;
   margin-bottom: 20px;
 }
@@ -75,7 +71,6 @@
 }
 
 .modal-close {
-  // background: #606061;
   color: black;
   line-height: 25px;
   position: absolute;

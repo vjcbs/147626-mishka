@@ -1,6 +1,4 @@
-
 .about {
-  // @include wrapper;
   padding: 40px 30px 20px 30px;
 }
 
@@ -28,20 +26,18 @@
 .about__item-image {
   @include fill-and-align($align: flex-start);
   margin-bottom: 10px;
-  // margin-left: 5px;
 }
 
 .about__item-caption {
   @include font-open-sans-bold($size: $h3-font-size, $lh: 20px);
-  padding: 5px 0;
   width: 100%;
+  padding: 5px 0;
 }
 
 @media (min-width: $tablet-width) {
   .about {
     min-height: 500px;
     padding: 50px;
-    // background-color: #999999;
   }
 
   .about__title {
@@ -57,12 +53,11 @@
   }
 
   .about__item {
-    padding: 20px 0;
     width: 45%;
     height: 120px;
+    padding: 20px 0;
     margin-top: 10px;
     margin-bottom: 25px;
-    // @include border(tomato);
   }
 
   .about__item-caption {
@@ -74,7 +69,6 @@
     flex-shrink: 0;
     margin-bottom: 20px;
     margin-left: 5px;
-    // padding: 10px 10px;
   }
 }
 

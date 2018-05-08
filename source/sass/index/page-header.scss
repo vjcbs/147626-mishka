@@ -4,9 +4,9 @@
 }
 
 .page-header__logo {
+  align-self: center;
   height: 80px;
   padding-top: 22px;
-  align-self: center;
 
   &:hover {
     opacity: 0.6;
@@ -65,8 +65,8 @@
   position: absolute;
   top: 50%;
   left: 30px;
-  transform: translateY(-50%);
   fill: #d3d2d2;
+  transform: translateY(-50%);
 }
 
 
@@ -117,8 +117,8 @@
     position: absolute;
     top: 0;
     left: 50px;
-    z-index: 5;
     height: 90px;
+    z-index: 5;
   }
 
   .nav-menu__toggle {
@@ -137,7 +137,6 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 100%;
-    // @include border(gold);
   }
 
   .nav-menu__list::after {
@@ -146,7 +145,6 @@
     position: absolute;
     top: 108px;
     right: 50px;
-    // color: blue;
   }
 
   .nav-menu__item {
@@ -161,23 +159,19 @@
     &:first-child,
     &:nth-child(2) {
       width: 25%;
-      border: none;
       height: 65px;
+      border: none;
 
       .nav-menu__item-link {
         font-size: $text-font-size;
       }
-      // @include border(red);
     }
 
     &:nth-child(3) {
-      margin-left: 50%;
-      padding: 0;
       width: 85px;
       order: -2;
-      // background-image: url("../img/icon-search.svg");
-      // background-repeat: no-repeat;
-      // background-position: center;
+      margin-left: 50%;
+      padding: 0;
 
       .nav-menu__item-link {
         display: none;
@@ -185,46 +179,22 @@
     }
 
     &:nth-child(4) {
-      // width: auto;
-      // @include flex-row;
       order: -1;
       flex-grow: 1;
       justify-content: flex-end;
       align-items: center;
-      // background-image: url("../img/icon-cart.svg");
-      // background-repeat: no-repeat;
-      // background-position: top 50% left 10%;
+      padding: 0 0 0 20px;
       border-right: none;
       border-left: none;
-      padding: 0 0 0 20px;
-      // @include border(blue);
 
       .nav-menu__item-image {
-        // @include border(green);
         left: 30px;
-        // position: static;
-        // align-self: center;
       }
     }
   }
 }
-/*
-@media (min-width: $tablet-width) and (max-width: 730px) {
-  .nav-menu__item:nth-child(3) {
-    margin-left: 30%;
-  }
 
-  .nav-menu__item:nth-child(4) {
-    justify-content: center;
-  }
-}
-*/
 @media (min-width: $desktop-width) {
-  .page-header {
-    // padding: 0 100px;
-    // background-color: #999999;
-  }
-
   .page-header__logo {
     left: 50%;
     top: 5px;
@@ -259,7 +229,6 @@
 
   .nav-menu__item:first-child,
   .nav-menu__item:nth-child(2) {
-    // @include border(gold);
     .nav-menu__item-link {
       font-size: 17px;
     }
@@ -279,10 +248,8 @@
   .nav-menu__item:nth-child(6) {
     display: flex;
     width: 20%;
-    border: none;
     height: 85px;
-
-    // @include border(red);
+    border: none;
 
     .nav-menu__item-link {
       font-size: 15px;

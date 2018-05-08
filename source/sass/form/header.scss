@@ -7,7 +7,6 @@
   @include heading;
   align-self: center;
   width: 100%;
-  // margin-top: -80px;
   padding: 70px 0;
   background-color: $light-gray;
   text-align: center;
@@ -34,7 +33,6 @@
     background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: repeat-x;
     background-position: bottom;
-    // z-index: 100;
   }
 
   .form__title {

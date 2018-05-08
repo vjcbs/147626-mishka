@@ -1,6 +1,5 @@
 .feedback {
   padding: 25px 30px;
-  // @include border(red);
 }
 
 .feedback__title {
@@ -16,7 +15,6 @@
 .feedback__text {
   @include font-open-sans($size: $text-font-size, $color: $light-black, $lh: 30px);
   @include reset-mp;
-  // padding: 0 0;
   margin-bottom: 27px;
 }
 
@@ -34,7 +32,6 @@
 .feedback__nav-buttons {
   display: flex;
   justify-content: space-between;
-  // margin-top: 10px;
   margin-bottom: 38px;
 }
 
@@ -44,16 +41,16 @@
   background-repeat: no-repeat;
   background-position: center center;
   outline: none;
-}
 
-.feedback__nav-button:hover {
-  background-color: white;
-  opacity: 0.6;
-}
+  &:hover {
+    background-color: white;
+    opacity: 0.6;
+  }
 
-.feedback__nav-button:active {
-  background-color: white;
-  opacity: 0.3;
+  &:active {
+    background-color: white;
+    opacity: 0.3;
+  }
 }
 
 .feedback__nav-button--left {
@@ -72,16 +69,15 @@
 
 @media (min-width: $tablet-width) {
   .feedback {
-    padding: 70px 50px 0 50px;
-    position: relative;
-    // @include border(red);
     @include flex-row;
+    position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 70px 50px 0 50px;
+    margin-bottom: 50px;
     background: url("../img/review@1x.jpg") no-repeat;
     background-size: contain;
     background-position: left 0 top 0;
-    margin-bottom: 50px;
   }
 
   .feedback__title {
@@ -107,8 +103,6 @@
     right: 50px;
     order: 4;
     width: 175px;
-    // border: none;
-    // @include border(green);
   }
 
   .feedback__nav-button {

@@ -1,7 +1,6 @@
 .selection {
   @include flex-column;
   justify-content: space-between;
-  // flex-grow: 1;
   padding-top: 70px;
   background: url("../img/hero-mobile@1x.jpg") no-repeat;
   background-position: top -15px center;
@@ -38,12 +37,7 @@
   transition: 0.5s;
 
   &:hover {
-    // height: calc(100% + 5px);
-    // height: 200px;
-    // transform: translateY(-5px);
-    // height: calc(100% + 5px);
     transform: scaleY(1.05) translateY(-2px);
-    // height: 105px;
   }
 
   &:hover .selection__item-name {
@@ -83,15 +77,15 @@
 @media (min-width: $tablet-width) {
   .selection {
     position: relative;
+    justify-content: space-between;
     min-height: 600px;
     margin-top: -65px;
     padding: 155px 50px 0 50px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: auto;
     background-position: top 0 center;
-    z-index: 1;
     border-top: 1px solid $light-gray;
-    justify-content: space-between;
+    z-index: 1;
   }
 
   .selection::after {
@@ -108,24 +102,17 @@
   }
 
   .selection__title {
+    flex-grow: 0;
+    min-height: auto;
+    padding: 0;
+    margin-bottom: 375px;
     font-size: $tablet-header-font;
     line-height: 50px;
-    padding: 0;
-    min-height: auto;
-    flex-grow: 0;
-    // @include border(lightblue);
-    margin-bottom: 375px;
   }
 
   .selection__list {
     @include flex-row;
-    // height: 120px;
     flex-grow: 0;
-    // @include border(gold);
-    // margin-bottom: -70px;
-    // border-image-source: url("../img/bg-zigzag-line.svg");
-    // border-image-slice: 10%;
-    // border-image-repeat: repeat-x;
   }
 
   .selection__item {
@@ -133,14 +120,16 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  .selection__item-name {
+    width: auto;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .selection {
     padding: 150px 100px 0 100px;
     margin-top: -85px;
-    // @include border(red);
-    justify-content: space-between;
   }
 
   .selection__title {
