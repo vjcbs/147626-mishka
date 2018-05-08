@@ -45,12 +45,11 @@
 }
 
 .modal-body__item {
-  border: 1px solid #ececec;
   width: 80px;
   height: 50px;
 
-  &:hover {
-    border-color: $light-green;
+  &:hover .modal-body__radio-label::before {
+    border-color: rgba(99, 209, 187, 0.6);
   }
 }
 
@@ -59,8 +58,29 @@
 }
 
 .modal-body__radio-label {
+  position: relative;
   line-height: 50px;
   vertical-align: middle;
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: -35px;
+    height: 50px;
+    width: 80px;
+    border: 1px solid #ececec;
+  }
+}
+
+.modal-body__item:nth-child(2) .modal-body__radio-label::before {
+  left: -32px;
+}
+
+.modal-body__radio-button:checked ~ .modal-body__radio-label::before {
+  border-color: $light-green;
 }
 
 .modal-body__submit {
@@ -68,23 +88,16 @@
   border: none;
   background-color: $light-green;
   color: #ffffff;
-}
-
-.modal-close {
-  color: black;
-  line-height: 25px;
-  position: absolute;
-  right: 10px;
-  text-align: center;
-  top: 10px;
-  width: 24px;
-  border: none;
-  text-decoration: none;
-  font-weight: bold;
   outline: none;
 
   &:hover {
-    background: #00d9ff;
+    background-color: $light-green;
+    opacity: 0.6;
+  }
+
+  &:active {
+    background-color: $light-green;
+    opacity: 0.3;
   }
 }
 
