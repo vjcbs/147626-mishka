@@ -70,15 +70,6 @@
     </ul>
   </section>
 
-  <div id="openModal" class="modalDialog">
-    <div>
-      <a href="#close" title="Close" class="close">X</a>
-      <h2>Modal Box</h2>
-      <p>This is a sample modal box that can be created using the powers of CSS3.</p>
-      <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
-    </div>
-  </div>
-
   <main class="page-main">
     <section class="featured">
       <div class="featured__wrapper">
@@ -125,7 +116,7 @@
         </div>
         <div class="featured__price-wrapper">
           <p class="featured__price">Цена: 990 руб.</p>
-          <a class="button featured__order-button" href="#openModal">Заказать</a>
+          <a class="button featured__order-button" id="openCart" href="#modalCart">Заказать</a>
         </div>
       </div>
     </section>
@@ -259,6 +250,29 @@
       </a>
     </div>
   </footer>
+
+  <div id="modalCart" class="modal-dialog">
+    <div class="modal-body" id="modalBody">
+      <!-- <a title="Close" class="modal-close">X</a> -->
+      <h2 class="modal-body__title">Добавить в корзину</h2>
+      <h3 class="modal-body__subtitle">Выберите размер</h2>
+      <ul class="site-list modal-body__list">
+        <li class="modal-body__item">
+          <input class="modal-body__radio-button" type="radio" name="size" id="radio-s" checked/>
+          <label class="modal-body__radio-label" for="radio-s">S</label>
+        </li>
+        <li class="modal-body__item">
+          <input class="modal-body__radio-button" type="radio" name="size" id="radio-m" />
+          <label class="modal-body__radio-label" for="radio-m">M</label>
+        </li>
+        <li class="modal-body__item">
+          <input class="modal-body__radio-button" type="radio" name="size" id="radio-l" />
+          <label class="modal-body__radio-label" for="radio-l">L</label>
+        </li>
+      </ul>
+      <button class="button modal-body__submit">Добавить</button>
+    </div>
+  </div>
 
   <script src="js/script.js"></script>
 

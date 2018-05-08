@@ -71,6 +71,10 @@
   @include fill-and-align($color: #d3d2d2);
 }
 
+.catalog__item-icon-link {
+  align-self: center;
+}
+
 @media (min-width: $tablet-width) {
   .catalog-items {
     padding: 0 50px;

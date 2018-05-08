@@ -70,9 +70,11 @@
           <div class="catalog__item-price">
             1 200 руб.
           </div>
-          <svg class="catalog__item-icon" width="20" height="19">
-            <use xlink:href="img/menu-icons.svg#cart">
-          </svg>
+          <a class="catalog__item-icon-link" href="#modalCart">
+            <svg class="catalog__item-icon" width="20" height="19">
+              <use xlink:href="img/menu-icons.svg#cart">
+            </svg>
+          </a>
         </div>
       </li>
       <li class="catalog__item">
@@ -91,9 +93,11 @@
           <div class="catalog__item-price">
             690 руб.
           </div>
-          <svg class="catalog__item-icon" width="20" height="19">
-            <use xlink:href="img/menu-icons.svg#cart">
-          </svg>
+          <a class="catalog__item-icon-link" href="#modalCart">
+            <svg class="catalog__item-icon" width="20" height="19">
+              <use xlink:href="img/menu-icons.svg#cart">
+            </svg>
+          </a>
         </div>
       </li>
       <li class="catalog__item">
@@ -112,9 +116,11 @@
           <div class="catalog__item-price">
             1 500 руб.
           </div>
-          <svg class="catalog__item-icon" width="20" height="19">
-            <use xlink:href="img/menu-icons.svg#cart">
-          </svg>
+          <a class="catalog__item-icon-link" href="#modalCart">
+            <svg class="catalog__item-icon" width="20" height="19">
+              <use xlink:href="img/menu-icons.svg#cart">
+            </svg>
+          </a>
         </div>
       </li>
     </ul>
@@ -177,6 +183,30 @@
       </a>
     </div>
   </footer>
+
+  <div id="modalCart" class="modal-dialog">
+    <div class="modal-body" id="modalBody">
+      <!-- <a title="Close" class="modal-close">X</a> -->
+      <h2 class="modal-body__title">Добавить в корзину</h2>
+      <h3 class="modal-body__subtitle">Выберите размер</h2>
+      <ul class="site-list modal-body__list">
+        <li class="modal-body__item">
+          <input class="modal-body__radio-button" type="radio" name="size" id="radio-s" checked/>
+          <label class="modal-body__radio-label" for="radio-s">S</label>
+        </li>
+        <li class="modal-body__item">
+          <input class="modal-body__radio-button" type="radio" name="size" id="radio-m" />
+          <label class="modal-body__radio-label" for="radio-m">M</label>
+        </li>
+        <li class="modal-body__item">
+          <input class="modal-body__radio-button" type="radio" name="size" id="radio-l" />
+          <label class="modal-body__radio-label" for="radio-l">L</label>
+        </li>
+      </ul>
+      <button class="button modal-body__submit">Добавить</button>
+    </div>
+  </div>
+
   <script src="js/script.js"></script>
 </body>
 </html>
