@@ -1,8 +1,6 @@
 .page-header {
   @include flex-column;
   position: relative;
-  min-height: 95vh;
-  // @include border(red);
 }
 
 .page-header__logo {
@@ -44,6 +42,17 @@
   border: 1px solid #ececec;
   text-align: center;
   cursor: pointer;
+
+  &:hover {
+    .nav-menu__item-image {
+      fill: $light-green;
+    }
+  }
+
+  &:active {
+    fill: $light-green;
+    opacity: 0.3;
+  }
 }
 
 .nav-menu__item:nth-child(5),
@@ -58,15 +67,6 @@
   left: 30px;
   transform: translateY(-50%);
   fill: #d3d2d2;
-
-  &:hover {
-    fill: $light-green;
-  }
-
-  &:active {
-    fill: $light-green;
-    opacity: 0.3;
-  }
 }
 
 
@@ -81,6 +81,10 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.nav-menu__item-link:hover ~ .nav-menu__item-image {
+  fill: $light-green;
 }
 
 .nav-menu__toggle {
@@ -104,34 +108,9 @@
 }
 
 @media (min-width: $tablet-width) {
-  // .border-image {
-  //   display: block;
-  //   position: absolute;
-  //   bottom: -130px;
-  //   right: 0;
-  //   fill: blue;
-  //   z-index: 100;
-  // }
-
   .page-header {
     position: relative;
-    // @include border(red);
     height: auto;
-    // min-height: 820px;
-    // background-color: #999999;
-  }
-
-  .page-header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 34px;
-    background-image: url("../img/bg-zigzag-fill.svg");
-    background-repeat: repeat-x;
-    background-position: bottom;
-    z-index: 10;
   }
 
   .page-header__logo {
@@ -188,7 +167,7 @@
       .nav-menu__item-link {
         font-size: $text-font-size;
       }
-      @include border(red);
+      // @include border(red);
     }
 
     &:nth-child(3) {
@@ -243,6 +222,7 @@
 @media (min-width: $desktop-width) {
   .page-header {
     // padding: 0 100px;
+    // background-color: #999999;
   }
 
   .page-header__logo {
@@ -283,6 +263,7 @@
     .nav-menu__item-link {
       font-size: 17px;
     }
+    height: 85px;
   }
 
   .nav-menu__item:nth-child(3) {
@@ -299,6 +280,7 @@
     display: flex;
     width: 20%;
     border: none;
+    height: 85px;
 
     // @include border(red);
 

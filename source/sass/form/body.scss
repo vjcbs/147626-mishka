@@ -18,20 +18,19 @@
   @include flex-column;
   position: relative;
   padding: 10px 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   // padding: 30px 0;
 }
 
-.form__customer-phone .form__input-text {
-  // @include border(blue);
+.form__customer-addit-info {
+  margin-bottom: 0;
 }
-
 
 .form__legend {
   @include font-open-sans-bold($size: $h3-font-size, $color: $light-green, $lh: 16px);
-  width: 80px;
+  width: 65px;
   // padding-right: 30px;
-  margin-top: -42px;
+  margin-top: -40px;
   margin-bottom: 20px;
   background-color: #ffffff;
   // @include border(red);
@@ -52,7 +51,7 @@
 .form__item {
   @include font-open-sans-bold($size: $h3-font-size, $lh: 17px);
   display: flex;
-  margin-bottom: 20px;
+  // margin-bottom: 10px;
   padding: 15px 60px;
 }
 
@@ -183,10 +182,6 @@
   }
 }
 
-.form__customer-name-label {
-  // margin-bottom: 5px;
-}
-
 .form__input-text {
   @include font-open-sans($size: 15px);
   position: relative;
@@ -205,13 +200,22 @@
     border-bottom-color: $light-green;
     border-bottom-width: 1px;
   }
+
+  &:hover + .form__icon {
+    fill: $light-green;
+  }
 }
 
-.form__icon {
-  // visibility: hidden;
+.form__customer-email,
+.form__customer-phone {
+  position: relative;
+}
+
+.form__customer-email .form__icon,
+.form__customer-phone .form__icon {
   position: absolute;
-  top: 40%;
-  right: 5%;
+  top: 35%;
+  right: 0;
 }
 
 .form__input-text::placeholder,
@@ -242,12 +246,15 @@
 }
 
 .form__submit {
-  margin: 20px 0;
+  margin: 20px 0 40px 0;
 }
 
 @media (min-width: $tablet-width) {
   .form-body {
     padding: 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .form__radiogroup,
@@ -259,6 +266,7 @@
     border: none;
     // @include border(red);
     padding: 30px 50px;
+    margin-bottom: 20px;
   }
 
   .form__customer-phone,
@@ -275,6 +283,7 @@
   .form__legend {
     // @include border(blue);
     margin: 0;
+    margin-top: 20px;
     flex-basis: 27%;
     background-color: transparent;
   }
@@ -286,6 +295,7 @@
 
   .form__item {
     padding: 15px 0;
+    margin-bottom: 25px;
     // @include border(red);
   }
 
@@ -300,7 +310,7 @@
 
   .form__checkboxgroup .form__list {
     flex-wrap: wrap;
-    max-height: 170px;
+    max-height: 220px;
   }
 
   .form__radiogroup,
@@ -310,10 +320,73 @@
     }
   }
 
+  // Меняю размеры касотманых элементов
+
+  .form__radio-label {
+    position: relative;
+    transition: color 0.25s;
+
+    &:hover {
+      &::before {
+        border-color: $light-green;
+      }
+    }
+  }
+
+  .form__radio-label::after,
+  .form__radio-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -64px;
+    border-radius: 50%;
+  }
+
+  .form__radio-label::before {
+    width: 48px;
+    height: 48px;
+    border: solid 1px #5a5a5a;
+    top: -16px;
+    transition: border-color 0.25s;
+  }
+
+  .form__radio-label::after {
+    width: 18px;
+    height: 18px;
+    background-color: #62d1ba;
+    transform: scale(0);
+    transition: transform 0.25s;
+    top: 0;
+    left: -48px;
+  }
+
+  // Меняю размер кастомных чекбоксов
+
+  .form__checkbox-label::after,
+  .form__checkbox-label::before {
+    top: 0;
+    left: -55px;
+  }
+
+  .form__checkbox-label::before {
+    width: 50px;
+    height: 50px;
+    top: -15px;
+  }
+
+  .form__checkbox-label::after {
+    width: 30px;
+    height: 20px;
+    top: -3px;
+    left: -44px;
+  }
+
+
   .form__customer-name .form__item {
     @include flex-row;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 0;
   }
 
   .form__customer-name-label {
@@ -326,9 +399,30 @@
     line-height: 18px;
   }
 
+  .form__customer-email .form__icon {
+    top: 25%;
+    right: 50px;
+  }
+
+  .form__customer-phone .form__icon {
+    top: 60%;
+    right: 50px;
+  }
+
   .form__customer-phone,
   .form__customer-email {
     background-color: $light-gray;
+    padding-bottom: 0;
+  }
+
+  .form__customer-email {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    // margin-bottom: 20px;
+  }
+
+  .form__customer-addit-info {
+    padding-bottom: 20px;
   }
 
   .form__customer-phone .form__legend,
@@ -386,11 +480,7 @@
   }
 
   .form__bottom-wrapper {
-    padding-left: 20.5%;
+    padding-left: 21.5%;
     // @include border(red);
-  }
-
-  .form__label {
-    font-size: 19px;
   }
 }

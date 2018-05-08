@@ -15,7 +15,7 @@
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
       <picture>
-        <source media="(min-width:1150px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width:1250px)" srcset="img/logo-desktop.svg">
         <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Главная" />
       </picture>
@@ -49,68 +49,85 @@
         </li>
       </ul>
     </nav>
-    <section class="selection">
-      <h1 class="main-title page-header__title">Милые штуки ручной работы для дома</h1>
-      <ul class="selection__list">
-        <li class="selection__item selection__item--interior">
-          <span class="selection__item-name">Предметы интерьера</span>
-          <svg class="selection__item-image" width="40" height="62">
-            <use xlink:href="img/selection-icons.svg#lamp">
-          </svg>
-        </li>
-        <li class="selection__item selection__item--toy">
-          <span class="selection__item-name">Детские игрушки</span>
-          <svg class="selection__item-image" width="60" height="60">
-            <use xlink:href="img/selection-icons.svg#toy">
-          </svg>
-        </li>
-      </ul>
-    </section>
+
   </header>
+
+  <section class="selection">
+    <h1 class="main-title selection__title">Милые штуки ручной работы для дома</h1>
+    <ul class="selection__list">
+      <li class="selection__item selection__item--interior">
+        <span class="selection__item-name">Предметы интерьера</span>
+        <svg class="selection__item-image" width="40" height="62">
+          <use xlink:href="img/selection-icons.svg#lamp">
+        </svg>
+      </li>
+      <li class="selection__item selection__item--toy">
+        <span class="selection__item-name">Детские игрушки</span>
+        <svg class="selection__item-image" width="60" height="60">
+          <use xlink:href="img/selection-icons.svg#toy">
+        </svg>
+      </li>
+    </ul>
+  </section>
+
+  <div id="openModal" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <h2>Modal Box</h2>
+      <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+      <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+    </div>
+  </div>
 
   <main class="page-main">
     <section class="featured">
-      <h2 class="featured__title">Вязаные корзинки</h2>
-      <h3 class="featured__subtitle">Товар недели</h3>
-      <p class="featured__desc">
-        Экологически чистая пряжа, ручная работа. Доступны в шести расцветках
-        и трех размерах.
-      </p>
-      <table class="featured__table">
-        <tr>
-          <td>
-            Цвет:
-          </td>
-          <td>
-            «Тиффани»/серый
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Диаметр:
-          </td>
-          <td>
-            25 см
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Высота:
-          </td>
-          <td>
-            15 см
-          </td>
-        </tr>
-      </table>
-      <div class="featured__image-wrapper">
-        <picture>
-          <source media="(min-width:1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-          <source media="(min-width:768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-          <img class="featured__product-image featured__product-image--mobile" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки" />
-        </picture>
+      <div class="featured__wrapper">
+        <h2 class="featured__title">Вязаные корзинки</h2>
+        <h3 class="featured__subtitle">Товар недели</h3>
+        <div class="featured__desc-wrapper">
+          <p class="featured__desc">
+            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках
+            и трех размерах.
+          </p>
+          <table class="featured__table">
+            <tr>
+              <td>
+                Цвет:
+              </td>
+              <td>
+                «Тиффани»/серый
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Диаметр:
+              </td>
+              <td>
+                25 см
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Высота:
+              </td>
+              <td>
+                15 см
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="featured__image-wrapper">
+          <picture>
+            <source media="(min-width:1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width:768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="featured__product-image featured__product-image--mobile" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки" />
+          </picture>
+        </div>
+        <div class="featured__price-wrapper">
+          <p class="featured__price">Цена: 990 руб.</p>
+          <a class="button featured__order-button" href="#openModal">Заказать</a>
+        </div>
       </div>
-      <p class="featured__price">Цена: 990 руб.</p>
-      <button class="button featured__order-button" type="button">Заказать</button>
     </section>
 
     <section class="about">
@@ -201,7 +218,7 @@
         </table>
       </div>
       <picture>
-        <source media="(min-width:1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+        <source media="(min-width:1250px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
           <source media="(min-width:768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
           <img class="contact__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Карта" />
       </picture>

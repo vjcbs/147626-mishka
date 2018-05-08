@@ -9,7 +9,7 @@
   background-color: #f9f9f9;
 }
 
-.page-header__title {
+.selection__title {
   display: block;
   min-height: 210px;
   width: 80%;
@@ -79,56 +79,41 @@
   @include fill-and-align;
   transition: 0.5s;
 }
-/*
-@media (max-height: 480px) {
-  .page-header__title {
-    min-height: 200px;
-  }
 
-  .selection {
-    background-position: top -75px center;
-  }
-
-  .selection__item {
-    font-size: $text-font-size;
-    line-height: 15px;
-  }
-
-  .selection__item-name {
-    width: 50%;
-  }
-}
-*/
 @media (min-width: $tablet-width) {
   .selection {
+    position: relative;
     min-height: 600px;
     margin-top: -65px;
     padding: 155px 50px 0 50px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: auto;
     background-position: top 0 center;
-    // background-color: #f9f9f9;
     z-index: 1;
     border-top: 1px solid $light-gray;
-    // min-height: 300px;
-    // @include border(tomato);
     justify-content: space-between;
-    // border-image-source: url("../img/bg-zigzag-line.svg");
-    // border-image-slice: 50;
-    // border-image-repeat: repeat-x;
-    // border-image-width: 23px;
-    // border-image-outset: 14px;
-    // background-position: center bottom;
   }
 
-  .page-header__title {
-    // @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
+  .selection::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 34px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    z-index: 10;
+  }
+
+  .selection__title {
     font-size: $tablet-header-font;
     line-height: 50px;
     padding: 0;
     min-height: auto;
     flex-grow: 0;
-    @include border(lightblue);
+    // @include border(lightblue);
     margin-bottom: 375px;
   }
 
@@ -152,13 +137,24 @@
 
 @media (min-width: $desktop-width) {
   .selection {
-    padding: 120px 100px 0 100px;
+    padding: 150px 100px 0 100px;
+    margin-top: -85px;
     // @include border(red);
     justify-content: space-between;
   }
 
-  .page-header__title {
+  .selection__title {
     font-size: 53px;
     line-height: 57px;
+    width: 75%;
+    margin-bottom: 365px;
+  }
+
+  .selection__item {
+    height: auto;
+  }
+
+  .selection__list {
+    height: 110px;
   }
 }

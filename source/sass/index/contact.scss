@@ -30,7 +30,7 @@
 }
 
 .contact__table td {
-  padding: 15px 0px;
+  padding: 15px 0;
   vertical-align: top;
   width: 100px;
 }
@@ -68,9 +68,10 @@
 
 @media (min-width: $tablet-width) {
   .contact {
-    padding: 70px 0;
+    padding: 80px 0;
     background: url("../img/bg-zigzag-line.svg") repeat-x;
     background-position: top center;
+    // background-color: #999999;
   }
 
   .contact-wrapper {
@@ -106,7 +107,7 @@
   }
 
   .contact__button {
-    width: 250px;
+    width: 235px;
     margin-top: 50px;
   }
 }
@@ -114,10 +115,13 @@
 @media (min-width: $desktop-width) {
   .contact {
     flex-wrap: wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: stretch;
     align-items: flex-start;
-    padding: 80px 100px 80px 270px;
+    padding: 75px 100px 80px 270px;
     height: 620px;
+    margin: 0 auto;
+    max-width: 1440px;
     // @include border(tomato);
   }
 
@@ -132,11 +136,12 @@
   .contact__title {
     font-size: $desktop-header-font;
     line-height: 57px;
+    margin-top: 60px;
   }
 
   .contact__title-icon {
-    top: 80px;
-    left: 100px;
+    top: 130px;
+    left: 160px;
   }
 
   .contact__table tbody {

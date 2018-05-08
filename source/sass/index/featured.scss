@@ -56,31 +56,56 @@
 }
 
 .featured__order-button {
-
+  display: inline-block;
+  color: $light-black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
 }
 
 @media (min-width: $tablet-width) {
   .featured {
-    @include flex-column;
+    // @include flex-row;
     position: relative;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 680px;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // height: 680px;
     padding: 0 50px 80px 50px;
-    margin-top: 100px;
+    margin-top: 43px;
     background: url("../img/bg-zigzag-line.svg") repeat-x;
     background-position: bottom center;
-
+    // margin: 10px;
     // z-index: 60;
     // margin-bottom: 50px;
     // @include border(blue);
   }
 
+  .featured__wrapper {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 100px;
+    // @include border(gold);
+  }
+
+  .featured__title,
+  .featured__subtitle,
+  .featured__desc-wrapper,
+  .featured__image-wrapper,
+  .featured__price-wrapper {
+    margin-top: 45px;
+  }
+
   .featured__title {
     order: 1;
     width: 80%;
+    align-self: center;
     padding: 0;
     margin: 0;
+    margin-left: -6px;
+    margin-top: -6px;
     font-size: $tablet-header-font;
     line-height: 50px;
     z-index: 5;
@@ -88,11 +113,13 @@
   }
 
   .featured__subtitle {
-    flex-basis: 100%;
+    // flex-basis: 100%;
     flex-grow: 0;
-    order: 6;
-    align-self: flex-start;
-    width: 100px;
+    order: 2;
+    align-self: center;
+    width: 120px;
+    margin: 0;
+    padding: 15px;
     font-size: 17px;
     line-height: 17px;
     text-align: center;
@@ -100,9 +127,36 @@
     // @include border(green);
   }
 
+  .featured__desc-wrapper {
+    order: 3;
+    width: 43%;
+    height: 50%;
+    // @include border(lightblue);
+  }
+
+  .featured__image-wrapper {
+    order: 4;
+    height: 1px;
+    // position: absolute;
+    // bottom: 75px;
+    // right: 50px;
+    // display: flex;
+  }
+
+  .featured__price-wrapper {
+    @include flex-column;
+    justify-content: space-between;
+    // padding: 30px 0;
+    order: 5;
+    width: 100%;
+    margin-top: 105px;
+    margin-bottom: 50px;
+    // @include border(red);
+  }
+
   .featured__desc {
-    order: 2;
-    width: 35%;
+    // order: 2;
+    // width: 35%;
     font-size: 17px;
     line-height: 30px;
     z-index: 5;
@@ -111,19 +165,10 @@
   }
 
   .featured__table {
-    order: 3;
-    width: 35%;
+    // order: 3;
+    // width: 35%;
     margin: 0;
     margin-right: 30px;
-  }
-
-  .featured__image-wrapper {
-    position: absolute;
-    bottom: 75px;
-    right: 50px;
-    display: flex;
-    // align-items: ;
-    // @include border(green);
   }
 
 
@@ -135,50 +180,110 @@
 
   .featured__price {
     @include reset-mp;
-    order: 4;
+    // order: 4;
     height: auto;
-    width: 35%;
+    width: 40%;
+    margin-bottom: 20px;
     font-size: 20px;
     text-align: center;
+    // @include border(blue);
   }
 
   .featured__order-button {
     order: 5;
-    width: 35%;
+    width: 40%;
     align-self: flex-start;
   }
 }
 
 @media (min-width: $desktop-width) {
   .featured {
-    height: 686px;
-    padding: 50px 100px 80px 270px;
+    // height: 686px;
+    margin-top: 75px;
+    // margin-right: auto;
+    // margin-left: auto;
+    padding: 0 100px 80px 275px;
+    // padding-left: 270px;
+    // @include border(brown);
+    min-height: 636px;
+    // max-width: 1440px;
+    // background-color: #aaaaaa;
+  }
+
+  .featured__wrapper {
+    margin-top: 0;
+    // @include border(red);
+    min-height: 636px;
+  }
+
+  .featured__subtitle {
+    position: absolute;
+    top: 50px;
+    left: 105px;
   }
 
   .featured__title {
-    width: 100%;
+    // position: relative;
+    visibility: hidden;
+    width: 20%;
+    // content: "Вязаные";
     // margin-top: -20px;
     font-size: $desktop-header-font;
     line-height: 57px;
   }
 
-  .featured__subtitle {
+  .featured::after {
+    @include font-open-sans-bold($size: 53px, $color: black, $lh: 50px);
     position: absolute;
-    top: 55px;
-    left: 130px;
+    content: "Вязаные корзинки";
+    display: inline-block;
+    top: 54px;
+    left: 275px;
+    height: 50px;
+    width: 50%;
+  }
+
+  .featured__title,
+  .featured__subtitle,
+  .featured__desc-wrapper,
+  .featured__image-wrapper,
+  .featured__price-wrapper {
+    // margin-top: 45px;
   }
 
   .featured__image-wrapper {
-    right: 100px;
+    // right: 100px;
+    order: 2;
+    width: auto;
+    // height: 10px;
+    margin-top: 0;
+    align-self: flex-start;
+    // @include border(green);
   }
 
-  // .featured__product-image {
-  //   position: absolute;
-  //   top: 50px;
-  //   right: 100px;
-  //   display: block;
-  //   width: auto;
-  //   height: auto;
-  //   object-fit: contain;
-  // }
+  .featured__desc-wrapper {
+    width: 40%;
+    order: 3;
+    margin-top: 55px;
+    padding: 0 10px;
+  }
+
+  .featured__table {
+    margin-top: 45px;
+  }
+
+  .featured__price-wrapper {
+    order: 4;
+    padding: 0 10px;
+    // margin-top: 123px;
+    margin-bottom: 0;
+  }
+
+  .featured__price {
+    width: 35%;
+  }
+
+  .featured__order-button {
+    width: 35%;
+  }
 }

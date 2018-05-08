@@ -1,6 +1,6 @@
 .feedback {
   padding: 25px 30px;
-  @include border(red);
+  // @include border(red);
 }
 
 .feedback__title {
@@ -103,10 +103,10 @@
 
   .feedback__nav-buttons {
     position: absolute;
-    bottom: 30px;
+    bottom: 0;
     right: 50px;
     order: 4;
-    width: 170px;
+    width: 175px;
     // border: none;
     // @include border(green);
   }
@@ -118,14 +118,14 @@
 
   .feedback__button {
     order: 2;
-    width: 170px;
+    width: 175px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .feedback {
-    padding: 70px 100px 50px 270px;
-    margin-bottom: 50px;
+    padding: 70px 100px 0 270px;
+    margin-bottom: 75px;
     background-position: left 100px center;
   }
 
