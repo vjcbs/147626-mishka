@@ -59,7 +59,6 @@ function init(){
 });
 
 if (myMap) {
-  console.log("Карта загружена");
   var mapPic = document.getElementsByClassName('contact__map-image')[0];
   mapPic.style.display = 'none';
 }
