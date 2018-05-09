@@ -51,7 +51,13 @@
 .contact__map-image {
   width: 100%;
   height: auto;
-  object-fit: contain;
+}
+
+.contact__map-wrapper {
+  display: block;
+  height: 457px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .contact__button {
@@ -97,6 +103,11 @@
 
   .contact__table td:last-child {
     width: 70%;
+  }
+
+  .contact__map-wrapper {
+    height: 457px;
+    width: 768px;
   }
 
   .contact__button {
@@ -148,9 +159,12 @@
     align-self: flex-start;
   }
 
-  .contact picture {
+  .contact__map-wrapper {
     order: 3;
     align-self: flex-end;
+    width: 457px;
+    height: 525px;
+    margin: 0;
   }
 
   .contact__map-image {

@@ -44,3 +44,28 @@ for (var i = 0; i < elements.length; i++) {
     modal.style.display = "block";
   });
 }
+
+// Карта
+
+ymaps.ready(init);
+
+var myMap,
+    myPlacemark;
+
+function init(){
+    myMap = new ymaps.Map("map", {
+        center: [59.938631, 30.323055],
+        zoom: 17
+});
+
+if (myMap) {
+  console.log("Карта загружена");
+  var mapPic = document.getElementsByClassName('contact__map-image')[0];
+  mapPic.style.display = 'none';
+}
+
+myPlacemark = new ymaps.Placemark([59.938631, 30.323055], { hintContent: 'Мишка', balloonContent: 'Мишка: милые штуки ручной работы для дома'
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+}
