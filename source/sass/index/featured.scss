@@ -168,6 +168,9 @@
 @media (min-width: $desktop-width) {
   .featured {
     min-height: 636px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 75px;
     padding: 0 100px 80px 275px;
   }
