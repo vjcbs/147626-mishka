@@ -78,6 +78,11 @@
     background: url("../img/review@1x.jpg") no-repeat;
     background-size: contain;
     background-position: left 0 top 0;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .feedback__title {

@@ -60,7 +60,11 @@
 // Оформление кастомных радиокнопок
 
 .form__radio-button {
-  display: none;
+  opacity: 0;
+
+  &:focus ~ .form__radio-label::before {
+    border-color: $light-green;
+  }
 }
 
 .form__radio-label {
@@ -120,7 +124,11 @@
 // Оформление кастомных чекбоксов
 
 .form__checkbox {
-  display: none;
+  opacity: 0;
+
+  &:focus ~ .form__checkbox-label::before {
+    border-color: $light-green;
+  }
 }
 
 .form__checkbox-label {
@@ -306,6 +314,8 @@
 
   .form__radiogroup,
   .form__checkboxgroup {
+    overflow-x: hidden;
+
     .form__list {
       transform: translateX(55px);
     }

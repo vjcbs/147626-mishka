@@ -213,7 +213,7 @@
 
   .featured__desc-wrapper {
     order: 3;
-    width: 40%;
+    width: 38%;
     margin-top: 55px;
     padding: 0 10px;
   }
@@ -228,11 +228,15 @@
     margin-bottom: 0;
   }
 
-  .featured__price {
-    width: 35%;
-  }
-
+  .featured__price,
   .featured__order-button {
-    width: 35%;
+    width: 30%;
+  }
+}
+
+@media (min-width: 1250px) {
+  .featured__price,
+  .featured__order-button {
+    width: 38%;
   }
 }

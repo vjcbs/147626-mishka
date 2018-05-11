@@ -4,8 +4,10 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
+// var posthtml = require("gulp-posthtml");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+// var del = require("del");
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")

@@ -4,18 +4,17 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="node_modules/svgxuse/svgxuse.js"></script>
+    <script defer src="js/svgxuse.min.js"></script>
     <script src="js/picturefill.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   </head>
 <body>
 
   <header class="form-header">
     <a class="page-header__logo" href="index.html">
       <picture>
-        <source media="(min-width:1250px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width:1150px)" srcset="img/logo-desktop.svg">
         <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Главная" />
       </picture>
@@ -31,13 +30,13 @@
         </li>
         <li class="nav-menu__item nav-menu__item--with-image">
           <svg class="nav-menu__item-image icon-search" width="18" height="18">
-            <use xlink:href="img/menu-icons.svg#search">
+            <use xlink:href="img/menu-icons.svg#search" />
           </svg>
           <a class="nav-menu__item-link" href="#">Поиск по сайту</a>
         </li>
         <li class="nav-menu__item nav-menu__item--with-image">
           <svg class="nav-menu__item-image icon-cart" width="20" height="19">
-            <use xlink:href="img/menu-icons.svg#cart">
+            <use xlink:href="img/menu-icons.svg#cart" />
           </svg>
           <a class="nav-menu__item-link" href="#">Корзина: пока пуста</a>
         </li>
@@ -49,7 +48,7 @@
         </li>
       </ul>
     </nav>
-    <h1 class="form__title">Вязание на заказ</h2>
+    <h1 class="form__title">Вязание на заказ</h1>
     <p class="form__header-text">
       Мы будем рады воплотить в жизнь ваши пожелания!
       Заполните простую форму заказа и мы свяжемся с вами,
@@ -60,7 +59,7 @@
   <form class="form-body" action="https://echo.htmlacademy.ru" method="post" >
 
     <div class="form__radiogroup">
-      <legend class="form__legend">Тип</legend>
+      <h4 class="form__legend">Тип</h4>
         <ul class="site-list form__list">
           <li class="form__item">
             <input class="radio-button form__radio-button" type="radio" name="type" value="interior" id="radio-interior" checked/>
@@ -74,7 +73,7 @@
     </div>
 
     <div class="form__checkboxgroup">
-      <legend class="form__legend">Цвет</legend>
+      <h4 class="form__legend">Цвет</h4>
       <ul class="site-list form__list">
         <li class="form__item">
           <input class="form__checkbox" type="checkbox" name="white" id="checkbox-white" checked/>
@@ -104,9 +103,9 @@
     </div>
 
     <div class="form__customer-name">
-      <legend class="form__legend">
+      <h4 class="form__legend">
         ФИО
-      </legend>
+      </h4>
       <ul class="site-list form__list">
         <li class="form__item">
           <label class="form__label form__customer-name-label" for="input-name">Имя:</label>
@@ -124,26 +123,26 @@
     </div>
 
     <div class="form__customer-phone">
-      <legend class="form__legend">Тел</legend>
+      <h4 class="form__legend">Тел</h4>
       <!-- <label class="form__label form__customer-phone-label" for="input-phone"></label> -->
       <input class="form__input-text" type="text" id="input-phone" name="phone" placeholder="+7 XXX XX XX*"/>
       <svg class="form__icon" width="25" height="24">
-        <use xlink:href="img/icon-phone.svg#phone">
+        <use xlink:href="img/icon-phone.svg#phone" />
       </svg>
     </div>
 
 
     <div class="form__customer-email">
-      <legend class="form__legend">Email</legend>
+      <h4 class="form__legend">Email</h4>
       <!-- <label class="form__label form__customer-email-label" for="input-email"></label> -->
       <input class="form__input-text" type="text" id="input-email" name="email" placeholder="Ваш Email*">
       <svg class="form__icon" width="32" height="32">
-        <use xlink:href="img/icon-mail.svg#mail">
+        <use xlink:href="img/icon-mail.svg#mail" />
       </svg>
     </div>
 
     <div class="form__customer-addit-info">
-      <legend class="form__legend">Доп</legend>
+      <h4 class="form__legend">Доп</h4>
       <!-- <label class="form__label form__customer-name-label legend-label" for="input-additional-info">Доп</label> -->
       <textarea class="form__input-textarea" id="input-additional-info" name="additional-info" rows="7" placeholder="Опишите все ваши пожелания по заказу"></textarea>
     </div>
@@ -157,37 +156,33 @@
   <footer class="page-footer">
     <a class="footer__logo-link" href="index.html">
       <svg class="footer__logo-image" width="102" height="34">
-        <use xlink:href="img/logo-footer.svg#logo-footer">
+        <use xlink:href="img/logo-footer.svg#logo-footer" />
       </svg>
     </a>
 
     <ul class="footer__social-list">
       <li class="footer__item">
         <svg class="social social--ig" width="22" height="21">
-          <use xlink:href="img/social-icons.svg#instagram">
+          <use xlink:href="img/social-icons.svg#instagram" />
         </svg>
       </li>
       <li class="footer__item">
         <svg class="social social--fb" width="15" height="28">
-          <use xlink:href="img/social-icons.svg#facebook">
+          <use xlink:href="img/social-icons.svg#facebook" />
         </svg>
       </li>
       <li class="footer__item">
         <svg class="social social--tw" width="23" height="20">
-          <use xlink:href="img/social-icons.svg#twitter">
+          <use xlink:href="img/social-icons.svg#twitter" />
         </svg>
       </li>
     </ul>
     <a class="copyright" href="https://htmlacademy.ru">
       <b class="copyright__title">Разработано</b>
-        <!-- <svg class="copyright__logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-          <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
-        </svg> -->
-        <svg class="copyright__logo" width="27" height="34">
-          <use xlink:href="img/logo-htmlacademy.svg#logo">
-        </svg>
-      </a>
-    </div>
+      <svg class="copyright__logo" width="27" height="34">
+        <use xlink:href="img/logo-htmlacademy.svg#logo" />
+      </svg>
+    </a>
   </footer>
   <script src="js/script.js"></script>
 </body>
