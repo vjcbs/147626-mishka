@@ -1,5 +1,5 @@
 .feedback {
-  padding: 20px 30px;
+  padding: 25px 30px;
 }
 
 .feedback__title {
@@ -8,29 +8,31 @@
 
 .feedback__item {
   margin: 0;
-  padding: 35px 0;
+  margin-bottom: 7px;
+  padding: 25px 0;
 }
 
 .feedback__text {
   @include font-open-sans($size: $text-font-size, $color: $light-black, $lh: 30px);
   @include reset-mp;
+  margin-bottom: 27px;
 }
 
 .feedback__author-name {
-  @include heading($h3-font-size);
-  margin-top: 70px;
-  margin-bottom: 15px;
+  @include heading($h3-font-size, $lh: 24px);
+  margin-top: 0;
+  margin-bottom: 3px;
 }
 
 .feedback__author-account {
-  @include font-open-sans($size: $h3-font-size, $color: $light-black);
+  @include font-open-sans($size: $h3-font-size, $color: $light-black, $lh: 30px);
   @include reset-mp;
 }
 
 .feedback__nav-buttons {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 .feedback__nav-button {
@@ -38,6 +40,17 @@
   border: 1px solid #ececec;
   background-repeat: no-repeat;
   background-position: center center;
+  outline: none;
+
+  &:hover {
+    background-color: white;
+    opacity: 0.6;
+  }
+
+  &:active {
+    background-color: white;
+    opacity: 0.3;
+  }
 }
 
 .feedback__nav-button--left {
@@ -56,15 +69,19 @@
 
 @media (min-width: $tablet-width) {
   .feedback {
-    padding: 70px 50px 30px 50px;
-    position: relative;
-    // @include border(red);
     @include flex-row;
+    position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 70px 50px 0 50px;
+    margin-bottom: 50px;
+    background: url("../img/review@1x.jpg") no-repeat;
+    background-size: contain;
+    background-position: left 0 top 0;
   }
 
   .feedback__title {
+    @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
     order: 1;
   }
 
@@ -72,21 +89,50 @@
     order: 3;
   }
 
+  .feedback__text {
+    font-size: 17px;
+  }
+
+  .feedback__author-name {
+    font-size: 18px;
+  }
+
   .feedback__nav-buttons {
     position: absolute;
-    bottom: 30px;
+    bottom: 0;
     right: 50px;
     order: 4;
-    width: 170px;
-    // @include border(green);
+    width: 175px;
   }
 
   .feedback__nav-button {
     width: 50%;
+    border: none;
   }
 
   .feedback__button {
     order: 2;
-    width: 170px;
+    width: 175px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback {
+    padding: 70px 100px 0 270px;
+    margin-bottom: 75px;
+    background-position: left 100px center;
+  }
+
+  .feedback__title {
+    font-size: $desktop-header-font;
+    line-height: 57px;
+  }
+
+  .feedback__nav-buttons {
+    right: 100px;
+  }
+
+  .feedback__author-name {
+    font-size: 17px;
   }
 }

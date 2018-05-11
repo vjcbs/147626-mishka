@@ -1,0 +1,115 @@
+.modal-dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal-dialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-body {
+  width: 100%;
+  position: relative;
+  margin: 10% auto;
+  padding: 0 30px;
+  border-top: 1px solid $light-gray;
+  background-color: #ffffff;
+  box-shadow: 0 3px 7px 0 #c6c6c6;
+  text-align: center;
+}
+
+.modal-body__title {
+  @include font-open-sans-bold($size: 25px, $lh: 30px);
+}
+
+.modal-body__subtitle {
+  @include font-open-sans($size: 15px, $color: $light-black, $lh: 30px);
+}
+
+.modal-body__list {
+  @include flex-row;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.modal-body__item {
+  width: 80px;
+  height: 50px;
+
+  &:hover .modal-body__radio-label::before {
+    border-color: rgba(99, 209, 187, 0.6);
+  }
+}
+
+.modal-body__radio-button {
+  display: none;
+}
+
+.modal-body__radio-label {
+  position: relative;
+  line-height: 50px;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: -35px;
+    height: 50px;
+    width: 80px;
+    border: 1px solid #ececec;
+  }
+}
+
+.modal-body__item:nth-child(2) .modal-body__radio-label::before {
+  left: -32px;
+}
+
+.modal-body__radio-button:checked ~ .modal-body__radio-label::before {
+  border-color: $light-green;
+}
+
+.modal-body__submit {
+  width: 300px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: $light-green;
+  color: #ffffff;
+  outline: none;
+
+  &:hover {
+    background-color: $light-green;
+    opacity: 0.6;
+  }
+
+  &:active {
+    background-color: $light-green;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal-body {
+    width: 550px;
+    padding: 0 125px;
+  }
+
+  .modal-body__item {
+    width: 90px;
+  }
+}
