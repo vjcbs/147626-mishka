@@ -15,41 +15,46 @@
 }
 
 .catalog-video__title {
-  @include heading($h3-font-size);
+  @include heading($h3-font-size, $lh: 24px);
   width: 50%;
   text-align: left;
   word-wrap: wrap;
 }
 
 .catalog-video__frame {
+  flex-basis: 100%;
   position: relative;
   width: 100%;
   margin: auto;
-  background: url("../img/video-mobile@1x.jpg") no-repeat;
-  background-position: center;
-  background-size: 100% auto;
 }
 
 .catalog-video__frame-image {
   height: auto;
   width: 100%;
   object-fit: contain;
-  opacity: 0;
 }
 
 .catalog-video__play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  flex-shrink: 0;
+  z-index: 1;
 
-.catalog-video__play-icon:hover {
-  filter: contrast(0.8);
-  cursor: pointer;
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-video__desc {
+  @include font-open-sans($size: 13px, $color: $light-black, $lh: 24px);
   align-self: center;
   padding: 20px 30px;
 }
@@ -63,4 +68,90 @@
   line-height: 48px;
   text-align: center;
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-video {
+    @include flex-column;
+    @include border($light-gray);
+    padding: 0 50px;
+    margin-bottom: 50px;
+  }
+
+  .catalog-video__frame {
+    order: 1;
+    min-width: 540px;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .catalog-video__title-wrapper {
+    @include flex-row;
+    justify-content: flex-start;
+    order: 2;
+    padding: 30px 55px 10px 55px;
+  }
+
+  .catalog-video__desc {
+    order: 3;
+    padding: 20px 55px;
+    font-size: 15px;
+    line-height: 30px;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  .catalog-video__title {
+    font-size: 20px;
+    padding: 0 30px;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-video {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 1240px;
+    height: 445px;
+    padding: 0;
+    margin: 0 100px 75px 100px;
+  }
+
+  .catalog-video__frame {
+    margin: 0;
+    width: 668px;
+    height: 455px;
+  }
+
+  .catalog-video__title-wrapper {
+    @include flex-column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    padding: 20px 55px 0 55px;
+  }
+
+  .catalog-video__title {
+    margin-top: 20px;
+    font-size: 20px;
+    padding-left: 0;
+    width: 50%;
+    flex-grow: 0;
+  }
+
+  .catalog-video__camera-icon {
+    align-self: flex-start;
+  }
+
+  .catalog-video__desc {
+    align-self: flex-start;
+    width: 30%;
+    margin-top: 0;
+    padding: 0 55px;
+    border: none;
+  }
+
+  .catalog__order-button {
+    margin-bottom: 0;
+    width: 235px;
+  }
 }

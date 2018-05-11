@@ -1,24 +1,18 @@
 .featured {
-  padding: 30px 30px;
+  padding: 28px 30px;
 }
 
 .featured__title {
   @include heading($h2-font-size);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .featured__subtitle {
-  @include font-open-sans-bold($size: $h3-font-size, $color: $light-green);
+  @include font-open-sans-bold($size: $h3-font-size, $color: $light-green, $lh: 20px);
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 23px;
   text-transform: uppercase;
 }
-
-// .featured__order {
-//   display: flex;
-//   flex-direction: column;
-//   color: $light-black;
-// }
 
 .featured__desc {
   @include font-open-sans($size: $text-font-size, $color: $light-black, $lh: 24px);
@@ -26,13 +20,19 @@
 
 .featured__table {
   @include font-open-sans($size: $text-font-size, $color: $light-black, $lh: 20px);
+  width: 100%;
   margin-bottom: 28px;
   border-spacing: 0;
 }
 
 .featured__table td {
-  padding: 15px;
+  padding: 10px 0;
   border-bottom: 1px solid #ececec;
+}
+
+.featured__table td:last-child {
+  padding-left: 15px;
+  padding-right: 10px;
 }
 
 .featured__product-image {
@@ -41,125 +41,198 @@
   object-fit: contain;
 }
 
-.featured__product-image--mobile {
-  display: block;
-}
-
-.featured__product-image--tablet {
-  display: none;
-}
-
-.featured__product-image--desktop {
-  display: none;
-}
 
 .featured__price {
   @include font-open-sans-bold($size: $h3-font-size, $color: $light-black);
-  margin: auto;
-  padding: 30px;
+  padding: 0 20px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.featured__order-button {
+  display: inline-block;
+  line-height: 50px;
+  vertical-align: middle;
+  color: $light-black;
+  text-decoration: none;
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
   .featured {
-    @include flex-column;
     position: relative;
+    padding: 0 50px 80px 50px;
+    margin-top: 43px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-position: bottom center;
+  }
+
+  .featured__wrapper {
+    @include flex-row;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 480px;
-    padding: 60px 50px;
-    // padding-top: 35px;
-    // @include border(black);
+    align-items: stretch;
+    margin-top: 100px;
+  }
+
+  .featured__title,
+  .featured__subtitle,
+  .featured__desc-wrapper,
+  .featured__image-wrapper,
+  .featured__price-wrapper {
+    margin-top: 45px;
   }
 
   .featured__title {
-    // display: inline-block;
-    // float: left;
-    // @include border(gold);
-    width: 50%;
     order: 1;
+    align-self: center;
+    width: 80%;
     padding: 0;
     margin: 0;
+    margin-left: -6px;
+    margin-top: -6px;
+    font-size: $tablet-header-font;
+    line-height: 50px;
+    z-index: 5;
   }
 
   .featured__subtitle {
-    // display: inline-block;
-    // float: right;
-    flex-basis: 20%;
-    // flex-grow: 1;
-    order: 6;
-    width: 20%;
-    align-self: flex-end;
+    flex-grow: 0;
+    order: 2;
+    align-self: center;
+    width: 120px;
+    margin: 0;
+    padding: 15px;
+    font-size: 17px;
+    line-height: 17px;
     text-align: center;
-    // @include border(tomato);
+    z-index: 6;
+  }
+
+  .featured__desc-wrapper {
+    order: 3;
+    width: 43%;
+    height: 50%;
+  }
+
+  .featured__image-wrapper {
+    order: 4;
+    height: 1px;
+  }
+
+  .featured__price-wrapper {
+    @include flex-column;
+    justify-content: space-between;
+    order: 5;
+    width: 100%;
+    margin-top: 105px;
+    margin-bottom: 50px;
   }
 
   .featured__desc {
-    // @include border(green);
-    order: 2;
-    // align-self: flex-end;
-    width: 40%;
-    // margin-top: 79px;
-    // padding-right: 55%;
+    margin: 0;
+    margin-top: -10px;
+    font-size: 17px;
+    line-height: 30px;
+    z-index: 5;
   }
 
   .featured__table {
-    // @include border(blue);
-    order: 3;
-    width: 40%;
-    // width: 75%;
-    // padding-right: 55%;
     margin: 0;
     margin-right: 30px;
   }
 
+
   .featured__product-image {
-    order: 7;
-    flex-basis: 20%;
-    flex-shrink: 1;
-    align-self: flex-end;
-    // max-width: 50%;
-    width: auto;
+    width: 100%;
     height: auto;
     object-fit: none;
-    margin-top: -100px;
-    // position: absolute;
-    // bottom: -202px;
-    // right: 50px;
-    // width: 333px;
-    // height: 404px;
-    // @include border(red);
-    // transform: translateY(-50%);
-  }
-
-  .featured__product-image--mobile {
-    display: none;
-  }
-
-  .featured__product-image--tablet {
-    display: block;
   }
 
   .featured__price {
     @include reset-mp;
-    order: 4;
     height: auto;
     width: 40%;
+    margin-bottom: 20px;
+    font-size: 20px;
     text-align: center;
   }
 
   .featured__order-button {
     order: 5;
-    width: 40%;
     align-self: flex-start;
-    // border: 1px solid red;
-    // vertical-align: bottom;
-    // transform: translateY(-44px);
+    width: 40%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .featured {
+    min-height: 636px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    padding: 0 100px 80px 275px;
   }
 
-  @media (min-width: $tablet-width) and (max-width: 788px) {
-    .featured__product-image {
-      width: 260px;
-      height: auto;
-    }
+  .featured__wrapper {
+    min-height: 636px;
+    margin-top: 0;
+  }
+
+  .featured__subtitle {
+    position: absolute;
+    top: 50px;
+    left: 105px;
+  }
+
+  .featured__title {
+    visibility: hidden;
+    width: 20%;
+    font-size: $desktop-header-font;
+    line-height: 57px;
+  }
+
+  .featured::after {
+    @include font-open-sans-bold($size: 53px, $color: black, $lh: 50px);
+    position: absolute;
+    content: "Вязаные корзинки";
+    display: inline-block;
+    top: 54px;
+    left: 275px;
+    height: 50px;
+    width: 50%;
+  }
+
+  .featured__image-wrapper {
+    order: 2;
+    align-self: flex-start;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .featured__desc-wrapper {
+    order: 3;
+    width: 40%;
+    margin-top: 55px;
+    padding: 0 10px;
+  }
+
+  .featured__table {
+    margin-top: 45px;
+  }
+
+  .featured__price-wrapper {
+    order: 4;
+    padding: 0 10px;
+    margin-bottom: 0;
+  }
+
+  .featured__price {
+    width: 35%;
+  }
+
+  .featured__order-button {
+    width: 35%;
   }
 }

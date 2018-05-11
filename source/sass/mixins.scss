@@ -16,15 +16,15 @@
   line-height: $lh;
 }
 
-@mixin font-open-sans-bold($size: false, $color: false, $lh: false) {
+@mixin font-open-sans-bold($size: 17px, $color: black, $lh: 24px) {
   font-family: $bold-font, "Helvetica", "Arial", sans-serif;
   font-size: $size;
   color: $color;
   line-height: $lh;
 }
 
-@mixin heading($font-size: $h1-font-size) {
-  @include font-open-sans-bold($font-size);
+@mixin heading($size: $h1-font-size, $lh: 30px) {
+  @include font-open-sans-bold($size: $size, $lh: $lh);
   @include reset-mp;
 }
 
@@ -63,7 +63,6 @@
 @mixin reset-link {
   color: black;
   text-decoration: none;
-  cursor: pointer;
 }
 
 @mixin fill-and-align($color: #3bb09d, $align: center) {
