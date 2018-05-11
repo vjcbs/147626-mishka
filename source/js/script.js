@@ -53,18 +53,18 @@ var myMap,
     myPlacemark;
 
 function init(){
-    myMap = new ymaps.Map("map", {
-        center: [59.938631, 30.323055],
-        zoom: 17
-});
+  myMap = new ymaps.Map("map", {
+      center: [59.938631, 30.323055],
+      zoom: 17
+  });
 
-if (myMap) {
-  var mapPic = document.getElementsByClassName('contact__map-image')[0];
-  mapPic.style.display = 'none';
-}
+  if (myMap) {
+    var mapPic = document.getElementsByClassName('contact__map-image')[0];
+    mapPic.style.display = 'none';
+  }
 
-myPlacemark = new ymaps.Placemark([59.938631, 30.323055], { hintContent: 'Мишка', balloonContent: 'Мишка: милые штуки ручной работы для дома'
-    });
+  myPlacemark = new ymaps.Placemark([59.938631, 30.323055], { hintContent: 'Мишка', balloonContent: 'Мишка: милые штуки ручной работы для дома'
+      });
 
-    myMap.geoObjects.add(myPlacemark);
+  myMap.geoObjects.add(myPlacemark);
 }
