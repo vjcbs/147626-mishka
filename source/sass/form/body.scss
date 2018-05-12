@@ -190,18 +190,21 @@
   position: relative;
   width: 100%;
   border: none;
-  border-bottom: 2px solid black;
+  // border-bottom: 2px solid black;
   padding: 12px 0;
   outline: none;
-  transition: border-bottom-color 0.25s;
+  box-shadow: 0 4px 0 -2px black;
+  // transition: border-bottom-color 0.25s;
 
   &:hover {
-    border-bottom-color: $light-green;
+    // border-bottom-color: $light-green;
+    box-shadow: 0 4px 0 -2px $light-green;
   }
 
   &:focus {
-    border-bottom-color: $light-green;
-    border-bottom-width: 1px;
+    // border-bottom-color: $light-green;
+    // border-bottom-width: 1px;
+    box-shadow: 0 3px 0 -2px $light-green;
   }
 
   &:hover + .form__icon {
@@ -436,6 +439,20 @@
   .form__customer-addit-info .form__input-textarea {
     flex-basis: 73%;
     font-size: 19px;
+  }
+
+  .form__customer-phone .form__input-text {
+    border-bottom: 2px solid black;
+    outline: 1px solid transparent;
+
+    &:hover {
+      border-bottom-color: $light-green;
+    }
+
+    &:focus {
+      border-bottom-color: $light-green;
+      border-bottom-width: 2px;
+    }
   }
 
   .form__bottom-wrapper {

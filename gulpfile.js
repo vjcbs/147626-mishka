@@ -27,7 +27,7 @@ gulp.task("style", function() {
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("source/css"))
-    // .pipe(server.stream());
+    .pipe(server.stream());
 });
 
 gulp.task("html",function() {
@@ -57,14 +57,14 @@ gulp.task("clean", function (){
   return del("build");
 });
 
-gulp.task("serve", function() {
+gulp.task("serve", ["style"], function() {
   server.init({
     server: "source/"
   });
 
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
-  gulp.watch("js/*.js").on("change", server.reload);
+  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/js/*.js").on("change", server.reload);
 });
 
 gulp.task("copy", function() {
