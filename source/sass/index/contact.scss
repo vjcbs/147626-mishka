@@ -54,10 +54,23 @@
 }
 
 .contact__map-wrapper {
+  position: relative;
   display: block;
   height: 457px;
   width: 320px;
   margin: 0 auto;
+
+  .contact__map-pin-icon {
+    position: absolute;
+    top: 146px;
+    left: 135px;
+    display: block;
+    height: 101px;
+    width: 66px;
+    background: url("../img/icon-map-pin.svg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
 }
 
 .contact__button {
@@ -108,6 +121,10 @@
   .contact__map-wrapper {
     height: 457px;
     width: 768px;
+
+    .contact__map-pin-icon {
+      left: 364px;
+    }
   }
 
   .contact__button {
@@ -165,6 +182,11 @@
     width: 457px;
     height: 525px;
     margin: 0;
+
+    .contact__map-pin-icon {
+      top: 150px;
+      left: 242px;
+    }
   }
 
   .contact__map-image {
