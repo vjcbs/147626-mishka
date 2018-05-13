@@ -133,6 +133,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog-video {
+    @include border($light-gray);
     justify-content: flex-start;
     flex-wrap: wrap;
     max-width: 1240px;
