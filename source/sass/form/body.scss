@@ -125,6 +125,10 @@
   }
 }
 
+.form__label[for="radio-interior"] {
+  min-width: 150px;
+}
+
 // Оформление кастомных чекбоксов
 
 .form__checkbox {
@@ -194,20 +198,15 @@
   position: relative;
   width: 100%;
   border: none;
-  // border-bottom: 2px solid black;
   padding: 12px 0;
   outline: none;
   box-shadow: 0 4px 0 -2px black;
-  // transition: border-bottom-color 0.25s;
 
   &:hover {
-    // border-bottom-color: $light-green;
     box-shadow: 0 4px 0 -2px $light-green;
   }
 
   &:focus {
-    // border-bottom-color: $light-green;
-    // border-bottom-width: 1px;
     box-shadow: 0 3px 0 -2px $light-green;
   }
 
