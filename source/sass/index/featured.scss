@@ -175,23 +175,23 @@
   .featured {
     min-height: 636px;
     max-width: 1440px;
-    width: 1050px;
+    // width: 1050px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
-    padding: 0 100px 80px 175px;
+    padding: 0 50px 80px 225px;
   }
 
   .featured__wrapper {
     min-height: 636px;
-    width: 825px;
     margin-top: 0;
+    @include border(red);
   }
 
   .featured__subtitle {
     position: absolute;
     top: 50px;
-    left: 25px;
+    left: 60px;
   }
 
   .featured__title {
@@ -207,7 +207,7 @@
     content: "Вязаные корзинки";
     display: inline-block;
     top: 54px;
-    left: 175px;
+    left: 225px;
     height: 50px;
     width: 75%;
   }
