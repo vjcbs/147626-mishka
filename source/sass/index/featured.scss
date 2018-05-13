@@ -150,8 +150,9 @@
 
   .featured__product-image {
     width: 100%;
+    max-width: 333px;
     height: auto;
-    object-fit: none;
+    object-fit: contain;
   }
 
   .featured__price {
@@ -215,6 +216,10 @@
     min-width: 425px;
     width: auto;
     margin-top: 0;
+  }
+
+  .featured__product-image {
+    max-width: 525px;
   }
 
   .featured__desc-wrapper {
