@@ -11,9 +11,16 @@ html {
 body {
   @include reset-mp;
   @include font-open-sans($size: 16px);
+}
+
+.wrapper {
   position: relative;
   max-width: 1680px;
   margin: 0 auto;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    overflow-x: hidden;
+  }
 }
 
 .main-wrapper {
