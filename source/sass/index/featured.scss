@@ -175,21 +175,23 @@
   .featured {
     min-height: 636px;
     max-width: 1440px;
+    width: 1050px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
-    padding: 0 100px 80px 275px;
+    padding: 0 100px 80px 175px;
   }
 
   .featured__wrapper {
     min-height: 636px;
+    width: 825px;
     margin-top: 0;
   }
 
   .featured__subtitle {
     position: absolute;
     top: 50px;
-    left: 105px;
+    left: 25px;
   }
 
   .featured__title {
@@ -205,9 +207,9 @@
     content: "Вязаные корзинки";
     display: inline-block;
     top: 54px;
-    left: 275px;
+    left: 175px;
     height: 50px;
-    width: 50%;
+    width: 75%;
   }
 
   .featured__image-wrapper {
@@ -224,7 +226,7 @@
 
   .featured__desc-wrapper {
     order: 3;
-    width: 36%;
+    width: 38%;
     margin-top: 55px;
     padding: 0 10px;
   }
@@ -236,18 +238,12 @@
   .featured__price-wrapper {
     order: 4;
     padding: 0 10px;
+    margin-top: 52px;
     margin-bottom: 0;
   }
 
   .featured__price,
   .featured__order-button {
-    width: 30%;
-  }
-}
-
-@media (min-width: 1250px) {
-  .featured__price,
-  .featured__order-button {
-    width: 38%;
+    width: 34%;
   }
 }
