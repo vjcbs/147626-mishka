@@ -9,9 +9,7 @@ var include = require("posthtml-include");
 var minify = require("gulp-csso");
 var autoprefixer = require("autoprefixer");
 var imagemin = require("gulp-imagemin");
-// var webp = require("gulp-webp");
 var rename = require("gulp-rename");
-// var svgstore = require("gulp-svgstore");
 var run = require("run-sequence");
 var del = require("del");
 var server = require("browser-sync").create();
@@ -23,11 +21,25 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
+});
+
+gulp.task("serve", function() {
+  server.init({
+    server: "build/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/js/*.js").on("change", server.reload);
 });
 
 gulp.task("html",function() {
@@ -57,25 +69,12 @@ gulp.task("clean", function (){
   return del("build");
 });
 
-gulp.task("serve", ["style"], function() {
-  server.init({
-    server: "source/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html").on("change", server.reload);
-  gulp.watch("source/js/*.js").on("change", server.reload);
-});
-
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**"
+    "source/js/**",
+    "source/*.html"
   ], {
     base: "source"
   })
