@@ -50,6 +50,10 @@
     justify-content: flex-start;
     max-height: 500px;
     margin-top: -10px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      height: 500px;
+    }
   }
 
   .about__item {

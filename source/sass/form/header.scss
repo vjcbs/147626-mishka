@@ -1,6 +1,10 @@
 .form-header {
   @include flex-column;
   margin-bottom: 10px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    overflow: hidden;
+  }
 }
 
 .form__title {

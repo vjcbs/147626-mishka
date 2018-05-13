@@ -2,6 +2,11 @@
   @include flex-column;
   justify-content: center;
   border: 1px solid $light-gray;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    min-height: 400px;
+    overflow: hidden;
+  }
 }
 
 .catalog-video__title-wrapper {
@@ -26,6 +31,12 @@
   position: relative;
   width: 100%;
   margin: auto;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    width: 260px;
+    min-height: 150px;
+    height: 150px;
+  }
 }
 
 .catalog-video__frame-image {
@@ -57,6 +68,14 @@
   @include font-open-sans($size: 13px, $color: $light-black, $lh: 24px);
   align-self: center;
   padding: 20px 30px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    width: 100%;
+  }
+}
+
+.catalog-video__desc-text {
+
 }
 
 .catalog__order-button {
@@ -83,6 +102,11 @@
     min-width: 540px;
     overflow: hidden;
     height: auto;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      min-height: 455px;
+      width: 668px;
+    }
   }
 
   .catalog-video__title-wrapper {
@@ -115,12 +139,22 @@
     height: 445px;
     padding: 0;
     margin: 0 100px 75px 100px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      height: 457px;
+    }
   }
 
   .catalog-video__frame {
     margin: 0;
-    width: 668px;
+    // width: 668px;
+    width: 682px;
     height: 455px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      min-height: 455px;
+      width: 682px;
+    }
   }
 
   .catalog-video__title-wrapper {

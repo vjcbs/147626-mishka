@@ -1,5 +1,9 @@
 .form-body {
   padding: 0 30px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    overflow: hidden;
+  }
 }
 
 .form__radiogroup,

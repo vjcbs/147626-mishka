@@ -1,5 +1,9 @@
 .catalog-items {
   padding: 20px 0;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    overflow: hidden;
+  }
 }
 
 .catalog__list {

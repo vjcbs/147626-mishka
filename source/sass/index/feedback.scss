@@ -93,6 +93,15 @@
   .feedback__title {
     @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
     order: 1;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      flex-grow: 1;
+    }
+  }
+
+  .feedback__button {
+    order: 2;
+    width: 175px;
   }
 
   .feedback__item {
@@ -118,11 +127,6 @@
   .feedback__nav-button {
     width: 50%;
     border: none;
-  }
-
-  .feedback__button {
-    order: 2;
-    width: 175px;
   }
 }
 
