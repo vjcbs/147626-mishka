@@ -24,7 +24,7 @@
 
 
 .about__item-image {
-  @include fill-and-align($align: flex-start);
+  @include fill-and-align($color: $light-green, $align: flex-start);
   margin-bottom: 10px;
 }
 

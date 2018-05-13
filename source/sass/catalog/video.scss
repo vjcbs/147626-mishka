@@ -2,10 +2,10 @@
   @include flex-column;
   justify-content: center;
   border: 1px solid $light-gray;
+  overflow: hidden;
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     min-height: 400px;
-    overflow: hidden;
   }
 }
 
@@ -16,7 +16,7 @@
 }
 
 .catalog-video__camera-icon {
-  @include fill-and-align;
+  @include fill-and-align($color: $light-green);
 }
 
 .catalog-video__title {
@@ -182,6 +182,6 @@
 
   .catalog__order-button {
     margin-bottom: 0;
-    width: 235px;
+    width: 200px;
   }
 }

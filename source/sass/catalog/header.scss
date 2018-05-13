@@ -1,6 +1,7 @@
 .catalog-header {
   @include flex-column;
   position: relative;
+  overflow: hidden;
 }
 
 .catalog__title {
