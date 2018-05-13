@@ -109,11 +109,11 @@
       <ul class="site-list form__list">
         <li class="form__item">
           <label class="form__label form__customer-name-label" for="input-name">Имя:</label>
-          <input class="form__input-text" type="text" id="input-name" name="name" placeholder="Введите ваше имя*">
+          <input class="form__input-text" type="text" id="input-name" name="name" placeholder="Введите ваше имя*" required>
         </li>
         <li class="form__item">
           <label class="form__label form__customer-name-label" for="input-surname">Фамилия:</label>
-          <input class="form__input-text" type="text" id="input-surname" name="surname" placeholder="Укажите фамилию*">
+          <input class="form__input-text" type="text" id="input-surname" name="surname" placeholder="Укажите фамилию*" required>
         </li>
         <li class="form__item">
           <label class="form__label form__customer-name-label" for="input-second-name">Отчество:</label>
@@ -124,7 +124,7 @@
 
     <div class="form__customer-phone">
       <h4 class="form__legend">Тел</h4>
-      <input class="form__input-text" type="text" id="input-phone" name="phone" placeholder="+7 XXX XX XX*">
+      <input class="form__input-text" type="tel" id="input-phone" name="phone" placeholder="+7 XXX XX XX*" required>
       <svg class="form__icon" width="25" height="24">
         <use xlink:href="img/icon-phone.svg#phone"></use>
       </svg>
@@ -133,7 +133,7 @@
 
     <div class="form__customer-email">
       <h4 class="form__legend">Email</h4>
-      <input class="form__input-text" type="text" id="input-email" name="email" placeholder="Ваш Email*">
+      <input class="form__input-text" type="email" id="input-email" name="email" placeholder="Ваш Email*" required>
       <svg class="form__icon" width="32" height="32">
         <use xlink:href="img/icon-mail.svg#mail"></use>
       </svg>

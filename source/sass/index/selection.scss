@@ -6,7 +6,7 @@
   background-position: top -21px center;
   background-size: 575px 373px;
   background-color: #f9f9f9;
-
+  min-width: 320px;
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
@@ -32,9 +32,8 @@
 .selection__item {
   @include font-open-sans-bold($size: 19px, $color: #ffffff, $lh: 24px);
   @include flex-row;
-  justify-content: space-between;
-  flex-grow: 1;
   height: 100px;
+  min-width: 320px;
   padding: 0 30px;
   background-repeat: no-repeat;
   background-color: $light-green;
@@ -60,6 +59,15 @@
 
 .selection__item:nth-child(2n) {
   background-color: $dark-green;
+}
+
+.selection__item-link {
+  @include flex-row;
+  justify-content: space-between;
+  flex-grow: 1;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .selection__item-name {

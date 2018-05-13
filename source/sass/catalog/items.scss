@@ -48,6 +48,11 @@
   border-bottom: 1px solid $light-gray;
 }
 
+.catalog__item-desc-link {
+  text-decoration: none;
+  color: #000000;
+}
+
 .catalog__item-title {
   @include heading($h3-font-size, $lh: 24px);
 }

@@ -1,6 +1,7 @@
 .page-header {
   @include flex-column;
   position: relative;
+  min-width: 320px;
 }
 
 .page-header__logo {

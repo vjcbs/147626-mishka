@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -61,16 +61,20 @@
     <h1 class="main-title selection__title">Милые штуки ручной<br>работы для дома</h1>
     <ul class="selection__list">
       <li class="selection__item selection__item--interior">
-        <span class="selection__item-name">Предметы интерьера</span>
-        <svg class="selection__item-image" width="40" height="62">
-          <use xlink:href="img/selection-icons.svg#lamp"></use>
-        </svg>
+        <a class="selection__item-link" href="/interior.html">
+          <span class="selection__item-name">Предметы интерьера</span>
+          <svg class="selection__item-image" width="40" height="62">
+            <use xlink:href="img/selection-icons.svg#lamp"></use>
+          </svg>
+        </a>
       </li>
       <li class="selection__item selection__item--toy">
-        <span class="selection__item-name">Детские игрушки</span>
-        <svg class="selection__item-image" width="60" height="60">
-          <use xlink:href="img/selection-icons.svg#toy"></use>
-        </svg>
+        <a class="selection__item-link" href="/toys.html">
+          <span class="selection__item-name">Детские игрушки</span>
+          <svg class="selection__item-image" width="60" height="60">
+            <use xlink:href="img/selection-icons.svg#toy"></use>
+          </svg>
+        </a>
       </li>
     </ul>
   </section>
@@ -116,6 +120,7 @@
           <picture>
             <source media="(min-width:1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width:768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+
             <img class="featured__product-image featured__product-image--mobile" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
           </picture>
         </div>
@@ -183,7 +188,7 @@
         <button class="button feedback__nav-button feedback__nav-button--left" type="button"></button>
         <button class="button feedback__nav-button feedback__nav-button--right" type="button"></button>
       </div>
-      <button class="button feedback__button" type="button">Написать</button>
+      <a class="button feedback__button" href="/post_feedback.html">Написать</a>
     </section>
 
     <section class="contact">
@@ -218,12 +223,12 @@
           <source media="(min-width:1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
           <source media="(min-width:768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
           <img class="contact__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="Карта">
-          <svg class="contact__map-pin-icon" width="66" height="101">
-            <use xlink:href="img/icon-map-pin.svg#map-pin"></use>
-          </svg>
         </picture>
+        <svg class="contact__map-pin-icon" width="66" height="101">
+          <use xlink:href="img/icon-map-pin.svg#map-pin"></use>
+        </svg>
       </div>
-      <button class="button contact__button">Напишите нам</button>
+      <a class="button contact__button">Напишите нам</a>
     </section>
 
   </main>

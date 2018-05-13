@@ -74,9 +74,14 @@
 }
 
 .contact__button {
-  width: $wrapper-width;
   align-self: center;
+  display: inline-block;
+  width: 260px;
   margin-top: 35px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
 }
 
 @media (min-width: $tablet-width) {
