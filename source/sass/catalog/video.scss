@@ -88,9 +88,9 @@
 @media (min-width: $tablet-width) {
   .catalog-video {
     @include flex-column;
-    @include border($light-gray);
     padding: 0 50px;
     margin-bottom: 50px;
+    border: none;
   }
 
   .catalog-video__frame {
@@ -110,6 +110,9 @@
     justify-content: flex-start;
     order: 2;
     padding: 30px 55px 10px 55px;
+    margin-top: -6px;
+    border: 1px solid $light-gray;
+    border-bottom: none;
   }
 
   .catalog-video__desc {
@@ -117,7 +120,8 @@
     padding: 20px 55px;
     font-size: 15px;
     line-height: 30px;
-    border-bottom: 1px solid $light-gray;
+    border: 1px solid $light-gray;
+    border-top: none;
   }
 
   .catalog-video__title {
