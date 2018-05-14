@@ -1,7 +1,11 @@
 .page-header {
   @include flex-column;
   position: relative;
+  min-height: 79px;
   min-width: 320px;
+  @include border($border-gray);
+  border-left: none;
+  border-right: none;
 }
 
 .page-header__logo {
@@ -26,6 +30,7 @@
   .page-header {
     position: relative;
     height: auto;
+    // background-color: black;
   }
 
   .page-header__logo {
@@ -40,7 +45,7 @@
 @media (min-width: $desktop-width) {
   .page-header__logo {
     left: 50%;
-    top: 5px;
+    top: 8px;
     padding-top: 0;
     transform: translateX(-50%);
   }

@@ -1,10 +1,11 @@
 .about {
-  padding: 40px 30px 20px 30px;
+  padding: 42px 28px 25px 28px;
+  // @include border(red);
 }
 
 .about__title {
   @include heading($h2-font-size);
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .about__list {
@@ -15,33 +16,79 @@
 .about__item {
   @include flex-column;
   justify-content: center;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
+  // @include border(red);
+
+  .about__item-image {
+    @include fill-and-align($color: $light-green, $align: flex-start);
+  }
+
+  .about__item-caption {
+    @include font-open-sans-bold($size: $h3-font-size, $lh: 20px);
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  &:first-child {
+    .about__item-image {
+      margin-top: 2px;
+      margin-left: 10px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &:nth-child(2) {
+    .about__item-image {
+      margin-bottom: 22px;
+      margin-left: 2px;
+    }
+  }
+
+  &:nth-child(3) {
+    .about__item-image {
+      margin-left: 10px;
+      margin-top: 5px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &:nth-child(4) {
+    .about__item-image {
+      margin-top: 1px;
+      margin-left: 5px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &:nth-child(5) {
+    .about__item-image {
+      margin-top: 3px;
+      margin-left: -3px;
+      margin-bottom: 23px;
+    }
+  }
 
   &:last-child {
     margin-bottom: 0;
+
+    .about__item-image {
+      margin-top: 2px;
+      margin-left: 6px;
+      margin-bottom: 15px;
+    }
   }
-}
-
-
-.about__item-image {
-  @include fill-and-align($color: $light-green, $align: flex-start);
-  margin-bottom: 10px;
-}
-
-.about__item-caption {
-  @include font-open-sans-bold($size: $h3-font-size, $lh: 20px);
-  width: 100%;
-  padding: 5px 0;
 }
 
 @media (min-width: $tablet-width) {
   .about {
     min-height: 500px;
-    padding: 50px;
+    padding: 44px 50px;
   }
 
   .about__title {
     @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
+    margin-left: -5px;
+    margin-bottom: 40px;
   }
 
   .about__list {
@@ -62,23 +109,24 @@
     padding: 20px 0;
     margin-top: 10px;
     margin-bottom: 25px;
-  }
 
-  .about__item-caption {
-    font-size: 20px;
-    line-height: 22px;
-  }
+    .about__item-caption {
+      font-size: 20px;
+      line-height: 22px;
+    }
 
-  .about__item-image {
-    flex-shrink: 0;
-    margin-bottom: 20px;
-    margin-left: 5px;
+    .about__item-image {
+      flex-shrink: 0;
+      margin-bottom: 20px;
+      margin-left: 5px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .about {
     padding: 60px 225px;
+    padding-bottom: 52px;
   }
 
   .about__title {

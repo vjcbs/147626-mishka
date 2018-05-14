@@ -1,12 +1,10 @@
 .selection {
-  @include flex-column;
-  justify-content: space-between;
+  min-width: 320px;
   padding-top: 70px;
   background: url("../img/hero-mobile@1x.jpg") no-repeat;
-  background-position: top -21px center;
+  background-position: top -17px center;
   background-size: 575px 373px;
   background-color: #f9f9f9;
-  min-width: 320px;
 
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
@@ -16,30 +14,70 @@
 
 .selection__title {
   display: block;
-  min-height: 210px;
+  min-height: 213px;
   width: auto;
   margin: 0 auto;
   padding: 0 30px;
   color: #010000;
   text-align: center;
+  // @include border(red);
 }
 
 .selection__list {
   @include list-reset;
-  @include flex-column;
-  flex-grow: 1;
+  // @include flex-column;
+  // flex-grow: 1;
 }
 
 .selection__item {
   @include font-open-sans-bold($size: 19px, $color: #ffffff, $lh: 24px);
   @include flex-row;
-  height: 100px;
+  height: 103px;
   min-width: 320px;
-  padding: 0 30px;
+  padding: 0 29px;
   background-repeat: no-repeat;
   background-color: $light-green;
   cursor: pointer;
   transition: 0.5s;
+
+  .selection__item-image {
+    align-self: center;
+
+    fill: #3bb09d;
+    transition: 0.5s;
+  }
+
+  .selection__item-name {
+    align-self: center;
+    width: 30%;
+    transition: transform 0.5s;
+  }
+
+  .selection__item-link {
+    @include flex-row;
+    justify-content: space-between;
+    flex-grow: 1;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transform: translateY(-4px);
+  }
+
+  &:first-child {
+    .selection__item-image {
+      margin-top: 13px;
+      margin-right: 7px;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-top: -1px;
+    background-color: $dark-green;
+
+    .selection__item-image {
+      margin-top: 6px;
+    }
+  }
 
   &:hover {
     transform: scaleY(1.05) translateY(-2px);
@@ -58,43 +96,15 @@
   }
 }
 
-.selection__item:nth-child(2n) {
-  background-color: $dark-green;
-}
-
-.selection__item-link {
-  @include flex-row;
-  justify-content: space-between;
-  flex-grow: 1;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.selection__item-name {
-  align-self: center;
-  width: 30%;
-  transition: transform 0.5s;
-}
-
-.selection__item:first-child {
-  .selection__item-image {
-    margin-right: 7px;
-  }
-}
-
-.selection__item-image {
-  @include fill-and-align;
-  transition: 0.5s;
-}
-
 @media (min-width: $tablet-width) {
   .selection {
     position: relative;
-    justify-content: space-between;
-    min-height: 600px;
-    margin-top: -65px;
-    padding: 155px 50px 0 50px;
+    // justify-content: space-between;
+    // min-height: 590px;
+    // margin-top: -65px;
+    // margin-bottom: -65px;
+    margin: -65px 0;
+    padding: 152px 50px 0 50px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: 1150px 746px;
     background-position: top 0 center;
@@ -124,9 +134,10 @@
     flex-grow: 0;
     min-height: auto;
     padding: 0;
-    margin-bottom: 375px;
+    margin-bottom: 374px;
     font-size: $tablet-header-font;
     line-height: 50px;
+    // @include border(blue);
   }
 
   .selection__list {
@@ -137,18 +148,34 @@
   .selection__item {
     width: 50%;
     font-size: 20px;
+    height: 117px;
     line-height: 30px;
-  }
+    padding: 0 29px 0 35px;
 
-  .selection__item-name {
-    width: auto;
+    .selection__item-name {
+      width: auto;
+      margin-top: 4px;
+    }
+
+    &:first-child {
+
+    }
+
+    &:last-child {
+      margin-top: 0;
+
+      .selection__item-image {
+        margin-top: 12px;
+        margin-right: 5px;
+      }
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .selection {
-    padding: 150px 50px 0 50px;
-    margin-top: -85px;
+    padding: 155px 50px 0 50px;
+    margin: -87px 0;
     background-image: url("../img/hero-desktop@1x.jpg");
 
     @media (min-resolution: 144dpi),
@@ -161,14 +188,17 @@
     font-size: 53px;
     line-height: 57px;
     width: 75%;
-    margin-bottom: 365px;
+    margin-bottom: 361px;
+  }
+
+  .selection__list {
+    height: 115px;
   }
 
   .selection__item {
     height: auto;
+    // height: 122px;
   }
 
-  .selection__list {
-    height: 110px;
-  }
+
 }

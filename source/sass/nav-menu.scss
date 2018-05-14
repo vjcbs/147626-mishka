@@ -3,6 +3,7 @@
 }
 
 .nav-menu__toggle {
+  display: block;
   position: absolute;
   top: 32px;
   right: 30px;
@@ -11,6 +12,7 @@
   border: none;
   background: url("../img/icon-menu-open.svg") no-repeat;
   outline: none;
+  z-index: 5;
   cursor: pointer;
 }
 
@@ -32,13 +34,18 @@
 }
 
 .nav-menu__item {
-  @include flex-row;
   position: relative;
-  justify-content: center;
-  padding: 30px 40px;
-  border: 1px solid #ececec;
+  padding: 0 30px;
+  height: 78px;
+  line-height: 78px;
+  vertical-align: middle;
+  border-top: 1px solid $border-gray;
   text-align: center;
   cursor: pointer;
+
+  &:first-child {
+
+  }
 
   &:hover {
     .nav-menu__item-image {
@@ -105,7 +112,7 @@
     @include font-open-sans($size: $text-font-size, $color: $light-black);
     content: "Бесплатная доставка по России";
     position: absolute;
-    top: 112px;
+    top: 106px;
     right: 50px;
   }
 
@@ -113,7 +120,7 @@
     @include flex-row;
     justify-content: flex-start;
     align-items: center;
-    height: 85px;
+    height: 86px;
     padding: 0;
     border-top: none;
     border-bottom: none;
@@ -130,10 +137,13 @@
     }
 
     &:nth-child(3) {
-      width: 85px;
+      width: 84px;
       order: -2;
-      margin-left: 50%;
+      margin-left: 48%;
       padding: 0;
+      @include border($border-gray);
+      border-top: none;
+      border-bottom: none;
 
       .nav-menu__item-link {
         display: none;
@@ -157,6 +167,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .nav-menu__item {
+    height: 86px;
+    // border-bottom: 1px solid red;
+  }
 
   .nav-menu__list::after {
     right: 50px;
@@ -191,7 +205,7 @@
   .nav-menu__item:nth-child(3) {
     order: 3;
     margin: 0;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   .nav-menu__item:nth-child(4) {
@@ -208,6 +222,7 @@
 
     .nav-menu__item-link {
       font-size: 15px;
+      margin-top: -20px;
     }
   }
 
@@ -219,5 +234,9 @@
   .nav-menu__item:nth-child(6) {
     order: 6;
     padding-left: 34px;
+
+    .nav-menu__item-link {
+      margin-left: -3px;
+    }
   }
 }

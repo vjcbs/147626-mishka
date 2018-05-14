@@ -1,7 +1,7 @@
 .contact {
   @include flex-column;
   position: relative;
-  padding: 60px 0;
+  padding: 60px 0 40px;
   overflow-x: hidden;
 }
 
@@ -13,7 +13,7 @@
   @include heading;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .contact__title-icon {
@@ -22,7 +22,7 @@
 
 .contact__table {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
   border-spacing: 0;
   font-size: $text-font-size;
   line-height: 30px;
@@ -60,6 +60,7 @@
   height: 457px;
   width: 320px;
   margin: 0 auto;
+  margin-bottom: 38px;
 
   .contact__map-pin-icon {
     position: absolute;
@@ -78,7 +79,7 @@
   align-self: center;
   display: inline-block;
   width: 260px;
-  margin-top: 35px;
+  // margin-top: 35px;
   text-decoration: none;
   text-align: center;
   line-height: 50px;
@@ -87,9 +88,10 @@
 
 @media (min-width: $tablet-width) {
   .contact {
-    padding: 80px 0;
+    padding: 84px 0 58px 0;
     background: url("../img/bg-zigzag-line.svg") repeat-x;
     background-position: top center;
+    // @include border(red);
   }
 
   .contact__wrapper {
@@ -98,18 +100,20 @@
 
   .contact__title {
     @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+    margin-left: -5px;
   }
 
   .contact__title-icon {
     display: block;
     position: absolute;
-    top: 70px;
-    right: 50px;
+    top: 68px;
+    right: 52px;
   }
 
   .contact__table {
     font-size: 17px;
+    margin-bottom: 42px;
   }
 
   .contact__table tbody {
@@ -121,12 +125,13 @@
   }
 
   .contact__table td:last-child {
-    width: 70%;
+    width: 77%;
   }
 
   .contact__map-wrapper {
     height: 457px;
     width: 768px;
+    margin-bottom: 54px;
 
     .contact__map-pin-icon {
       left: 364px;
@@ -134,8 +139,7 @@
   }
 
   .contact__button {
-    width: 235px;
-    margin-top: 50px;
+    width: 230px;
   }
 }
 
@@ -146,8 +150,9 @@
     align-items: flex-start;
     max-width: 1440px;
     padding: 75px 50px 80px 225px;
-    height: 620px;
+    height: 625px;
     margin: 0 auto;
+    margin-bottom: 22px;
   }
 
   .contact__wrapper {
@@ -159,14 +164,18 @@
 
   .contact__title {
     margin-top: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     font-size: $desktop-header-font;
     line-height: 57px;
   }
 
   .contact__title-icon {
-    top: 130px;
-    left: 110px;
+    top: 148px;
+    left: 114px;
+  }
+
+  .contact__table {
+    margin-bottom: 30px;
   }
 
   .contact__table tbody {
@@ -176,20 +185,23 @@
 
   .contact__table td:last-child {
     width: 80%;
+    padding-left: 15px;
   }
 
   .contact__button {
     order: 2;
     align-self: flex-start;
-    margin-top: 45px;
+    margin-top: 33px;
   }
 
   .contact__map-wrapper {
     order: 3;
     align-self: flex-end;
-    width: 457px;
-    height: 525px;
+    width: 525px;
+    height: 457px;
     margin: 0;
+    margin-top: 10px;
+    margin-left: 5px;
 
     .contact__map-pin-icon {
       top: 150px;

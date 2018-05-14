@@ -1,5 +1,5 @@
 .feedback {
-  padding: 25px 30px;
+  padding: 25px 29px;
 }
 
 .feedback__title {
@@ -8,14 +8,14 @@
 
 .feedback__item {
   margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   padding: 25px 0;
 }
 
 .feedback__text {
   @include font-open-sans($size: $text-font-size, $color: $light-black, $lh: 30px);
   @include reset-mp;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 }
 
 .feedback__author-name {
@@ -56,6 +56,7 @@
 .feedback__nav-button--left {
   border-right: 0;
   background-image: url("../img/icon-left-arrow.svg");
+  background-position: center;
 }
 
 .feedback__nav-button--right {
@@ -78,8 +79,8 @@
     position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 70px 50px 0 50px;
-    margin-bottom: 50px;
+    padding: 78px 50px 0 50px;
+    margin-bottom: 60px;
     background: url("../img/review@1x.jpg") no-repeat;
     background-size: contain;
     background-position: left 0 top 0;
@@ -93,6 +94,7 @@
   .feedback__title {
     @include font-open-sans-bold($size: $tablet-header-font, $lh: 50px);
     order: 1;
+    margin-left: -4px;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       flex-grow: 1;
@@ -106,10 +108,13 @@
 
   .feedback__item {
     order: 3;
+    margin-top: 22px;
+    padding-bottom: 45px;
   }
 
   .feedback__text {
     font-size: 17px;
+    margin-bottom: 57px;
   }
 
   .feedback__author-name {
@@ -118,7 +123,7 @@
 
   .feedback__nav-buttons {
     position: absolute;
-    bottom: 0;
+    bottom: 13px;
     right: 50px;
     order: 4;
     width: 175px;
@@ -134,7 +139,7 @@
   .feedback {
     padding: 70px 50px 0 225px;
     margin-bottom: 75px;
-    background-position: left 100px center;
+    background-position: left 50px center;
   }
 
   .feedback__title {
@@ -142,8 +147,21 @@
     line-height: 57px;
   }
 
+  .feedback__item {
+    margin-bottom: 50px;
+  }
+
+  .feedback__button {
+    align-self: flex-end;
+  }
+
   .feedback__nav-buttons {
-    right: 100px;
+    right: 50px;
+    bottom: 59px;
+  }
+
+  .feedback__text {
+    margin-bottom: 40px;
   }
 
   .feedback__author-name {
