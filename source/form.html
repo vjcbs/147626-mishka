@@ -19,15 +19,16 @@
 <body>
   <div class="wrapper">
     <header class="form-header">
-      <a class="page-header__logo" href="index.html">
+      <a class="form-header__logo" href="index.html">
         <picture>
           <source media="(min-width:1150px)" srcset="img/logo-desktop.svg">
           <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Главная">
+          <img class="form-header__logo-image" src="img/logo-mobile.svg" alt="Главная">
         </picture>
       </a>
-      <button class="nav-menu__toggle" type="button"></button>
+
       <nav class="nav-menu">
+        <button class="nav-menu__toggle" type="button"></button>
         <ul class="nav-menu__list">
           <li class="nav-menu__item">
             <a class="nav-menu__item-link" href="catalog.html">Каталог товаров</a>
@@ -55,8 +56,8 @@
           </li>
         </ul>
       </nav>
-      <h1 class="form__title">Вязание на заказ</h1>
-      <p class="form__header-text">
+      <h1 class="form-header__title">Вязание на заказ</h1>
+      <p class="form-header__text">
         Мы будем рады воплотить в жизнь ваши пожелания!
         Заполните простую форму заказа и мы свяжемся с вами,
         чтобы уточнить детали.
@@ -65,125 +66,125 @@
 
     <form class="form-body" action="https://echo.htmlacademy.ru" method="post">
 
-      <div class="form__radiogroup">
-        <h4 class="form__legend">Тип</h4>
-          <ul class="site-list form__list">
-            <li class="form__item">
-              <input class="radio-button form__radio-button" type="radio" name="type" value="interior" id="radio-interior" checked="">
-              <label class="form__label form__radio-label" for="radio-interior">Аксессуары для интерьера</label>
+      <div class="form-body__radiogroup">
+        <h4 class="form-body__legend">Тип</h4>
+          <ul class="site-list form-body__list">
+            <li class="form-body__item">
+              <input class="radio-button form-body__radio-button" type="radio" name="type" value="interior" id="radio-interior" checked="">
+              <label class="form-body__label form-body__radio-label" for="radio-interior">Аксессуары для интерьера</label>
             </li>
-            <li class="form__item">
-              <input class="radio-button form__radio-button" type="radio" name="type" value="toy" id="radio-toy">
-              <label class="form__label form__radio-label" for="radio-toy">Детская игрушка</label>
+            <li class="form-body__item">
+              <input class="radio-button form-body__radio-button" type="radio" name="type" value="toy" id="radio-toy">
+              <label class="form-body__label form-body__radio-label" for="radio-toy">Детская игрушка</label>
             </li>
           </ul>
       </div>
 
-      <div class="form__checkboxgroup">
-        <h4 class="form__legend">Цвет</h4>
-        <ul class="site-list form__list">
-          <li class="form__item">
-            <input class="form__checkbox" type="checkbox" name="color" value="white" id="checkbox-white" checked="">
-            <label class="form__label form__checkbox-label" for="checkbox-white">Белый</label>
+      <div class="form-body__checkboxgroup">
+        <h4 class="form-body__legend">Цвет</h4>
+        <ul class="site-list form-body__list">
+          <li class="form-body__item">
+            <input class="form-body__checkbox" type="checkbox" name="color" value="white" id="checkbox-white" checked="">
+            <label class="form-body__label form-body__checkbox-label" for="checkbox-white">Белый</label>
           </li>
-          <li class="form__item">
-            <input class="form__checkbox" type="checkbox" name="color" value="gray" id="checkbox-gray" checked="">
-            <label class="form__label form__checkbox-label" for="checkbox-gray">Серый</label>
+          <li class="form-body__item">
+            <input class="form-body__checkbox" type="checkbox" name="color" value="gray" id="checkbox-gray" checked="">
+            <label class="form-body__label form-body__checkbox-label" for="checkbox-gray">Серый</label>
           </li>
-          <li class="form__item">
-            <input class="form__checkbox" type="checkbox" name="color" value="tiffany" id="checkbox-tiffany">
-            <label class="form__label form__checkbox-label" for="checkbox-tiffany">«Тиффани»</label>
+          <li class="form-body__item">
+            <input class="form-body__checkbox" type="checkbox" name="color" value="tiffany" id="checkbox-tiffany">
+            <label class="form-body__label form-body__checkbox-label" for="checkbox-tiffany">«Тиффани»</label>
           </li>
-          <li class="form__item">
-            <input class="form__checkbox" type="checkbox" name="color" value="black" id="checkbox-black">
-            <label class="form__label form__checkbox-label" for="checkbox-black">Черный</label>
+          <li class="form-body__item">
+            <input class="form-body__checkbox" type="checkbox" name="color" value="black" id="checkbox-black">
+            <label class="form-body__label form-body__checkbox-label" for="checkbox-black">Черный</label>
           </li>
-          <li class="form__item">
-            <input class="form__checkbox" type="checkbox" name="color" value="pink" id="checkbox-pink">
-            <label class="form__label form__checkbox-label" for="checkbox-pink">Розовый</label>
+          <li class="form-body__item">
+            <input class="form-body__checkbox" type="checkbox" name="color" value="pink" id="checkbox-pink">
+            <label class="form-body__label form-body__checkbox-label" for="checkbox-pink">Розовый</label>
           </li>
-          <li class="form__item">
-            <input class="form__checkbox" type="checkbox" name="color" value="orange" id="checkbox-orange">
-            <label class="form__label form__checkbox-label" for="checkbox-orange">Оранжевый</label>
+          <li class="form-body__item">
+            <input class="form-body__checkbox" type="checkbox" name="color" value="orange" id="checkbox-orange">
+            <label class="form-body__label form-body__checkbox-label" for="checkbox-orange">Оранжевый</label>
           </li>
         </ul>
       </div>
 
-      <div class="form__customer-name">
-        <h4 class="form__legend">
+      <div class="form-body__customer-name">
+        <h4 class="form-body__legend">
           ФИО
         </h4>
-        <ul class="site-list form__list">
-          <li class="form__item">
-            <label class="form__label form__customer-name-label" for="input-name">Имя:</label>
-            <input class="form__input-text" type="text" id="input-name" name="name" placeholder="Введите ваше имя*" required>
+        <ul class="site-list form-body__list">
+          <li class="form-body__item">
+            <label class="form-body__label form-body__customer-name-label" for="input-name">Имя:</label>
+            <input class="form-body__input-text" type="text" id="input-name" name="name" placeholder="Введите ваше имя*" required>
           </li>
-          <li class="form__item">
-            <label class="form__label form__customer-name-label" for="input-surname">Фамилия:</label>
-            <input class="form__input-text" type="text" id="input-surname" name="surname" placeholder="Укажите фамилию*" required>
+          <li class="form-body__item">
+            <label class="form-body__label form-body__customer-name-label" for="input-surname">Фамилия:</label>
+            <input class="form-body__input-text" type="text" id="input-surname" name="surname" placeholder="Укажите фамилию*" required>
           </li>
-          <li class="form__item">
-            <label class="form__label form__customer-name-label" for="input-second-name">Отчество:</label>
-            <input class="form__input-text" type="text" id="input-second-name" name="second-name" placeholder="Отчество, если желаете">
+          <li class="form-body__item">
+            <label class="form-body__label form-body__customer-name-label" for="input-second-name">Отчество:</label>
+            <input class="form-body__input-text" type="text" id="input-second-name" name="second-name" placeholder="Отчество, если желаете">
           </li>
         </ul>
       </div>
 
-      <div class="form__customer-phone">
-        <h4 class="form__legend">Тел</h4>
-        <input class="form__input-text" type="tel" id="input-phone" name="phone" placeholder="+7 XXX XX XX*" required>
-        <svg class="form__icon" width="25" height="24">
+      <div class="form-body__customer-phone">
+        <h4 class="form-body__legend">Тел</h4>
+        <input class="form-body__input-text" type="tel" id="input-phone" name="phone" placeholder="+7 XXX XX XX*" required>
+        <svg class="form-body__icon" width="25" height="24">
           <use xlink:href="img/icon-phone.svg#phone"></use>
         </svg>
       </div>
 
 
-      <div class="form__customer-email">
-        <h4 class="form__legend">Email</h4>
-        <input class="form__input-text" type="email" id="input-email" name="email" placeholder="Ваш Email*" required>
-        <svg class="form__icon" width="32" height="32">
+      <div class="form-body__customer-email">
+        <h4 class="form-body__legend">Email</h4>
+        <input class="form-body__input-text" type="email" id="input-email" name="email" placeholder="Ваш Email*" required>
+        <svg class="form-body__icon" width="32" height="32">
           <use xlink:href="img/icon-mail.svg#mail"></use>
         </svg>
       </div>
 
-      <div class="form__customer-addit-info">
-        <h4 class="form__legend">Доп</h4>
-        <textarea class="form__input-textarea" id="input-additional-info" name="additional-info" rows="7" placeholder="Опишите все ваши пожелания по заказу"></textarea>
+      <div class="form-body__customer-addit-info">
+        <h4 class="form-body__legend">Доп</h4>
+        <textarea class="form-body__input-textarea" id="input-additional-info" name="additional-info" rows="7" placeholder="Опишите все ваши пожелания по заказу"></textarea>
       </div>
 
-      <div class="form__bottom-wrapper">
-        <span class="form__note"><sup>*</sup>Поля обязательны для заполнения</span>
-        <button class="button form__submit" type="submit" value="Send order">Отправить заказ</button>
+      <div class="form-body__bottom-wrapper">
+        <span class="form-body__note"><sup>*</sup>Поля обязательны для заполнения</span>
+        <button class="button form-body__submit" type="submit" value="Send order">Отправить заказ</button>
       </div>
     </form>
 
     <footer class="page-footer">
-      <a class="footer__logo-link" href="index.html">
-        <svg class="footer__logo-image" width="102" height="34">
+      <a class="page-footer__logo-link" href="index.html">
+        <svg class="page-footer__logo-image" width="102" height="34">
           <use xlink:href="img/logo-footer.svg#logo-footer"></use>
         </svg>
       </a>
 
-      <ul class="footer__social-list">
-        <li class="footer__item">
-          <svg class="social social--ig" width="22" height="21">
+      <ul class="page-footer__social-list">
+        <li class="page-footer__item">
+          <svg class="page-footer__social page-footer__social--ig" width="22" height="21">
             <use xlink:href="img/social-icons.svg#instagram"></use>
           </svg>
         </li>
-        <li class="footer__item">
-          <svg class="social social--fb" width="15" height="28">
+        <li class="page-footer__item">
+          <svg class="page-footer__social page-footer__social--fb" width="15" height="28">
             <use xlink:href="img/social-icons.svg#facebook"></use>
           </svg>
         </li>
-        <li class="footer__item">
-          <svg class="social social--tw" width="23" height="20">
+        <li class="page-footer__item">
+          <svg class="page-footer__social page-footer__social--tw" width="23" height="20">
             <use xlink:href="img/social-icons.svg#twitter"></use>
           </svg>
         </li>
       </ul>
-      <a class="copyright" href="https://htmlacademy.ru">
-        <b class="copyright__title">Разработано</b>
-        <svg class="copyright__logo" width="27" height="34">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru">
+        <b class="page-footer__copyright-title">Разработано</b>
+        <svg class="page-footer__copyright-logo" width="27" height="34">
           <use xlink:href="img/logo-htmlacademy.svg#logo"></use>
         </svg>
       </a>

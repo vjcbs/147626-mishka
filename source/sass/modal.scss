@@ -1,4 +1,4 @@
-.modal-dialog {
+.modal {
   display: none;
   position: fixed;
   top: 0;
@@ -13,12 +13,12 @@
   pointer-events: none;
 }
 
-.modal-dialog:target {
+.modal:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-.modal-body {
+.modal__body {
   width: 100%;
   position: relative;
   margin: 10% auto;
@@ -29,15 +29,15 @@
   text-align: center;
 }
 
-.modal-body__title {
+.modal__title {
   @include font-open-sans-bold($size: 25px, $lh: 30px);
 }
 
-.modal-body__subtitle {
+.modal__subtitle {
   @include font-open-sans($size: 15px, $color: $light-black, $lh: 30px);
 }
 
-.modal-body__list {
+.modal__list {
   @include flex-row;
   justify-content: space-between;
   margin: auto;
@@ -45,20 +45,20 @@
   width: 300px;
 }
 
-.modal-body__item {
+.modal__item {
   width: 80px;
   height: 50px;
 
-  &:hover .modal-body__radio-label::before {
+  &:hover .modal__radio-label::before {
     border-color: rgba(99, 209, 187, 0.6);
   }
 }
 
-.modal-body__radio-button {
+.modal__radio-button {
   display: none;
 }
 
-.modal-body__radio-label {
+.modal__radio-label {
   position: relative;
   line-height: 50px;
   vertical-align: middle;
@@ -76,15 +76,15 @@
   }
 }
 
-.modal-body__item:nth-child(2) .modal-body__radio-label::before {
+.modal__item:nth-child(2) .modal__radio-label::before {
   left: -32px;
 }
 
-.modal-body__radio-button:checked ~ .modal-body__radio-label::before {
+.modal__radio-button:checked ~ .modal__radio-label::before {
   border-color: $light-green;
 }
 
-.modal-body__submit {
+.modal__submit {
   width: 300px;
   margin-bottom: 20px;
   border: none;
@@ -104,12 +104,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .modal-body {
+  .modal__body {
     width: 550px;
     padding: 0 125px;
   }
 
-  .modal-body__item {
+  .modal__item {
     width: 90px;
   }
 }

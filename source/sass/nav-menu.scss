@@ -1,0 +1,223 @@
+.nav-menu {
+  display: none;
+}
+
+.nav-menu__toggle {
+  position: absolute;
+  top: 32px;
+  right: 30px;
+  width: 21px;
+  height: 20px;
+  border: none;
+  background: url("../img/icon-menu-open.svg") no-repeat;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-menu__toggle--closed {
+  background: url("../img/icon-menu-close.svg") no-repeat;
+}
+
+.nav-menu--nojs {
+  display: block;
+}
+
+.nav-menu--slide-down {
+  display: block;
+}
+
+.nav-menu__list {
+  @include list-reset;
+  @include flex-column;
+}
+
+.nav-menu__item {
+  @include flex-row;
+  position: relative;
+  justify-content: center;
+  padding: 30px 40px;
+  border: 1px solid #ececec;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    .nav-menu__item-image {
+      fill: $light-green;
+    }
+  }
+
+  &:active {
+    fill: $light-green;
+    opacity: 0.3;
+  }
+}
+
+.nav-menu__item:nth-child(5),
+.nav-menu__item:nth-child(6) {
+  display: none;
+}
+
+
+.nav-menu__item-image {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  fill: #d3d2d2;
+  transform: translateY(-50%);
+}
+
+.nav-menu__item-link {
+  @include reset-link;
+  @include font-open-sans-bold;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.nav-menu__item-link:hover ~ .nav-menu__item-image {
+  fill: $light-green;
+}
+
+@media (min-width: $tablet-width) {
+  .nav-menu {
+    display: block;
+    padding: 0 50px;
+    z-index: 2;
+  }
+
+  .nav-menu__toggle {
+    display: none;
+  }
+
+  .nav-menu__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .nav-menu__list::after {
+    @include font-open-sans($size: $text-font-size, $color: $light-black);
+    content: "Бесплатная доставка по России";
+    position: absolute;
+    top: 112px;
+    right: 50px;
+  }
+
+  .nav-menu__item {
+    @include flex-row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 85px;
+    padding: 0;
+    border-top: none;
+    border-bottom: none;
+
+    &:first-child,
+    &:nth-child(2) {
+      width: 25%;
+      height: 65px;
+      border: none;
+
+      .nav-menu__item-link {
+        font-size: $text-font-size;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 85px;
+      order: -2;
+      margin-left: 50%;
+      padding: 0;
+
+      .nav-menu__item-link {
+        display: none;
+      }
+    }
+
+    &:nth-child(4) {
+      order: -1;
+      flex-grow: 1;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 0 0 20px;
+      border-right: none;
+      border-left: none;
+
+      .nav-menu__item-image {
+        left: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .nav-menu__list::after {
+    right: 50px;
+  }
+
+  .nav-menu__item:first-child {
+    order: 1;
+    width: 18%;
+    border-right: 1px solid $light-gray;
+
+    .nav-menu__item-link {
+      font-size: 17px;
+    }
+  }
+
+  .nav-menu__item:nth-child(2) {
+    order: 2;
+    width: 20%;
+    margin-right: 28%;
+    padding-left: 34px;
+    font-size: 17px;
+  }
+
+  .nav-menu__item:first-child,
+  .nav-menu__item:nth-child(2) {
+    .nav-menu__item-link {
+      font-size: 17px;
+    }
+    height: 85px;
+  }
+
+  .nav-menu__item:nth-child(3) {
+    order: 3;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .nav-menu__item:nth-child(4) {
+    order: 4;
+    padding-left: 60px;
+    justify-content: flex-end;
+    text-align: left;
+  }
+
+  .nav-menu__item:nth-child(5),
+  .nav-menu__item:nth-child(6) {
+    display: flex;
+    border: none;
+
+    .nav-menu__item-link {
+      font-size: 15px;
+    }
+  }
+
+  .nav-menu__item:nth-child(5) {
+    order: 5;
+    width: 18%;
+  }
+
+  .nav-menu__item:nth-child(6) {
+    order: 6;
+    padding-left: 34px;
+  }
+}

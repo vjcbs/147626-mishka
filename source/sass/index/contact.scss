@@ -5,7 +5,7 @@
   overflow-x: hidden;
 }
 
-.contact-wrapper {
+.contact__wrapper {
   padding: 0 30px;
 }
 
@@ -92,7 +92,7 @@
     background-position: top center;
   }
 
-  .contact-wrapper {
+  .contact__wrapper {
     padding: 0 50px;
   }
 
@@ -150,7 +150,7 @@
     margin: 0 auto;
   }
 
-  .contact-wrapper {
+  .contact__wrapper {
     order: 1;
     align-self: flex-start;
     width: 40%;
@@ -165,7 +165,7 @@
   }
 
   .contact__title-icon {
-    top: 100px;
+    top: 130px;
     left: 110px;
   }
 

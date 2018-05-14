@@ -7,17 +7,17 @@
   }
 }
 
-.form__radiogroup,
-.form__checkboxgroup,
-.form__customer-name {
+.form-body__radiogroup,
+.form-body__checkboxgroup,
+.form-body__customer-name {
   @include remove-fieldset-borders;
   margin: 0;
   padding: 30px 0;
 }
 
-.form__customer-phone,
-.form__customer-email,
-.form__customer-addit-info {
+.form-body__customer-phone,
+.form-body__customer-email,
+.form-body__customer-addit-info {
   @include remove-fieldset-borders;
   @include flex-column;
   position: relative;
@@ -25,11 +25,11 @@
   margin-bottom: 40px;
 }
 
-.form__customer-addit-info {
+.form-body__customer-addit-info {
   margin-bottom: 0;
 }
 
-.form__legend {
+.form-body__legend {
   @include font-open-sans-bold($size: $h3-font-size, $color: $light-green, $lh: 16px);
   width: 65px;
   margin-top: -40px;
@@ -38,25 +38,25 @@
   text-transform: uppercase;
 }
 
-.form__customer-phone .form__legend,
-.form__customer-email .form__legend,
-.form__customer-addit-info .form__legend {
+.form-body__customer-phone .form-body__legend,
+.form-body__customer-email .form-body__legend,
+.form-body__customer-addit-info .form-body__legend {
   margin-top: -22px;
   margin-bottom: 0;
 }
 
-.form__list {
+.form-body__list {
   padding: 0 0;
 }
 
-.form__item {
+.form-body__item {
   @include font-open-sans-bold($size: $h3-font-size, $lh: 17px);
   display: flex;
   padding: 15px 60px;
 }
 
-.form__customer-name {
-  .form__item {
+.form-body__customer-name {
+  .form-body__item {
     @include flex-column;
     padding: 15px 0;
   }
@@ -64,15 +64,15 @@
 
 // Оформление кастомных радиокнопок
 
-.form__radio-button {
+.form-body__radio-button {
   opacity: 0;
 
-  &:focus ~ .form__radio-label::before {
+  &:focus ~ .form-body__radio-label::before {
     border-color: $light-green;
   }
 }
 
-.form__radio-label {
+.form-body__radio-label {
   position: relative;
   transition: color 0.25s;
 
@@ -83,8 +83,8 @@
   }
 }
 
-.form__radio-label::after,
-.form__radio-label::before {
+.form-body__radio-label::after,
+.form-body__radio-label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -92,7 +92,7 @@
   border-radius: 50%;
 }
 
-.form__radio-label::before {
+.form-body__radio-label::before {
   width: 41px;
   height: 41px;
   border: solid 1px #5a5a5a;
@@ -100,7 +100,7 @@
   transition: border-color 0.25s;
 }
 
-.form__radio-label::after {
+.form-body__radio-label::after {
   width: 16px;
   height: 16px;
   background-color: #62d1ba;
@@ -110,15 +110,15 @@
   left: -42px;
 }
 
-.form__radio-button:checked ~ .form__radio-label::before {
+.form-body__radio-button:checked ~ .form-body__radio-label::before {
   border-color: #c7c7c7;
 }
 
-.form__radio-button:checked ~ .form__radio-label::after {
+.form-body__radio-button:checked ~ .form-body__radio-label::after {
   transform: scale(1.1);
 }
 
-.form__radio-button:checked ~ .form__radio-label {
+.form-body__radio-button:checked ~ .form-body__radio-label {
   &:hover {
     &::before {
       border-color: $light-green;
@@ -126,21 +126,21 @@
   }
 }
 
-.form__label[for="radio-interior"] {
+.form-body__label[for="radio-interior"] {
   min-width: 150px;
 }
 
 // Оформление кастомных чекбоксов
 
-.form__checkbox {
+.form-body__checkbox {
   opacity: 0;
 
-  &:focus ~ .form__checkbox-label::before {
+  &:focus ~ .form-body__checkbox-label::before {
     border-color: $light-green;
   }
 }
 
-.form__checkbox-label {
+.form-body__checkbox-label {
   position: relative;
   transition: color 0.25s;
 
@@ -151,15 +151,15 @@
   }
 }
 
-.form__checkbox-label::after,
-.form__checkbox-label::before {
+.form-body__checkbox-label::after,
+.form-body__checkbox-label::before {
   content: "";
   position: absolute;
   top: 0;
   left: -55px;
 }
 
-.form__checkbox-label::before {
+.form-body__checkbox-label::before {
   width: 41px;
   height: 41px;
   border: solid 1px #5a5a5a;
@@ -167,7 +167,7 @@
   transition: border-color 0.25s;
 }
 
-.form__checkbox-label::after {
+.form-body__checkbox-label::after {
   width: 24px;
   height: 18px;
   border-top: 2px solid black;
@@ -178,15 +178,15 @@
   left: -44px;
 }
 
-.form__checkbox:checked ~ .form__checkbox-label::before {
+.form-body__checkbox:checked ~ .form-body__checkbox-label::before {
   border-color: #c7c7c7;
 }
 
-.form__checkbox:checked ~ .form__checkbox-label::after {
+.form-body__checkbox:checked ~ .form-body__checkbox-label::after {
   transform: rotate(135deg) scale(1);
 }
 
-.form__checkbox:checked ~ .form__checkbox-label {
+.form-body__checkbox:checked ~ .form-body__checkbox-label {
   &:hover {
     &::before {
       border-color: $light-green;
@@ -194,7 +194,7 @@
   }
 }
 
-.form__input-text {
+.form-body__input-text {
   @include font-open-sans($size: 15px);
   position: relative;
   width: 100%;
@@ -211,30 +211,30 @@
     box-shadow: 0 3px 0 -2px $light-green;
   }
 
-  &:hover + .form__icon {
+  &:hover + .form-body__icon {
     fill: $light-green;
   }
 }
 
-.form__customer-email,
-.form__customer-phone {
+.form-body__customer-email,
+.form-body__customer-phone {
   position: relative;
 }
 
-.form__customer-email .form__icon,
-.form__customer-phone .form__icon {
+.form-body__customer-email .form-body__icon,
+.form-body__customer-phone .form-body__icon {
   position: absolute;
   top: 35%;
   right: 0;
 }
 
-.form__input-text::placeholder,
-.form__input-textarea::placeholder {
+.form-body__input-text::placeholder,
+.form-body__input-textarea::placeholder {
   color: $light-black;
   opacity: 0.3;
 }
 
-.form__input-textarea {
+.form-body__input-textarea {
   @include font-open-sans($size: 15px, $lh: 18px);
   width: 100%;
   padding: 10px;
@@ -250,12 +250,12 @@
   }
 }
 
-.form__note {
+.form-body__note {
   @include font-open-sans($size: 14px, $lh: 16px);
   font: 12px $regular-font;
 }
 
-.form__submit {
+.form-body__submit {
   margin: 20px 0 40px 0;
 }
 
@@ -267,9 +267,9 @@
     margin-right: auto;
   }
 
-  .form__radiogroup,
-  .form__checkboxgroup,
-  .form__customer-name {
+  .form-body__radiogroup,
+  .form-body__checkboxgroup,
+  .form-body__customer-name {
     @include flex-row;
     justify-content: space-between;
     align-items: flex-start;
@@ -278,9 +278,9 @@
     border: none;
   }
 
-  .form__customer-phone,
-  .form__customer-email,
-  .form__customer-addit-info {
+  .form-body__customer-phone,
+  .form-body__customer-email,
+  .form-body__customer-addit-info {
     @include flex-row;
     justify-content: space-between;
     align-items: baseline;
@@ -289,53 +289,53 @@
     border: none;
   }
 
-  .form__legend {
+  .form-body__legend {
     margin: 0;
     margin-top: 20px;
     flex-basis: 27%;
     background-color: transparent;
   }
 
-  .form__list {
+  .form-body__list {
     flex-basis: 73%;
   }
 
-  .form__item {
+  .form-body__item {
     padding: 15px 0;
     margin-bottom: 25px;
   }
 
-  .form__label {
+  .form-body__label {
     font-size: 19px;
     line-height: 18px;
   }
 
-  .form__checkboxgroup {
+  .form-body__checkboxgroup {
     background-color: $light-gray;
   }
 
-  .form__checkboxgroup .form__list {
+  .form-body__checkboxgroup .form-body__list {
     flex-direction: row;
     flex-wrap: wrap;
     max-height: 220px;
   }
 
-  .form__checkboxgroup .form__item {
+  .form-body__checkboxgroup .form-body__item {
     flex-basis: 50%;
   }
 
-  .form__radiogroup,
-  .form__checkboxgroup {
+  .form-body__radiogroup,
+  .form-body__checkboxgroup {
     overflow-x: hidden;
 
-    .form__list {
+    .form-body__list {
       transform: translateX(55px);
     }
   }
 
   // Меняю размеры кастомных радиокнопок
 
-  .form__radio-label {
+  .form-body__radio-label {
     position: relative;
     transition: color 0.25s;
 
@@ -346,8 +346,8 @@
     }
   }
 
-  .form__radio-label::after,
-  .form__radio-label::before {
+  .form-body__radio-label::after,
+  .form-body__radio-label::before {
     content: "";
     position: absolute;
     top: 0;
@@ -355,7 +355,7 @@
     border-radius: 50%;
   }
 
-  .form__radio-label::before {
+  .form-body__radio-label::before {
     width: 48px;
     height: 48px;
     border: solid 1px #5a5a5a;
@@ -363,7 +363,7 @@
     transition: border-color 0.25s;
   }
 
-  .form__radio-label::after {
+  .form-body__radio-label::after {
     width: 18px;
     height: 18px;
     background-color: #62d1ba;
@@ -375,19 +375,19 @@
 
   // Меняю размеры кастомных чекбоксов
 
-  .form__checkbox-label::after,
-  .form__checkbox-label::before {
+  .form-body__checkbox-label::after,
+  .form-body__checkbox-label::before {
     top: 0;
     left: -65px;
   }
 
-  .form__checkbox-label::before {
+  .form-body__checkbox-label::before {
     width: 50px;
     height: 50px;
     top: -15px;
   }
 
-  .form__checkbox-label::after {
+  .form-body__checkbox-label::after {
     width: 30px;
     height: 20px;
     top: -3px;
@@ -395,62 +395,62 @@
   }
 
 
-  .form__customer-name .form__item {
+  .form-body__customer-name .form-body__item {
     @include flex-row;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 0;
   }
 
-  .form__customer-name-label {
+  .form-body__customer-name-label {
     margin-right: 20px;
   }
 
-  .form__input-text {
+  .form-body__input-text {
     padding: 12px 17px;
     background-color: transparent;
     line-height: 18px;
   }
 
-  .form__customer-email .form__icon {
+  .form-body__customer-email .form-body__icon {
     top: 25%;
     right: 50px;
   }
 
-  .form__customer-phone .form__icon {
+  .form-body__customer-phone .form-body__icon {
     top: 60%;
     right: 50px;
   }
 
-  .form__customer-phone,
-  .form__customer-email {
+  .form-body__customer-phone,
+  .form-body__customer-email {
     background-color: $light-gray;
     padding-bottom: 0;
   }
 
-  .form__customer-email {
+  .form-body__customer-email {
     padding-top: 20px;
     padding-bottom: 60px;
   }
 
-  .form__customer-addit-info {
+  .form-body__customer-addit-info {
     padding-bottom: 20px;
   }
 
-  .form__customer-phone .form__legend,
-  .form__customer-email .form__legend,
-  .form__customer-addit-info .form__legend {
+  .form-body__customer-phone .form-body__legend,
+  .form-body__customer-email .form-body__legend,
+  .form-body__customer-addit-info .form-body__legend {
     flex-basis: 27%;
   }
 
-  .form__customer-phone .form__input-text,
-  .form__customer-email .form__input-text,
-  .form__customer-addit-info .form__input-textarea {
+  .form-body__customer-phone .form-body__input-text,
+  .form-body__customer-email .form-body__input-text,
+  .form-body__customer-addit-info .form-body__input-textarea {
     flex-basis: 73%;
     font-size: 19px;
   }
 
-  .form__customer-phone .form__input-text {
+  .form-body__customer-phone .form-body__input-text {
     border-bottom: 2px solid black;
     outline: 1px solid transparent;
 
@@ -464,51 +464,51 @@
     }
   }
 
-  .form__bottom-wrapper {
+  .form-body__bottom-wrapper {
     @include flex-row;
     justify-content: space-between;
     align-items: baseline;
     padding: 0 50px;
   }
 
-  .form__note {
+  .form-body__note {
     font-size: 17px;
     line-height: 30px;
   }
 
-  .form__submit {
+  .form-body__submit {
     order: -1;
     width: 220px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .form__legend {
+  .form-body__legend {
     flex-basis: 18.333%;
     text-align: center;
   }
 
-  .form__list {
+  .form-body__list {
     flex-basis: 81.666%;
   }
 
-  .form__checkboxgroup .form__item {
+  .form-body__checkboxgroup .form-body__item {
     flex-basis: 30%;
   }
 
-  .form__customer-phone .form__legend,
-  .form__customer-email .form__legend,
-  .form__customer-addit-info .form__legend {
+  .form-body__customer-phone .form-body__legend,
+  .form-body__customer-email .form-body__legend,
+  .form-body__customer-addit-info .form-body__legend {
     flex-basis: 18.333%;
   }
 
-  .form__customer-phone .form__input-text,
-  .form__customer-email .form__input-text,
-  .form__customer-addit-info .form__input-textarea {
+  .form-body__customer-phone .form-body__input-text,
+  .form-body__customer-email .form-body__input-text,
+  .form-body__customer-addit-info .form-body__input-textarea {
     flex-basis: 81.666%;
   }
 
-  .form__bottom-wrapper {
+  .form-body__bottom-wrapper {
     padding-left: 21.5%;
   }
 }

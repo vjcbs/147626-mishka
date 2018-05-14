@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-.footer__social-list {
+.page-footer__social-list {
   @include list-reset;
   @include flex-row;
   justify-content: space-around;
@@ -15,15 +15,15 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.footer__item {
+.page-footer__item {
   padding: 25px 0;
 }
 
-.footer__logo-image {
+.page-footer__logo-image {
   display: none;
 }
 
-.social {
+.page-footer__social {
   display: block;
   width: 22px;
   height: 21px;
@@ -33,21 +33,21 @@
   cursor: pointer;
 }
 
-.social:hover {
+.page-footer__social:hover {
   fill: $light-green;
   opacity: 0.6;
 }
 
-.social:active {
+.page-footer__social:active {
   opacity: 0.3;
 }
 
-.social--ig {
+.page-footer__social--ig {
   width: 22px;
   height: 21px;
 }
 
-.social--fb {
+.page-footer__social--fb {
   width: 15px;
   height: 28px;
 }
@@ -57,7 +57,7 @@
   height: 28px;
 }
 
-.copyright {
+.page-footer__copyright {
   @include reset-link;
   display: flex;
   flex-direction: row;
@@ -68,22 +68,22 @@
   padding: 20px 25px 20px 15px;
 }
 
-.copyright__title {
+.page-footer__copyright-title {
   @include heading($size: 19px, $lh: 18px);
 }
 
-.copyright__logo {
+.page-footer__copyright-logo {
   @include fill-and-align;
   fill: #63d1bb;
 }
 
-.copyright:hover .copyright__logo {
+.page-footer__copyright:hover .page-footer__copyright-logo {
   fill: $hover-color;
 }
 
-.copyright:active {
-  .copyright__title,
-  .copyright__logo {
+.page-footer__copyright:active {
+  .page-footer__copyright-title,
+  .page-footer__copyright-logo {
     opacity: 0.3;
   }
 }
@@ -97,38 +97,38 @@
     clear: both;
   }
 
-  .footer__logo-image {
+  .page-footer__logo-image {
     display: block;
     cursor: pointer;
   }
 
-  .footer__logo-image:hover {
+  .page-footer__logo-image:hover {
     fill: $hover-color;
   }
 
-  .footer__logo-image:active {
+  .page-footer__logo-image:active {
     opacity: 0.3;
   }
 
-  .footer__social-list {
+  .page-footer__social-list {
     width: 200px;
     margin: 0;
     margin-left: 55px;
   }
 
-  .footer__item {
+  .page-footer__item {
     padding: 10px;
     margin: 0;
   }
 
-  .copyright {
+  .page-footer__copyright {
     justify-content: space-between;
     width: 180px;
     padding: 0;
     margin: 0;
   }
 
-  .copyright__title {
+  .page-footer__copyright-title {
     padding: 0;
   }
 }

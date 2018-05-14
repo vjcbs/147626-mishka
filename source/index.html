@@ -27,8 +27,8 @@
           <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Главная">
         </picture>
       </a>
-      <button class="nav-menu__toggle" type="button"></button>
       <nav class="nav-menu nav-menu--nojs">
+        <button class="nav-menu__toggle" type="button"></button>
         <ul class="nav-menu__list">
           <li class="nav-menu__item">
             <a class="nav-menu__item-link" href="catalog.html">Каталог товаров</a>
@@ -194,7 +194,7 @@
       </section>
 
       <section class="contact">
-        <div class="contact-wrapper">
+        <div class="contact__wrapper">
           <h3 class="contact__title">Контакты</h3>
           <svg class="contact__title-icon" width="47" height="82">
             <use xlink:href="img/icon-flag.svg#flag"></use>
@@ -236,56 +236,56 @@
     </main>
 
     <footer class="page-footer">
-      <a class="footer__logo-link" href="index.html">
-        <svg class="footer__logo-image" width="102" height="34">
+      <a class="page-footer__logo-link" href="index.html">
+        <svg class="page-footer__logo-image" width="102" height="34">
           <use xlink:href="img/logo-footer.svg#logo-footer"></use>
         </svg>
       </a>
 
-      <ul class="footer__social-list">
-        <li class="footer__item">
-          <svg class="social social--ig" width="22" height="21">
+      <ul class="page-footer__social-list">
+        <li class="page-footer__item">
+          <svg class="page-footer__social page-footer__social--ig" width="22" height="21">
             <use xlink:href="img/social-icons.svg#instagram"></use>
           </svg>
         </li>
-        <li class="footer__item">
-          <svg class="social social--fb" width="15" height="28">
+        <li class="page-footer__item">
+          <svg class="page-footer__social page-footer__social--fb" width="15" height="28">
             <use xlink:href="img/social-icons.svg#facebook"></use>
           </svg>
         </li>
-        <li class="footer__item">
-          <svg class="social social--tw" width="23" height="20">
+        <li class="page-footer__item">
+          <svg class="page-footer__social page-footer__social--tw" width="23" height="20">
             <use xlink:href="img/social-icons.svg#twitter"></use>
           </svg>
         </li>
       </ul>
-      <a class="copyright" href="https://htmlacademy.ru">
-        <b class="copyright__title">Разработано</b>
-        <svg class="copyright__logo" width="27" height="34">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru">
+        <b class="page-footer__copyright-title">Разработано</b>
+        <svg class="page-footer__copyright-logo" width="27" height="34">
           <use xlink:href="img/logo-htmlacademy.svg#logo"></use>
         </svg>
       </a>
     </footer>
 
-    <div id="modalCart" class="modal-dialog">
-      <div class="modal-body" id="modalBody">
-        <h2 class="modal-body__title">Добавить в корзину</h2>
-        <h3 class="modal-body__subtitle">Выберите размер</h3>
-        <ul class="site-list modal-body__list">
-          <li class="modal-body__item">
-            <input class="modal-body__radio-button" type="radio" name="size" value="s" id="radio-s" checked="">
-            <label class="modal-body__radio-label" for="radio-s">S</label>
+    <div class="modal" id="modalCart">
+      <div class="modal__body" id="modalBody">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <h3 class="modal__subtitle">Выберите размер</h3>
+        <ul class="site-list modal__list">
+          <li class="modal__item">
+            <input class="modal__radio-button" type="radio" name="size" value="s" id="radio-s" checked="">
+            <label class="modal__radio-label" for="radio-s">S</label>
           </li>
-          <li class="modal-body__item">
-            <input class="modal-body__radio-button" type="radio" name="size" value="m" id="radio-m">
-            <label class="modal-body__radio-label" for="radio-m">M</label>
+          <li class="modal__item">
+            <input class="modal__radio-button" type="radio" name="size" value="m" id="radio-m">
+            <label class="modal__radio-label" for="radio-m">M</label>
           </li>
-          <li class="modal-body__item">
-            <input class="modal-body__radio-button" type="radio" name="size" value="l" id="radio-l">
-            <label class="modal-body__radio-label" for="radio-l">L</label>
+          <li class="modal__item">
+            <input class="modal__radio-button" type="radio" name="size" value="l" id="radio-l">
+            <label class="modal__radio-label" for="radio-l">L</label>
           </li>
         </ul>
-        <button class="button modal-body__submit">Добавить</button>
+        <button class="button modal__submit">Добавить</button>
       </div>
     </div>
   </div>

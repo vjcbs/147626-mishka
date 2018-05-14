@@ -36,22 +36,3 @@ body {
   @include flex-column;
   @include list-reset;
 }
-
-.button {
-  @include font-open-sans-bold($size: $button-font-size, $color: $light-black, $lh: 20px);
-  width: 100%;
-  height: 50px;
-  background-color: #ffffff;
-  border: 2px solid $light-black;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $light-black;
-    color: white;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
-}
