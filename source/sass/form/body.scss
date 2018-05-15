@@ -9,115 +9,84 @@
 
 .form-body__radiogroup,
 .form-body__checkboxgroup,
-.form-body__customer-name {
-  @include remove-fieldset-borders;
-  margin: 0;
-  padding: 30px 0;
-}
-
+.form-body__customer-name,
 .form-body__customer-phone,
 .form-body__customer-email,
 .form-body__customer-addit-info {
   @include remove-fieldset-borders;
-  @include flex-column;
-  position: relative;
-  padding: 10px 0;
 }
 
-.form-body__customer-addit-info {
-  margin-bottom: 10px;
-  padding-bottom: 0;
+.form-body__checkboxgroup .form-body__legend,
+.form-body__customer-name .form-body__legend,
+.form-body__customer-phone .form-body__legend,
+.form-body__customer-email .form-body__legend,
+.form-body__customer-addit-info .form-body__legend {
+  margin-top: -8px;
+}
+
+.form-body__customer-email,
+.form-body__customer-phone {
+  position: relative;
+}
+
+.form-body__list {
+  @include list-reset;
 }
 
 .form-body__legend {
   @include font-open-sans-bold($size: $h3-font-size, $color: $light-green, $lh: 16px);
   width: 65px;
-  margin-top: -40px;
   margin-bottom: 20px;
   background-color: #ffffff;
   text-transform: uppercase;
 }
 
-.form-body__customer-phone .form-body__legend,
-.form-body__customer-email .form-body__legend,
-.form-body__customer-addit-info .form-body__legend {
-  margin-top: -22px;
-  margin-bottom: 0;
-}
-
-.form-body__list {
-  padding: 0 0;
-}
-
 .form-body__item {
-  @include font-open-sans-bold($size: $h3-font-size, $lh: 17px);
-  display: flex;
-  padding: 15px 60px;
-}
-
-.form-body__customer-name {
-  margin-bottom: 5px;
-  .form-body__item {
-    @include flex-column;
-    padding: 10px 0;
-    margin-bottom: 0;
-  }
+  @include font-open-sans-bold($size: $h3-font-size, $lh: 18px);
 }
 
 .form-body__radiogroup {
   // @include border(blue);
+  // height: 150px;
   padding: 0;
-  margin-bottom: 57px;
-}
+  margin-bottom: 52px;
 
-.form-body__radiogroup .form-body__item {
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  // @include border(blue);
-}
+  .form-body__legend {
+    margin-top: -10px;
+    margin-bottom: 17px;
+  }
 
-.form-body__radiogroup .form-body__legend {
-  margin-top: -10px;
-}
+  .form-body__list {
 
-.form-body__checkboxgroup {
-  margin-bottom: 16px;
-  padding-bottom: 0;
+  }
+
   .form-body__item {
-    padding-left: 40px;
-    margin-bottom: 13px;
+    @include flex-row;
+    position: relative;
+    padding: 18px 41px 0 41px;
+
+    &:first-child {
+      margin-bottom: 6px;
+    }
+  }
+
+  .form-body__rlabel {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+
+  .form-body__radio-button {
+    // opacity: 0;
+  }
+
+  .form-body__radio-label {
+    width: 200px;
+    transition: color 0.25s;
   }
 }
 
 // Оформление кастомных радиокнопок
-
-.form-body__radio-button {
-  opacity: 0;
-
-  &:focus ~ .form-body__radio-label::before {
-    border-color: $light-green;
-  }
-}
-
-.form-body__radiogroup .form-body__item {
-  display: block;
-
-}
-
-.form-body__radio-label {
-  display: inline-block;
-  width: 200px;
-  padding: 0;
-
-  transition: color 0.25s;
-
-  &:hover {
-    &::before {
-      border-color: $light-green;
-    }
-  }
-}
 
 .form-body__radio-label::after,
 .form-body__radio-label::before {
@@ -131,7 +100,7 @@
   width: 40px;
   height: 40px;
   border: solid 2px #444444;
-  top: 3px;
+  top: 8px;
   transition: border-color 0.25s;
 }
 
@@ -141,10 +110,10 @@
   background-color: #62d1ba;
   transform: scale(0);
   transition: transform 0.25s;
-  top: 16px;
+  top: 20px;
   left: 13px;
 }
-
+/*
 .form-body__radiogroup .form-body__item:nth-child(1) {
   margin-bottom: 5px;
 
@@ -162,25 +131,53 @@
     top: 23px;
   }
 }
-
+*/
 .form-body__radio-button:checked ~ .form-body__radio-label::before {
-  border-color: #c7c7c7;
-}
-
-.form-body__radio-button:checked ~ .form-body__radio-label::after {
-  transform: scale(1.1);
+  // border-color: #c7c7c7;
+  // background-color: blue;
+  // border-color: $light-green;
 }
 
 .form-body__radio-button:checked ~ .form-body__radio-label {
-  &:hover {
-    &::before {
-      border-color: $light-green;
-    }
+
+}
+
+.form-body__radio-button:checked ~ .form-body__radio-label {
+  &::before {
+    border-color: #c7c7c7;
   }
+
+  // &:hover {
+  //   &::before {
+  //     border-color: $light-green;
+  //   }
+  // }
+}
+
+.form-body__radio-button {
+  // &:focus ~ .form-body__radio-label::before {
+  //   border-color: $light-green;
+  // }
+}
+
+.form-body__radio-label {
+  // &:hover {
+  //   &::before {
+  //     border-color: $light-green;
+  //   }
 }
 
 .form-body__label[for="radio-interior"] {
   min-width: 150px;
+}
+
+.form-body__checkboxgroup {
+  margin-bottom: 16px;
+  padding-bottom: 0;
+  .form-body__item {
+    padding-left: 40px;
+    margin-bottom: 13px;
+  }
 }
 
 // Оформление кастомных чекбоксов
@@ -269,30 +266,6 @@
   }
 }
 
-.form-body__customer-email,
-.form-body__customer-phone {
-  position: relative;
-}
-
-.form-body__customer-phone {
-  margin-bottom: 38px;
-
-  .form-body__input-text {
-    padding: 15px 0;
-  }
-}
-
-.form-body__customer-email {
-  margin-bottom: 38px;
-}
-
-.form-body__customer-email .form-body__icon,
-.form-body__customer-phone .form-body__icon {
-  position: absolute;
-  top: 35%;
-  right: 0;
-}
-
 .form-body__input-text::placeholder,
 .form-body__input-textarea::placeholder {
   color: $light-black;
@@ -314,6 +287,35 @@
   &:active {
     border-color: $light-green;
   }
+}
+
+.form-body__customer-name {
+  margin-bottom: 5px;
+
+  .form-body__item {
+    @include flex-column;
+    padding: 10px 0;
+    margin-bottom: 0;
+  }
+}
+
+.form-body__customer-phone {
+  margin-bottom: 38px;
+
+  .form-body__input-text {
+    padding: 15px 0;
+  }
+}
+
+.form-body__customer-email {
+  margin-bottom: 38px;
+}
+
+.form-body__customer-email .form-body__icon,
+.form-body__customer-phone .form-body__icon {
+  position: absolute;
+  top: 35%;
+  right: 0;
 }
 
 .form-body__note {

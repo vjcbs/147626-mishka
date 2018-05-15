@@ -67,21 +67,27 @@
 
       <div class="form-body__radiogroup">
         <h4 class="form-body__legend">Тип</h4>
-          <ul class="site-list form-body__list">
+          <ul class="form-body__list">
             <li class="form-body__item">
-              <input class="radio-button form-body__radio-button" type="radio" name="type" value="interior" id="radio-interior" checked="">
-              <label class="form-body__label form-body__radio-label" for="radio-interior">Аксессуар для интерьера</label>
+              <!-- <label class="form-body__rlabel" for="radio-interior"> -->
+                <input class="radio-button form-body__radio-button" type="radio" name="type" value="interior" id="radio-interior" checked="">
+                <!-- <span class='form-body__radio-label'>Аксессуар для интерьера</span> -->
+                <label class="form-body__label form-body__radio-label" for="radio-interior">Аксессуар для интерьера</label>
+              <!-- </label> -->
             </li>
             <li class="form-body__item">
-              <input class="radio-button form-body__radio-button" type="radio" name="type" value="toy" id="radio-toy">
-              <label class="form-body__label form-body__radio-label" for="radio-toy">Детская игрушка</label>
+              <!-- <label class="form-body__rlabel" for="radio-toy"> -->
+                <!-- <span class='form-body__radio-label'>Детская игрушка</span> -->
+                <input class="radio-button form-body__radio-button" type="radio" name="type" value="toy" id="radio-toy">
+                <label class="form-body__label form-body__radio-label" for="radio-toy">Детская игрушка</label>
+              <!-- </label> -->
             </li>
           </ul>
       </div>
 
       <div class="form-body__checkboxgroup">
         <h4 class="form-body__legend">Цвет</h4>
-        <ul class="site-list form-body__list">
+        <ul class="form-body__list">
           <li class="form-body__item">
             <input class="form-body__checkbox" type="checkbox" name="color" value="white" id="checkbox-white" checked="">
             <label class="form-body__label form-body__checkbox-label" for="checkbox-white">Белый</label>
@@ -113,7 +119,7 @@
         <h4 class="form-body__legend">
           ФИО
         </h4>
-        <ul class="site-list form-body__list">
+        <ul class="form-body__list">
           <li class="form-body__item">
             <label class="form-body__label form-body__customer-name-label" for="input-name">Имя:</label>
             <input class="form-body__input-text" type="text" id="input-name" name="name" placeholder="Введите ваше имя*" required>
