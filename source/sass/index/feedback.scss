@@ -1,5 +1,6 @@
 .feedback {
   padding: 25px 29px;
+  // overflow-x: hidden;
 }
 
 .feedback__title {
@@ -32,7 +33,7 @@
 .feedback__nav-buttons {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 38px;
+  margin-bottom: 35px;
 }
 
 .feedback__nav-button {
@@ -67,6 +68,7 @@
 .feedback__button {
   align-self: center;
   display: inline-block;
+  width: 260px;
   text-decoration: none;
   text-align: center;
   line-height: 50px;

@@ -17,6 +17,7 @@ body {
   position: relative;
   max-width: 1680px;
   margin: 0 auto;
+  overflow-x: hidden;
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     overflow-x: hidden;

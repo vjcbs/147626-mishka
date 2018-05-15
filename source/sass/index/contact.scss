@@ -2,7 +2,7 @@
   @include flex-column;
   position: relative;
   padding: 60px 0 40px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .contact__wrapper {
@@ -80,6 +80,7 @@
   display: inline-block;
   width: 260px;
   // margin-top: 35px;
+  margin-left: 13px;
   text-decoration: none;
   text-align: center;
   line-height: 50px;

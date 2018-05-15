@@ -26,7 +26,7 @@
   @include heading;
   align-self: center;
   width: 100%;
-  padding: 70px 0;
+  padding: 70px 0 75px;
   background-color: $light-gray;
   text-align: center;
   z-index: -2;
@@ -36,7 +36,7 @@
   @include font-open-sans($size: 13px, $color: $light-black, $lh: 24px);
   align-self: center;
   margin: 0;
-  padding: 25px 30px;
+  padding: 25px 30px 22px 30px;
   line-height: 24px;
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

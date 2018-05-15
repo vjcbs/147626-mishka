@@ -1,10 +1,15 @@
 .featured {
   padding: 28px 30px;
+  // @include border(blue);
+  min-width: 320px;
 }
 
 .featured__title {
   @include heading($h2-font-size);
+  padding: 0;
   margin-bottom: 4px;
+  width: 100%;
+  // @include border(red);
 }
 
 .featured__subtitle {

@@ -1,6 +1,7 @@
 .about {
   padding: 42px 28px 25px 28px;
   // @include border(red);
+  // overflow-x: hidden;
 }
 
 .about__title {
@@ -17,6 +18,7 @@
   @include flex-column;
   justify-content: center;
   margin-bottom: 24px;
+  width: 260px;
   // @include border(red);
 
   .about__item-image {
@@ -33,13 +35,13 @@
     .about__item-image {
       margin-top: 2px;
       margin-left: 10px;
-      margin-bottom: 13px;
+      margin-bottom: 10px;
     }
   }
 
   &:nth-child(2) {
     .about__item-image {
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       margin-left: 2px;
     }
   }
@@ -48,7 +50,7 @@
     .about__item-image {
       margin-left: 10px;
       margin-top: 5px;
-      margin-bottom: 16px;
+      margin-bottom: 19px;
     }
   }
 
@@ -56,7 +58,7 @@
     .about__item-image {
       margin-top: 1px;
       margin-left: 5px;
-      margin-bottom: 13px;
+      margin-bottom: 15px;
     }
   }
 
@@ -64,7 +66,7 @@
     .about__item-image {
       margin-top: 3px;
       margin-left: -3px;
-      margin-bottom: 23px;
+      margin-bottom: 22px;
     }
   }
 
@@ -74,7 +76,7 @@
     .about__item-image {
       margin-top: 2px;
       margin-left: 6px;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
   }
 }

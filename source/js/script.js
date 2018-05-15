@@ -37,10 +37,11 @@ window.onclick = function(event) {
 
 // Для вызовы модального окна на странице каталога
 
-var elements = document.querySelectorAll('.catalog__item-icon-link');
+var elements = document.querySelectorAll('.catalog-items__item-icon-link');
 
 for (var i = 0; i < elements.length; i++) {
   elements[i].addEventListener('click', function() {
     modal.style.display = 'block';
+    console.log('Click!');
   });
 }
