@@ -65,8 +65,12 @@
   .featured {
     position: relative;
     padding: 9px 50px 25px 50px;
+    margin-top: 110px;
     background: url("../img/bg-zigzag-line.svg") repeat-x;
     background-position: bottom center;
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .featured__wrapper {
@@ -74,8 +78,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
+    // max-width: 990px;
+    // margin: 0 auto;
     // margin-top: 100px;
-    margin-top: -50px;
+    // margin-top: -50px;
+    // @include border(red);
   }
 
   // .featured__title,
@@ -102,11 +109,12 @@
   .featured__subtitle {
     flex-grow: 0;
     order: 2;
-    align-self: center;
-    width: 120px;
+    // align-self: center;
+    // align-self: flex-end;
+    width: 122px;
     margin: 0;
-    // margin-top: 3px;
-    padding: 15px;
+    // padding: 15px;
+    margin-top: 3px;
     font-size: 17px;
     line-height: 17px;
     text-align: center;
@@ -115,16 +123,16 @@
 
   .featured__desc-wrapper {
     order: 3;
-    width: 43%;
+    width: 44%;
     height: 50%;
-    // margin-top: 48px;
+    margin-top: 55px;
   }
 
   .featured__image-wrapper {
     order: 4;
     height: 1px;
     min-width: 333px;
-    margin-top: 48px;
+    margin-top: 55px;
   }
 
   .featured__price-wrapper {
@@ -133,7 +141,7 @@
     align-self: flex-end;
     order: 5;
     width: 100%;
-    // margin-top: 55px;
+    margin-top: 58px;
     margin-bottom: 50px;
     // @include border(red);
   }
@@ -178,14 +186,14 @@
     align-self: flex-start;
     width: 44%;
     margin-top: 32px;
-    margin-left: -4px;
+    margin-left: -3px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .featured {
     min-height: 636px;
-    max-width: 1440px;
+    max-width: 1366px;
     // width: 1050px;
     margin-left: auto;
     margin-right: auto;
@@ -200,7 +208,7 @@
 
   .featured__subtitle {
     position: absolute;
-    top: 50px;
+    top: 65px;
     left: 72px;
   }
 
@@ -257,7 +265,7 @@
     order: 4;
     padding: 0 8px;
     height: 110px;
-    margin-top: 52px;
+    // margin-top: 52px;
     margin-top: 0;
     margin-bottom: 0;
     // @include border(red);

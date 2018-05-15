@@ -157,10 +157,6 @@
       margin-top: 4px;
     }
 
-    &:first-child {
-
-    }
-
     &:last-child {
       margin-top: 0;
 
@@ -197,8 +193,5 @@
 
   .selection__item {
     height: auto;
-    // height: 122px;
   }
-
-
 }

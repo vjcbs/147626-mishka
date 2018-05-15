@@ -43,10 +43,6 @@
   text-align: center;
   cursor: pointer;
 
-  &:first-child {
-
-  }
-
   &:hover {
     .nav-menu__item-image {
       fill: $light-green;
@@ -141,9 +137,10 @@
       order: -2;
       margin-left: 48%;
       padding: 0;
-      @include border($border-gray);
       border-top: none;
       border-bottom: none;
+
+      @include border($border-gray);
 
       .nav-menu__item-link {
         display: none;

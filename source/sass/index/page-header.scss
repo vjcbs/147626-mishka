@@ -1,9 +1,9 @@
 .page-header {
   @include flex-column;
+  @include border($border-gray);
   position: relative;
   min-height: 79px;
   min-width: 320px;
-  @include border($border-gray);
   border-left: none;
   border-right: none;
 }
