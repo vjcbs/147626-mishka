@@ -371,7 +371,6 @@
     max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
-    // background-color: #999999;
   }
 
   .form-body__radiogroup,
@@ -485,36 +484,28 @@
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .form-body__checkboxgroup {
-      // flex-wrap: wrap;
-      // height: 250px;
-      // @include border(red);
+      @include flex-row;
+      justify-content: space-between;
+    }
 
-      .form-body__list {
-        // flex-wrap: wrap;
-        // flex-basis: 80%;
-        // flex: 1 1 auto;
-        // max-height: 240px;
-        // margin-left: 225px;
-        // display: table;
-        // @include border(gold);
+    .form-body__checkboxgroup .form-body__list {
+      flex-basis: 69%;
+      max-height: 220px;
+    }
+
+    .form-body__checkboxgroup .form-body__item {
+      &:nth-child(n) {
+        flex-basis: 48%;
+        padding-left: 0;
       }
 
-      .form-body__item {
-        // display: table-cell;
-        // max-height: 20px;
-        // @include border(blue);
-        // align-self: stretch;
+      &:nth-child(6) {
+        // padding-left: 75px;
+        // @include border(red);
+        // margin-left: 70px;
       }
     }
   }
-  // .form-body__radiogroup,
-  // .form-body__checkboxgroup {
-  //   overflow-x: hidden;
-  //
-  //   .form-body__list {
-  //     transform: translateX(55px);
-  //   }
-  // }
 
   // Меняю размеры кастомных радиокнопок
 
@@ -761,6 +752,31 @@
     }
   }
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .form-body__checkboxgroup {
+      @include flex-row;
+      justify-content: space-between;
+    }
+
+    .form-body__checkboxgroup .form-body__list {
+      flex-basis: 69%;
+      max-height: 220px;
+    }
+
+    .form-body__checkboxgroup .form-body__item {
+      &:nth-child(n) {
+        flex-basis: 48%;
+        padding-left: 0;
+      }
+
+      &:nth-child(6) {
+        // padding-left: 75px;
+        // @include border(red);
+        // margin-left: 70px;
+      }
+    }
+  }
+
   .form-body__customer-name {
     .form-body__item {
       padding-left: 19px;
@@ -806,4 +822,13 @@
     width: 925px;
     // @include border(red);
   }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .form-body__bottom-wrapper {
+      // @include border(red);
+      width: 953px;
+      margin-left: 55px;
+    }
+  }
+
 }
