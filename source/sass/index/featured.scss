@@ -287,4 +287,14 @@
     width: 34%;
     margin-top: 0;
   }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .featured__title {
+      margin-bottom: 60px;
+    }
+
+    .featured__desc-wrapper {
+      margin-bottom: 110px;
+    }
+  }
 }

@@ -66,10 +66,6 @@
     z-index: 5;
   }
 
-  .form-header .nav-menu__item:nth-child(3) {
-    border-bottom: none;
-  }
-
   .form-header__title {
     position: relative;
     font-size: $tablet-header-font;
@@ -98,14 +94,15 @@
   }
 
   .form-header__title {
-    padding: 100px 0 120px;
-    margin-top: -85px;
+    padding: 95px 0 122px;
+    margin-top: -86px;
     margin-bottom: 0;
     font-size: $desktop-header-font;
     line-height: 57px;
+    border-top: 1px solid $border-gray;
   }
 
   .form-header__text {
-    padding: 100px 225px 50px 225px;
+    padding: 103px 225px 20px 225px;
   }
 }

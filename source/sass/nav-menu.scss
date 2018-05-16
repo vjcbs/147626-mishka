@@ -139,6 +139,7 @@
       padding: 0;
       border-top: none;
       border-bottom: none;
+      // border: none;
 
       @include border($border-gray);
 
@@ -161,6 +162,10 @@
       }
     }
   }
+
+  .nav-menu__item:nth-child(3) {
+    border-bottom: none;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -175,7 +180,7 @@
 
   .nav-menu__item:first-child {
     order: 1;
-    width: 18%;
+    width: 17.7%;
     border-right: 1px solid $light-gray;
 
     .nav-menu__item-link {
@@ -203,6 +208,7 @@
     order: 3;
     margin: 0;
     margin-left: 10px;
+    // border-bottom: none;
   }
 
   .nav-menu__item:nth-child(4) {

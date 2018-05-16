@@ -72,11 +72,11 @@
 
 @media (min-width: $desktop-width) {
   .catalog-header {
-    margin-bottom: 0;
+    margin-bottom: 110px;
   }
 
   .catalog-header::after {
-    bottom: 100px;
+    bottom: 0px;
   }
 
   .catalog-header__logo {
@@ -87,9 +87,9 @@
   }
 
   .catalog-header__title {
-    margin: -85px 0 111px 0;
+    margin-top: -85px;
     font-size: $desktop-header-font;
     line-height: 57px;
-    padding: 95px 0 122px;
+    padding: 95px 0 102px;
   }
 }

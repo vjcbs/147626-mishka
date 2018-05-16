@@ -28,6 +28,14 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
+gulp.task("html",function() {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
+});
+
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -40,14 +48,6 @@ gulp.task("serve", function() {
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html").on("change", server.reload);
   gulp.watch("source/js/*.js").on("change", server.reload);
-});
-
-gulp.task("html",function() {
-  return gulp.src("source/*.html")
-    .pipe(posthtml([
-      include()
-    ]))
-    .pipe(gulp.dest("build"));
 });
 
 gulp.task("images", function() {
