@@ -133,15 +133,13 @@
     }
 
     &:nth-child(3) {
+      @include border($border-gray);
       width: 84px;
       order: -2;
       margin-left: 48%;
       padding: 0;
       border-top: none;
       border-bottom: none;
-      // border: none;
-
-      @include border($border-gray);
 
       .nav-menu__item-link {
         display: none;
@@ -162,16 +160,11 @@
       }
     }
   }
-
-  .nav-menu__item:nth-child(3) {
-    border-bottom: none;
-  }
 }
 
 @media (min-width: $desktop-width) {
   .nav-menu__item {
     height: 86px;
-    // border-bottom: 1px solid red;
   }
 
   .nav-menu__list::after {
@@ -208,7 +201,6 @@
     order: 3;
     margin: 0;
     margin-left: 10px;
-    // border-bottom: none;
   }
 
   .nav-menu__item:nth-child(4) {

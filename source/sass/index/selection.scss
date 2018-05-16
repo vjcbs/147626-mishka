@@ -20,13 +20,10 @@
   padding: 0 30px;
   color: #010000;
   text-align: center;
-  // @include border(red);
 }
 
 .selection__list {
   @include list-reset;
-  // @include flex-column;
-  // flex-grow: 1;
 }
 
 .selection__item {
@@ -99,10 +96,6 @@
 @media (min-width: $tablet-width) {
   .selection {
     position: relative;
-    // justify-content: space-between;
-    // min-height: 590px;
-    // margin-top: -65px;
-    // margin-bottom: -65px;
     margin: -65px 0;
     padding: 152px 50px 0 50px;
     background-image: url("../img/hero-tablet@1x.jpg");
@@ -137,7 +130,6 @@
     margin-bottom: 374px;
     font-size: $tablet-header-font;
     line-height: 50px;
-    // @include border(blue);
   }
 
   .selection__list {

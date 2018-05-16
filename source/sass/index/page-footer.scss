@@ -1,7 +1,6 @@
 .page-footer {
   padding: 0 30px;
   background-color: #f1f1f1;
-  // overflow-x: hidden;
 }
 
 .page-footer__social-list {
@@ -13,10 +12,7 @@
   margin-top: 0;
   padding: 5px 30px;
   width: 260px;
-  // margin-left: 3px;
-  // margin-left: 10px;
   border-bottom: 1px solid #e5e5e5;
-  // @include border(red);
 }
 
 .page-footer__item {
@@ -99,7 +95,7 @@
   .page-footer {
     @include flex-row;
     justify-content: space-between;
-    padding: 35px 50px;
+    padding: 30px 50px 35px 50px;
     align-items: center;
     clear: both;
   }
@@ -126,12 +122,6 @@
     margin: 0;
     margin-left: 68px;
     border: none;
-    // @include border(red);
-  }
-
-  .page-footer__item {
-    // padding: 10px;
-    // margin: 0;
   }
 
   .page-footer__social {
@@ -148,6 +138,10 @@
   .page-footer__copyright-title {
     padding: 0;
     transform: translateX(-12px);
+  }
+
+  .page-footer__copyright-logo {
+    transform: translateX(0);
   }
 }
 

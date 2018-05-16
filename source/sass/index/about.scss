@@ -1,7 +1,5 @@
 .about {
   padding: 42px 28px 25px 28px;
-  // @include border(red);
-  // overflow-x: hidden;
 }
 
 .about__title {
@@ -19,7 +17,6 @@
   justify-content: center;
   margin-bottom: 24px;
   width: 260px;
-  // @include border(red);
 
   .about__item-image {
     @include fill-and-align($color: $light-green, $align: flex-start);
