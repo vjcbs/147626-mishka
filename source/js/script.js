@@ -1,7 +1,7 @@
 // Открытие/закрытие главного меню
 
 var menu = document.querySelector('.nav-menu');
-var menuToggle = document.querySelector('.nav-menu__toggle');
+var menuToggle = document.querySelector('.menu-toggle');
 
 menu.classList.remove('nav-menu--nojs');
 
@@ -9,11 +9,11 @@ menuToggle.addEventListener('click', function() {
 
   if ( menu.classList.contains('nav-menu--slide-down') ) {
     menu.classList.remove('nav-menu--slide-down');
-    menuToggle.classList.remove('nav-menu__toggle--closed');
+    menuToggle.classList.remove('menu-toggle--closed');
   }
   else {
     menu.classList.add('nav-menu--slide-down');
-    menuToggle.classList.add('nav-menu__toggle--closed');
+    menuToggle.classList.add('menu-toggle--closed');
   }
 
 });

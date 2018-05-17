@@ -1,0 +1,23 @@
+.menu-toggle {
+  display: block;
+  position: absolute;
+  top: 32px;
+  right: 30px;
+  width: 21px;
+  height: 20px;
+  border: none;
+  background: url("../img/icon-menu-open.svg") no-repeat;
+  outline: none;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.menu-toggle--closed {
+  background: url("../img/icon-menu-close.svg") no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .menu-toggle {
+    display: none;
+  }
+}

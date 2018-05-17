@@ -2,24 +2,6 @@
   display: none;
 }
 
-.nav-menu__toggle {
-  display: block;
-  position: absolute;
-  top: 32px;
-  right: 30px;
-  width: 21px;
-  height: 20px;
-  border: none;
-  background: url("../img/icon-menu-open.svg") no-repeat;
-  outline: none;
-  z-index: 5;
-  cursor: pointer;
-}
-
-.nav-menu__toggle--closed {
-  background: url("../img/icon-menu-close.svg") no-repeat;
-}
-
 .nav-menu--nojs {
   display: block;
 }
@@ -91,10 +73,6 @@
     display: block;
     padding: 0 50px;
     z-index: 2;
-  }
-
-  .nav-menu__toggle {
-    display: none;
   }
 
   .nav-menu__list {

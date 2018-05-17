@@ -27,7 +27,7 @@
           <img class="catalog-header__logo-image" src="img/logo-mobile.svg" alt="Главная">
         </picture>
       </a>
-      <button class="nav-menu__toggle" type="button"></button>
+      <button class="menu-toggle" type="button"></button>
       <nav class="nav-menu">
         <ul class="nav-menu__list">
           <li class="nav-menu__item">
@@ -197,7 +197,7 @@
     </footer>
 
     <div class="modal" id="modalCart">
-      <div class="modal__body" id="modalBody">
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="modal__title">Добавить в корзину</h2>
         <h3 class="modal__subtitle">Выберите размер</h3>
         <ul class="site-list modal__list">
@@ -214,8 +214,8 @@
             <label class="modal__radio-label" for="radio-l">L</label>
           </li>
         </ul>
-        <button class="button modal__submit">Добавить</button>
-      </div>
+        <button class="button modal__submit" type="submit" value="Add to cart">Добавить</button>
+      </form>
     </div>
   </div>
   <script src="js/script.js"></script>
