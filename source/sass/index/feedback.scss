@@ -1,5 +1,8 @@
 .feedback {
-  padding: 25px 29px;
+  padding: 25px 29px 52px 29px;
+  background: url("../img/bg-zigzag-line.svg") repeat-x;
+  background-size: auto 10px;
+  background-position: bottom center;
 }
 
 .feedback__title {
@@ -139,7 +142,7 @@
 @media (min-width: $desktop-width) {
   .feedback {
     padding: 70px 50px 0 225px;
-    margin-bottom: 75px;
+    margin-bottom: 65px;
     background-position: left 50px center;
   }
 

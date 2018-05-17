@@ -1,7 +1,7 @@
 .contact {
   @include flex-column;
   position: relative;
-  padding: 60px 0 40px;
+  padding: 35px 0 38px;
 }
 
 .contact__wrapper {
@@ -59,7 +59,7 @@
   height: 457px;
   width: 320px;
   margin: 0 auto;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 
   .contact__map-pin-icon {
     position: absolute;
@@ -78,7 +78,7 @@
   align-self: center;
   display: inline-block;
   width: 260px;
-  margin-left: 13px;
+  margin-left: 2px;
   text-decoration: none;
   text-align: center;
   line-height: 50px;
@@ -89,7 +89,8 @@
   .contact {
     padding: 84px 0 58px 0;
     background: url("../img/bg-zigzag-line.svg") repeat-x;
-    background-position: top center;
+    background-size: auto 15px;
+    background-position: top 6px center;
   }
 
   .contact__wrapper {
@@ -138,7 +139,6 @@
 
   .contact__button {
     width: 230px;
-    transform: translateX(-8px);
   }
 }
 
@@ -148,10 +148,12 @@
     justify-content: stretch;
     align-items: flex-start;
     max-width: 1440px;
-    padding: 75px 50px 80px 225px;
+    padding: 85px 50px 75px 225px;
     height: 625px;
     margin: 0 auto;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
+    background-size: auto 20px;
+    background-position: top 0 center;
   }
 
   .contact__wrapper {
@@ -169,7 +171,7 @@
   }
 
   .contact__title-icon {
-    top: 148px;
+    top: 155px;
     left: 114px;
   }
 
@@ -190,9 +192,8 @@
   .contact__button {
     order: 2;
     align-self: flex-start;
-    margin-top: 33px;
+    margin-top: 30px;
     margin-left: 0;
-    transform: translateX(0);
   }
 
   .contact__map-wrapper {

@@ -1,6 +1,9 @@
 .featured {
-  padding: 28px 30px;
+  padding: 28px 30px 40px 30px;
   min-width: 320px;
+  background: url("../img/bg-zigzag-line.svg") repeat-x;
+  background-size: auto 10px;
+  background-position: bottom center;
 }
 
 .featured__title {
@@ -67,9 +70,10 @@
 @media (min-width: $tablet-width) {
   .featured {
     position: relative;
-    padding: 9px 50px 25px 50px;
+    padding: 9px 50px 20px 50px;
     margin-top: 110px;
     background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: auto 15px;
     background-position: bottom center;
     max-width: 990px;
     margin-left: auto;
@@ -182,6 +186,7 @@
     margin-right: auto;
     margin-top: 162px;
     padding: 0 50px 95px 222px;
+    background-size: auto 20px;
   }
 
   .featured__wrapper {

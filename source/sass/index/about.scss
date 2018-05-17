@@ -1,10 +1,10 @@
 .about {
-  padding: 42px 28px 25px 28px;
+  padding: 26px 28px 25px 28px;
 }
 
 .about__title {
   @include heading($h2-font-size);
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .about__list {
@@ -81,7 +81,7 @@
 @media (min-width: $tablet-width) {
   .about {
     min-height: 500px;
-    padding: 44px 50px;
+    padding: 49px 50px 44px 50px;
   }
 
   .about__title {
